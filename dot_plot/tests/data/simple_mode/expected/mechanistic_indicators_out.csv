@@ -1,0 +1,27 @@
+Mutation,"Stability classification, xray, (Rosetta, FoldX)","Stability classification, xray, (RaSP, FoldX)",PTM effect in regulation,PTM effect in stability,PTM effect in function,AlloSigma2 predicted consequence - active sites,AlloSigma2 predicted consequence - cofactor sites,AlloSigma2 predicted consequence - pockets and interfaces,Functional sites (cofactor),Functional sites (active site),MAVISp Effects
+W86A,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86C,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86D,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86E,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86F,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86G,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86H,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86I,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86K,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86L,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86M,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86N,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86P,neutral,uncertain,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86Q,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86R,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86S,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86T,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86V,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+W86Y,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+N88A,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+N88C,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+N88G,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+N88S,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+L89A,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+L89C,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
+L89D,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,neutral,neutral,Long Range
