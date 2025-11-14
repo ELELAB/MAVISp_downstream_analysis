@@ -1,0 +1,883 @@
+Mutation,"Stability classification, (Rosetta, FoldX) [md]","Stability classification, (RaSP, FoldX) [md]","Stability classification, (Rosetta, FoldX) [cabsflex]","Stability classification, (RaSP, FoldX) [cabsflex]",PTM effect in regulation [md],PTM effect in stability [md],PTM effect in function [md],PTM effect in regulation [cabsflex],PTM effect in stability [cabsflex],PTM effect in function [cabsflex],AlloSigma2-PSN classification - pockets and interfaces [md],MAVISp Effects
+P98A,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98E,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98F,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98G,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98H,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98I,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98K,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98L,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98Q,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98R,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98S,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98V,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98W,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P98Y,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+S99D,,neutral,,neutral,damaging,neutral,uncertain,damaging,neutral,uncertain,uncertain,PTM
+S99H,,neutral,,neutral,damaging,neutral,uncertain,damaging,neutral,uncertain,uncertain,PTM
+S99K,,neutral,,neutral,damaging,neutral,uncertain,damaging,neutral,uncertain,uncertain,PTM
+S99M,,neutral,,neutral,damaging,neutral,uncertain,damaging,neutral,uncertain,uncertain,PTM
+S99R,,neutral,,neutral,damaging,neutral,uncertain,damaging,neutral,uncertain,uncertain,PTM
+S99W,,neutral,,neutral,damaging,neutral,uncertain,damaging,neutral,uncertain,uncertain,PTM
+Y103A,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103D,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103E,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103G,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y103I,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103K,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103L,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103M,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103N,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103P,,destabilizing,,destabilizing,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y103Q,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103R,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103S,,uncertain,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103T,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y103V,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+G105C,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105D,uncertain,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105E,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105F,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105H,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105I,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105L,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105M,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105Q,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105R,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105T,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105V,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105W,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G105Y,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+Y107A,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y107D,uncertain,uncertain,uncertain,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y107E,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y107G,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y107I,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y107K,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y107M,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y107P,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y107Q,uncertain,uncertain,uncertain,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y107R,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y107T,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+G108P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109C,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109E,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109I,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109N,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109Q,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109R,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109S,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109T,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F109V,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R110P,destabilizing,destabilizing,uncertain,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+L111A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111C,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111E,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111N,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111P,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111Q,uncertain,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111R,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111T,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L111W,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G112P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F113A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113C,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113E,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113G,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113H,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+F113I,uncertain,uncertain,neutral,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+F113K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113L,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+F113M,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+F113N,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113P,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113Q,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113R,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113S,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113T,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113V,destabilizing,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F113W,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+G117P,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+S121P,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,neutral,Stability
+C124K,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C124R,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C124Y,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+T125A,neutral,neutral,neutral,neutral,uncertain,,,uncertain,,,damaging,Long Range
+T125C,,neutral,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+T125G,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+T125K,destabilizing,uncertain,destabilizing,uncertain,uncertain,,,uncertain,,,neutral,Stability
+T125P,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+T125R,destabilizing,uncertain,destabilizing,uncertain,uncertain,,,uncertain,,,neutral,Stability
+T125S,,neutral,,neutral,neutral,,,neutral,,,damaging,Long Range
+Y126A,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+Y126D,destabilizing,destabilizing,uncertain,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+Y126E,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+Y126G,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+Y126N,destabilizing,destabilizing,uncertain,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+Y126P,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+Y126Q,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+Y126S,destabilizing,destabilizing,uncertain,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+Y126T,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+S127E,,destabilizing,,neutral,uncertain,,,uncertain,,,uncertain,Stability
+S127F,destabilizing,uncertain,neutral,neutral,uncertain,,,uncertain,,,uncertain,Stability
+S127K,,destabilizing,,neutral,uncertain,,,uncertain,,,uncertain,Stability
+S127P,uncertain,uncertain,uncertain,destabilizing,uncertain,,,uncertain,,,uncertain,Stability
+S127R,,destabilizing,,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+S127W,,destabilizing,,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+S127Y,destabilizing,destabilizing,uncertain,neutral,uncertain,,,uncertain,,,uncertain,Stability
+N131P,,destabilizing,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+K132P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+M133D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+M133G,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+M133K,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+M133P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+M133R,destabilizing,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+M133S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F134A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134C,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134D,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134E,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134G,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134N,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134Q,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134R,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134S,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F134T,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C135K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C135P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C135R,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C135W,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C135Y,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+Q136A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136C,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136D,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136E,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136F,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136G,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136H,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136I,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136K,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136L,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136N,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136P,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+Q136S,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136T,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136W,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q136Y,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138C,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138D,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138E,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138F,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138H,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138I,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138K,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138L,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138N,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138P,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+A138Q,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138R,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138T,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138V,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138W,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A138Y,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+K139P,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C141K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C141P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C141R,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C141W,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C141Y,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V143D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V143E,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V143G,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V143K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V143P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V143R,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V143S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L145A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L145C,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L145D,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L145E,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L145G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L145K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L145N,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L145P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L145R,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L145S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+W146P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V147E,uncertain,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V147F,neutral,neutral,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V147K,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V147R,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V147W,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+P151A,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P151E,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P151F,destabilizing,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+P151G,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P151H,destabilizing,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+P151I,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P151K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+P151M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P151Q,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P151R,destabilizing,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+P151W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P151Y,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+G154I,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G154P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G154V,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+T155L,uncertain,neutral,neutral,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
+T155P,destabilizing,destabilizing,uncertain,uncertain,uncertain,neutral,uncertain,uncertain,damaging,uncertain,uncertain,"Stability, PTM"
+R156P,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V157D,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V157E,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V157G,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V157K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V157P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V157R,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V157S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V157W,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R158A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158C,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158D,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158E,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158F,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158G,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158H,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158I,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158L,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158N,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158P,uncertain,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+R158Q,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158S,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158T,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158V,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R158Y,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A159F,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+A159K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+A159R,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+A159W,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+M160A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160C,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160D,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160E,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160F,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160G,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160H,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160K,uncertain,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160N,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+M160Q,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160R,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160S,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M160Y,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A161D,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+A161F,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+A161N,neutral,neutral,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I162G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I162P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+Y163D,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+Y163E,,destabilizing,,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+Y163G,,destabilizing,,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+Y163K,,destabilizing,,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+Y163Q,,destabilizing,,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+Y163R,,destabilizing,,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+Y163S,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+Y163T,,destabilizing,,uncertain,uncertain,,,uncertain,,,uncertain,Stability
+Q165C,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q165D,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Q165P,uncertain,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+H168A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168C,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168E,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168G,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168I,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168K,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168L,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+H168R,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168S,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168T,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168V,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H168W,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M169P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V173A,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V173C,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V173D,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V173E,uncertain,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V173F,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V173G,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V173H,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V173K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V173N,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V173P,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V173Q,destabilizing,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V173R,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V173S,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V173T,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V173W,destabilizing,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V173Y,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R175A,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175C,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175D,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175E,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175G,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175H,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175I,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175L,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175M,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175N,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175P,neutral,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175Q,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175S,neutral,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175T,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R175V,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C176F,neutral,neutral,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+H179A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179C,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179D,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179E,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179F,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179G,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179I,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179K,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179L,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179N,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179P,uncertain,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+H179R,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179S,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179T,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179V,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179W,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H179Y,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E180P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+R181P,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C182P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+D186F,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+D186I,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+D186K,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+D186L,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+D186R,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+D186V,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+D186W,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+G187P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+A189G,neutral,neutral,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+A189K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+P190E,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P190F,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+P190G,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P190I,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P190K,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P190L,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P190M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P190R,neutral,neutral,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+P190V,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P190W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P190Y,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193A,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193C,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193D,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193E,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193F,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193G,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193I,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193K,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193L,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193M,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193N,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193P,uncertain,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+H193Q,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193R,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+H193S,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193T,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193V,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+H193Y,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+L194D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L194F,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L194G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L194H,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L194K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L194R,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L194S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I195D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I195E,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I195F,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+I195G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I195K,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I195P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I195R,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+I195S,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I195W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+I195Y,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196C,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196D,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196E,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196F,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196G,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196H,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196I,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196L,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196N,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+R196Q,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196S,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196T,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196V,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196W,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+R196Y,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V197A,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V197C,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V197D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V197E,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V197F,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V197G,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V197H,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V197K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V197N,,destabilizing,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V197P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V197Q,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V197R,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V197S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V197T,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V197W,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V197Y,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+E198A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198C,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198D,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198F,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198G,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198H,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198I,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198K,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198L,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198N,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+E198Q,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198R,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198S,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198T,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198W,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E198Y,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+G199I,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G199P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G199V,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+N200A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200C,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200E,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200F,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200K,neutral,neutral,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200L,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+N200Q,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200R,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200V,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200W,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+N200Y,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V203D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V203E,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V203F,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V203H,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V203K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V203M,uncertain,neutral,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V203N,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V203P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V203R,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V203W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V203Y,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+E204P,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+Y205A,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205C,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205D,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205E,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205G,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205H,uncertain,uncertain,uncertain,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y205I,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205K,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205L,,uncertain,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y205M,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y205N,destabilizing,destabilizing,neutral,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205P,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205Q,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205R,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205S,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205T,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205V,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y205W,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+D208P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+T211C,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211D,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211E,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211F,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211G,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211H,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211I,neutral,neutral,neutral,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211K,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211L,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211M,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211P,uncertain,uncertain,uncertain,uncertain,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211Q,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211R,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211V,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211W,,neutral,,neutral,damaging,damaging,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T211Y,,neutral,,neutral,uncertain,damaging,potentially_damaging,uncertain,neutral,potentially_damaging,uncertain,PTM
+F212P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R213P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+S215A,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,uncertain,PTM
+S215E,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
+S215G,neutral,neutral,neutral,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,uncertain,PTM
+S215I,neutral,neutral,neutral,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
+S215K,neutral,neutral,neutral,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
+S215L,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
+S215N,neutral,neutral,neutral,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
+S215Q,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
+S215T,neutral,neutral,neutral,neutral,neutral,damaging,uncertain,neutral,damaging,uncertain,neutral,PTM
+S215V,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
+V216A,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V216C,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V216D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V216E,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V216G,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V216H,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V216K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V216N,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V216P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V216Q,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V216R,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V216S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V216T,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V216W,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V216Y,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V217P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V218A,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V218C,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V218D,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V218G,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V218K,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V218N,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V218P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+V218S,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V218T,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Y220A,,destabilizing,,uncertain,uncertain,neutral,uncertain,damaging,damaging,uncertain,damaging,"Stability, PTM, Long Range"
+Y220C,destabilizing,destabilizing,neutral,uncertain,uncertain,neutral,uncertain,damaging,damaging,uncertain,damaging,"Stability, PTM, Long Range"
+Y220D,destabilizing,destabilizing,uncertain,uncertain,uncertain,neutral,uncertain,damaging,damaging,uncertain,damaging,"Stability, PTM, Long Range"
+Y220E,,destabilizing,,uncertain,uncertain,neutral,uncertain,damaging,damaging,uncertain,damaging,"Stability, PTM, Long Range"
+Y220G,,destabilizing,,uncertain,uncertain,neutral,uncertain,damaging,damaging,uncertain,damaging,"Stability, PTM, Long Range"
+Y220H,uncertain,uncertain,neutral,neutral,uncertain,uncertain,uncertain,damaging,damaging,uncertain,damaging,"PTM, Long Range"
+Y220I,,neutral,,neutral,uncertain,damaging,uncertain,damaging,damaging,uncertain,damaging,"PTM, Long Range"
+Y220K,,uncertain,,uncertain,uncertain,uncertain,uncertain,damaging,damaging,uncertain,damaging,"PTM, Long Range"
+Y220L,neutral,neutral,uncertain,neutral,uncertain,damaging,uncertain,damaging,damaging,uncertain,damaging,"PTM, Long Range"
+Y220M,,neutral,,neutral,uncertain,damaging,uncertain,damaging,damaging,uncertain,damaging,"PTM, Long Range"
+Y220N,uncertain,destabilizing,neutral,uncertain,uncertain,neutral,uncertain,damaging,damaging,uncertain,damaging,"Stability, PTM, Long Range"
+Y220P,,destabilizing,,uncertain,uncertain,neutral,uncertain,damaging,uncertain,uncertain,damaging,"Stability, PTM, Long Range"
+Y220Q,,uncertain,,uncertain,uncertain,uncertain,uncertain,damaging,damaging,uncertain,damaging,"PTM, Long Range"
+Y220R,,uncertain,,uncertain,uncertain,uncertain,uncertain,damaging,damaging,uncertain,damaging,"PTM, Long Range"
+Y220S,destabilizing,destabilizing,uncertain,uncertain,uncertain,neutral,uncertain,uncertain,damaging,uncertain,damaging,"Stability, PTM, Long Range"
+Y220T,,destabilizing,,uncertain,uncertain,neutral,uncertain,uncertain,damaging,uncertain,damaging,"Stability, PTM, Long Range"
+Y220V,,uncertain,,neutral,uncertain,uncertain,uncertain,damaging,damaging,uncertain,damaging,"PTM, Long Range"
+Y220W,,neutral,,uncertain,uncertain,damaging,uncertain,damaging,uncertain,uncertain,neutral,PTM
+P222W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+G226P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G226V,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I232A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+I232C,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+I232D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+I232E,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+I232G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+I232H,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+I232N,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+I232P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+I232Q,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+I232R,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+I232S,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+I232W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+I232Y,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+Y234A,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234C,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234D,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234E,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234G,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234H,uncertain,uncertain,uncertain,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y234I,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y234K,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234M,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y234N,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234P,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234Q,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234R,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234S,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234T,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y234V,,uncertain,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y234W,,neutral,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+N235P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+Y236A,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236C,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236D,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236E,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236G,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236H,destabilizing,uncertain,uncertain,neutral,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236I,,uncertain,,neutral,uncertain,,,uncertain,,,damaging,Long Range
+Y236K,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236L,uncertain,neutral,uncertain,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y236M,,neutral,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y236N,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236P,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236Q,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236R,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236S,destabilizing,destabilizing,uncertain,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236T,,destabilizing,,uncertain,uncertain,,,uncertain,,,damaging,"Stability, Long Range"
+Y236V,,uncertain,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+Y236W,,neutral,,uncertain,uncertain,,,uncertain,,,damaging,Long Range
+M237A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237C,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237D,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237E,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237F,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237G,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237H,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237K,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237N,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+M237Q,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237R,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237S,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237T,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237V,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+M237Y,,neutral,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C238F,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C238P,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C238R,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C238W,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C238Y,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+S240P,destabilizing,destabilizing,destabilizing,destabilizing,uncertain,,,uncertain,,,neutral,Stability
+C242P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G244C,neutral,neutral,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G244P,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G244V,neutral,neutral,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G245E,uncertain,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G245F,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G245H,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G245I,uncertain,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G245K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G245L,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G245P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G245R,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G245Y,uncertain,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+M246G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+M246K,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+M246R,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+N247P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+R248P,destabilizing,destabilizing,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+R249A,,neutral,,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249C,,neutral,,uncertain,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249D,,uncertain,,uncertain,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249E,,uncertain,,uncertain,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249F,,neutral,,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249G,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249H,,neutral,,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249I,neutral,neutral,neutral,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249K,neutral,neutral,neutral,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,uncertain,PTM
+R249L,,neutral,,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249M,neutral,neutral,neutral,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249N,,neutral,,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249P,,destabilizing,,destabilizing,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"Stability, PTM, Long Range"
+R249Q,,neutral,,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249S,neutral,neutral,neutral,uncertain,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249T,neutral,neutral,neutral,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249V,neutral,neutral,neutral,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249W,neutral,neutral,neutral,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+R249Y,,neutral,,neutral,uncertain,neutral,neutral,damaging,neutral,neutral,damaging,"PTM, Long Range"
+I251A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251C,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251D,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251E,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251N,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251Q,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251R,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I251S,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I251W,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L252D,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L252G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L252P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L252S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+T253G,,destabilizing,,uncertain,uncertain,,,uncertain,,,neutral,Stability
+T253P,destabilizing,destabilizing,uncertain,destabilizing,uncertain,,,uncertain,,,uncertain,Stability
+I254D,uncertain,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I254E,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I254F,destabilizing,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I254G,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I254K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I254N,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I254P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I254S,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I255A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I255C,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I255D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I255E,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I255G,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I255K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I255N,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I255P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+I255R,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I255S,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+T256P,uncertain,destabilizing,uncertain,destabilizing,uncertain,,,uncertain,,,uncertain,Stability
+L257A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257C,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257D,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257E,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257H,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L257N,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257P,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257Q,uncertain,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257R,destabilizing,destabilizing,uncertain,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257T,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257W,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L257Y,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+E258P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+D259F,uncertain,neutral,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+D259P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G262P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G262V,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+L265G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L265P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266D,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266E,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266F,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266H,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266I,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266K,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266L,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266M,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266Q,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266R,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266S,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266T,destabilizing,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266V,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266W,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266Y,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R267P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+F270A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270C,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270D,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270E,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270G,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270H,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+F270I,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+F270K,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270L,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+F270M,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+F270N,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270Q,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270R,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270S,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270T,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+F270V,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+F270W,,uncertain,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+V272D,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V272E,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V272F,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V272H,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V272K,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V272N,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V272P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V272Q,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V272R,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V272S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V272W,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V272Y,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V274D,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V274E,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+V274F,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V274G,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V274H,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V274K,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V274R,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V274S,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V274W,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V274Y,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C275A,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275E,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275F,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275G,neutral,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275H,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275I,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275K,,destabilizing,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+C275L,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275M,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275N,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+C275Q,,uncertain,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275R,uncertain,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
+C275S,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275T,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275V,,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275W,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+C275Y,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
+P278F,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+P278H,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+P278K,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+P278L,destabilizing,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+P278R,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+P278S,destabilizing,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+G279C,,neutral,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279D,neutral,neutral,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279E,neutral,neutral,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279F,,neutral,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279H,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279I,,neutral,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279K,,neutral,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279L,,neutral,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279M,,neutral,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279N,,neutral,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279P,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279Q,,neutral,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279R,neutral,neutral,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279T,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279V,neutral,neutral,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279W,neutral,neutral,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G279Y,,neutral,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+D281P,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+R282P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+T284D,,neutral,,neutral,damaging,neutral,potentially_damaging,damaging,neutral,potentially_damaging,uncertain,PTM
+T284E,,neutral,,neutral,damaging,neutral,potentially_damaging,damaging,neutral,potentially_damaging,neutral,PTM
+T284F,,neutral,,neutral,damaging,neutral,potentially_damaging,damaging,neutral,potentially_damaging,neutral,PTM
+T284K,neutral,neutral,neutral,neutral,damaging,neutral,potentially_damaging,damaging,neutral,potentially_damaging,neutral,PTM
+T284P,uncertain,uncertain,uncertain,uncertain,damaging,neutral,potentially_damaging,damaging,uncertain,potentially_damaging,uncertain,PTM
+T284R,,neutral,,neutral,damaging,neutral,potentially_damaging,damaging,neutral,potentially_damaging,neutral,PTM
+T284W,,neutral,,neutral,damaging,neutral,potentially_damaging,damaging,neutral,potentially_damaging,neutral,PTM
+E286P,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+E287P,,uncertain,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+N288P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
