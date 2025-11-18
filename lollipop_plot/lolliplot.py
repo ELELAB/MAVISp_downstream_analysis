@@ -62,15 +62,16 @@ def adjust_figsize_w(x_mut, original_w, original_m):
     return new_w
 
 def process_input(df):
-    '''Read AlphaMissense CSV file. 
+    '''process dataframe parsed from dot_plot.py output. 
     
-    The funtion takes as input a CSV file and returns a
+    The funtion takes as input a dataframe and returns a
     dataframe with converted values for subsequent plotting.
 
     Parameters 
     ----------
     data: dataframe
         input AlphaMissense dataframe from CSV.
+
     Returns
     ----------
     df: dataframe
