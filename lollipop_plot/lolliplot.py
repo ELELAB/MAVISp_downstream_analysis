@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 """
-# Copyright (C) 2024 Karolina Krzesińska <kzokr@dtu.dk> 
-# Danish Cancer Institute 
+# Copyright (C) 2024 Karolina Krzesińska <kzokr@dtu.dk>
+# Danish Cancer Institute
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 def adjust_figsize_w(x_mut, original_w, original_m):
     ''' Adjust width of figuresize if the last plot has less mutations
     on the x axis.
-    
+
     The function takes as input the number of remaining mutations and
     the original width and number of mutations per axis, and returns
     the new width adapted to remaining mutations.
@@ -44,12 +44,12 @@ def adjust_figsize_w(x_mut, original_w, original_m):
         original figuresize width
     original_m: int
         original number of mutations per x-axis
-    
+
     Returns
     ----------
     new_w: float
         adapted width
-            
+
     '''
     # Define a score as the original width - 3 (default space for y labels)
     # and divided by the number of mutations
@@ -62,12 +62,12 @@ def adjust_figsize_w(x_mut, original_w, original_m):
     return new_w
 
 def process_input(df):
-    '''process dataframe parsed from dot_plot.py output. 
-    
+    '''process dataframe parsed from dot_plot.py output.
+
     The funtion takes as input a dataframe and returns a
     dataframe with converted values for subsequent plotting.
 
-    Parameters 
+    Parameters
     ----------
     data: dataframe
         input AlphaMissense dataframe from CSV.
@@ -75,7 +75,7 @@ def process_input(df):
     Returns
     ----------
     df: dataframe
-        filtered dataframe for classification columns where values 
+        filtered dataframe for classification columns where values
         have been converted to 0/1s for plotting.
     '''
     # Define columns with effect classification
@@ -132,14 +132,14 @@ def process_input(df):
 
     return df
 
-def plot(df, xlim, save_png):
-    '''Plot stacked lollis per identified mutational effect. 
+def plot(df, xlim):
+    '''Plot stacked lollis per identified mutational effect.
 
     The function takes the filtered df and plots a lolliplot
     per identified effect for each mutation.
     Currently supported mavisp effects:
-    stability, local int., ptm, long range, 
-    functional. 
+    stability, local int., ptm, long range,
+    functional.
 
     Parameters
     ----------
@@ -147,12 +147,10 @@ def plot(df, xlim, save_png):
         filtered dataframe with replaced values to 0/1s.
     xlim: int
         number of mutations to plot on the x axis.
-    save_png: boolean
-        denoting whether individual plots should be saved
-        as pngs
+
     Returns
     ----------
-        plots saved as pdfs (default) +optionally as pngs
+        figures: list of pyplot Figures objects
     '''
 
     # Set the font
@@ -179,11 +177,8 @@ def plot(df, xlim, save_png):
     # Define expected number of plots
     expected_plots = math.ceil(df.shape[0]/xlim)
 
-    pdf = PdfPages("lolliplot.pdf")
-    if save_png:
-        if expected_plots > 5:
-            log.warning("Too many plots (>5). PNGs will not be saved.")
-            save_png = False
+    figures = []
+
     for p in range(expected_plots):
         # Filter df for range of mutations to be plotted
         filtered_df = df.iloc[lower:upper, :]
@@ -214,15 +209,15 @@ def plot(df, xlim, save_png):
                     # Increment y-axis position for each effect plotted
                     y_pos += 1
                     # Define the sticks of the lolli
-                    ax.vlines(x_pos, 
-                            y_pos - 0.9, 
-                            y_pos, 
-                            color=color, 
+                    ax.vlines(x_pos,
+                            y_pos - 0.9,
+                            y_pos,
+                            color=color,
                             alpha=0.7)
                     # Plot the head of the lolli
-                    ax.scatter(x_pos, 
-                            y_pos, 
-                            color=color, 
+                    ax.scatter(x_pos,
+                            y_pos,
+                            color=color,
                             s=100)
 
         # Define legend elements
@@ -248,25 +243,15 @@ def plot(df, xlim, save_png):
         ax.spines['bottom'].set_visible(True)
         ax.yaxis.set_visible(False)
 
-        # Save plot as png and grouped pdf
-        plt.savefig(pdf,
-                    format='pdf',
-                    dpi=300,
-                    bbox_inches='tight')
-
-        if save_png:
-            fig.savefig(f'lolliplot_{p}.png',
-                        dpi=300,
-                        bbox_inches='tight')
-
-        plt.close(fig)
+        # Append figure to return
+        figures.append(fig)
 
         # Update ranges for next plot
         lower += xlim
         upper += xlim
 
-    # Save merged pdf fig
-    pdf.close()
+    return figures
+
 
 def main():
 
@@ -308,7 +293,29 @@ def main():
     processed_df = process_input(df)
 
     # Plot data
-    plot(processed_df, args.xlim, args.save_png)
+    figures = plot(processed_df, args.xlim)
+
+    # Find out if we need to save png files
+    if args.save_png:
+        if len(figures) > 5:
+            log.warning("Too many plots (>5). PNGs will not be saved.")
+            save_png = False
+        else:
+            save_png = True
+    else:
+        save_png = False
+
+    # Save plots
+    with PdfPages("lolliplot.pdf") as pdf:
+        for i, figure in enumerate(figures):
+            if save_png:
+                figure.savefig(f'lolliplot_{i}.png',
+                            dpi=300,
+                            bbox_inches='tight')
+            figure.savefig(pdf,
+                           format='pdf',
+                           dpi=300,
+                           bbox_inches='tight')
 
 if __name__ == "__main__":
     main()
