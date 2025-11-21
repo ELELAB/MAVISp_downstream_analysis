@@ -519,10 +519,9 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
 
         # Raise error if filtering leaves df empty
         if source_idx.empty:
-            log.warning(f"No mutations found matching the mutation source: {plot_Source}. Exiting...")
-            raise TypeError(f"No mutations found matching the mutation source: {plot_Source}.")
-
-        log.info(f"Found {len(source_idx)} mutations matching the source filter: {plot_Source}")
+            log.warning(f"No mutations found matching the mutation source: {plot_Source}")
+        else:
+            log.info(f"Found {len(source_idx)} mutations matching the source filter: {plot_Source}")
 
     # Define an empty df if flags -pltC/-colC are not used
     clinvar_mapped_df = None
@@ -565,10 +564,9 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
 
         # Raise error if filtering leaves df empty
         if len(clinvar_idx) == 0:
-            log.warning(f"No mutations found matching the ClinVar filter {plot_Clinvar}. Exiting...")
-            raise TypeError(f"No mutations found matching the ClinVar filter {plot_Clinvar}.")
-
-        log.info(f"Found {len(clinvar_idx)} mutations matching the ClinVar filter {plot_Clinvar}")
+            log.warning(f"No mutations found matching the ClinVar filter {plot_Clinvar}")
+        else:
+            log.info(f"Found {len(clinvar_idx)} mutations matching the ClinVar filter {plot_Clinvar}")
 
 
     # Additively filter if -pltS -pltC
@@ -580,8 +578,7 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
         log.info(f"Found {len(df)} mutations matching filters.")
         # Raise error if filtering leaves df empty
         if df.empty:
-            log.warning("No mutations remain after filtering. Exiting...")
-            raise TypeError("No mutations remain after filtering. Exiting...")
+            log.warning("No mutations remain after filtering")
 
     # Create plotting dataframe and drop columns only used for visualization
     plot_df = df.copy()
@@ -2056,12 +2053,15 @@ def main():
                    clinvar_flag = bool(args.plot_Clinvar),
                    clinvar_col = bool(args.color_Clinvar))
 
-    with PdfPages(f"{args.output}.pdf") as pdf:
-        for i, figure in enumerate(figures):
-            figure.savefig(pdf, format='pdf', dpi=300)
 
-            if save_png:
-                figure.savefig(f'{args.output}_{i}.png', dpi=300)
+    if len(figures) > 0:
+        with PdfPages(f"{args.output}.pdf") as pdf:
+            for i, figure in enumerate(figures):
+                figure.savefig(pdf, format='pdf', dpi=300)
+                if save_png:
+                    figure.savefig(f'{args.output}_{i}.png', dpi=300)
+    else:
+        log.warning("No figures available to produce; pdf output will not be written")
 
 ################################# AM CSV #################################
     filtered_am = filter_vep_summary(summary_df, classification_df, args.AMx, args.adf)
