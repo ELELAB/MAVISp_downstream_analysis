@@ -80,8 +80,8 @@ def read_input(data):
     # Define columns with effect classification
     f = lambda x: 'Stability classification' in x or \
                         'Local Int. ' in x or \
-                        'AlloSigma2 predicted consequence' in x or \
-                        'AlloSigma2-PSN classification' in x or \
+                        'AlloSigMA 2 predicted consequence' in x or \
+                        'AlloSigMA2-PSN classification' in x or \
                         'PTM effect' in x or \
                         'Functional sites' in x or \
                         'Mutation' in x and not 'Mutation sources' in x
@@ -98,7 +98,7 @@ def read_input(data):
     # has been identified
     regex_patterns = {
         'Stability classification': 'Stability',
-        'AlloSigma2': 'Long Range',
+        'AlloSigMA': 'Long Range',
         'Local Int. ': 'Local Int.',
         'PTM effect': 'PTM',
         'Functional sites' : 'Functional'
@@ -127,7 +127,7 @@ def read_input(data):
 
     # Group columns by broad effect
     df['Stability']  = df.filter(regex='Stability classification').apply(pd.to_numeric, errors="coerce").max(axis=1)
-    df['Long Range'] = df.filter(regex='AlloSigma2').apply(pd.to_numeric, errors="coerce").max(axis=1)
+    df['Long Range'] = df.filter(regex='AlloSigMA').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Local Int.'] = df.filter(regex='Local Int.').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['PTM']        = df.filter(regex='PTM effect').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Functional'] = df.filter(regex='Functional sites').apply(pd.to_numeric, errors="coerce").max(axis=1)
