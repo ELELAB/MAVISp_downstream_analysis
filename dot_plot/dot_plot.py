@@ -2061,7 +2061,7 @@ def main():
                 if save_png:
                     figure.savefig(f'{args.output}_{i}.png', dpi=300)
     else:
-        log.warning("No figures available to produce; pdf output will not be written")
+        log.warning("No figures available to produce; figure output will not be written")
 
 ################################# AM CSV #################################
     filtered_am = filter_vep_summary(summary_df, classification_df, args.AMx, args.adf)
