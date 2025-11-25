@@ -1,5 +1,5 @@
 # MAVISp dot plot
-*Last updated*: 14/11/25
+*Last updated*: 25/11/25
 
 ## Description
 
@@ -7,7 +7,7 @@
 It produces:
 - publication-ready dot plots that summarise structural and functional module effects per mutation;
 - a `log.txt` which contains a summary of mutational effects
-- `mechanistic_indicators_out.csv`, which lists mutations with at least one MAVISp module effect together with the aggregated `MAVISp Effects` column. Optionally, this table is filtered by keeping only mutations that are damaging or pathogenic according to VEPs. This can be turned on with option `-vep/` settings (AlphaMissense, REVEL, GEMME, EVE or none) and can be further restricted to mutations that are LoF or GoF for DeMaSk via `-lgof`.
+- `mechanistic_indicators_out.csv`, which lists mutations with at least one MAVISp module effect together with the aggregated `MAVISp Effects` column. Optionally, this table is filtered by keeping only mutations that are damaging or pathogenic according to VEPs. This can be turned on with option `-vep` (arguments AlphaMissense, REVEL, GEMME, EVE or none) and can be further restricted to mutations that are LoF or GoF for DeMaSk via `-lgof`.
 
 ## Requirements
 
