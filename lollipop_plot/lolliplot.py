@@ -84,6 +84,7 @@ def process_input(df):
                         'AlloSigMA 2 predicted consequence' in x or \
                         'AlloSigMA2-PSN classification' in x or \
                         'PTM effect' in x or \
+                        'disulfide bridge' in x or \
                         'Functional sites' in x or \
                         'Mutation' in x and not 'Mutation sources' in x
 
@@ -96,7 +97,8 @@ def process_input(df):
         'AlloSigMA': 'Long Range',
         'Local Int. ': 'Local Int.',
         'PTM effect': 'PTM',
-        'Functional sites' : 'Functional'
+        'Functional sites' : 'Functional',
+        'disulfide bridge' : 'Disulfide bridges'
     }
     # Print warning if not one column identified
     for pattern, name in regex_patterns.items():
@@ -126,9 +128,10 @@ def process_input(df):
     df['Local Int.'] = df.filter(regex='Local Int.').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['PTM']        = df.filter(regex='PTM effect').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Functional'] = df.filter(regex='Functional sites').apply(pd.to_numeric, errors="coerce").max(axis=1)
+    df['Disulfide bridges'] = df.filter(regex='disulfide bridge').apply(pd.to_numeric, errors="coerce").max(axis=1)
 
     # Filter df for relevant columns
-    df = df[['Stability', 'Long Range', 'Local Int.', 'PTM', 'Functional']]
+    df = df[['Stability', 'Long Range', 'Local Int.', 'PTM', 'Functional', 'Disulfide bridges']]
 
     return df
 
@@ -164,7 +167,8 @@ def plot(df, xlim):
             'Local Int.': '#3E5965',
             'PTM': '#FF8B1F',
             'Long Range': '#F6CE3C',
-            'Functional': '#5B8255'}
+            'Functional': '#5B8255',
+            'Disulfide bridges': '#E34A6F'}
 
     # Define range of df to be plotted
     lower = 0
