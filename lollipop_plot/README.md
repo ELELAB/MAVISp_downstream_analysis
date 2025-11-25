@@ -2,7 +2,7 @@
 ## Description
 The script `lolliplot.py` takes as input and plots the output csv from dotplot.py named `alphamissense_out.csv`, containing the mutations with an AlphaMissense 'pathogenic' classification and an identified MAVISp effect. 
 
-The plot groups the identified effects in the following broad categories: stability, ptm, long range, local int, functional.
+The plot groups the identified effects in the following broad categories: stability, effects related to disulfide bridges, ptm, long range, local int, functional.
 
 ## Requirements
 module load python/3.10/modulefile 
