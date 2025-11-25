@@ -94,11 +94,11 @@ def process_input(df):
     # has been identified
     regex_patterns = {
         'Stability classification': 'Stability',
+        'disulfide bridge' : 'Disulfide bridges',
         'AlloSigMA': 'Long Range',
         'Local Int. ': 'Local Int.',
         'PTM effect': 'PTM',
-        'Functional sites' : 'Functional',
-        'disulfide bridge' : 'Disulfide bridges'
+        'Functional sites' : 'Functional'
     }
     # Print warning if not one column identified
     for pattern, name in regex_patterns.items():
@@ -124,14 +124,14 @@ def process_input(df):
 
     # Group columns by broad effect
     df['Stability']  = df.filter(regex='Stability classification').apply(pd.to_numeric, errors="coerce").max(axis=1)
+    df['Disulfide bridges'] = df.filter(regex='disulfide bridge').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Long Range'] = df.filter(regex='AlloSigMA').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Local Int.'] = df.filter(regex='Local Int.').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['PTM']        = df.filter(regex='PTM effect').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Functional'] = df.filter(regex='Functional sites').apply(pd.to_numeric, errors="coerce").max(axis=1)
-    df['Disulfide bridges'] = df.filter(regex='disulfide bridge').apply(pd.to_numeric, errors="coerce").max(axis=1)
 
     # Filter df for relevant columns
-    df = df[['Stability', 'Long Range', 'Local Int.', 'PTM', 'Functional', 'Disulfide bridges']]
+    df = df[['Stability', 'Disulfide bridges', 'Long Range', 'Local Int.', 'PTM', 'Functional']]
 
     return df
 
@@ -164,11 +164,11 @@ def plot(df, xlim):
     # Define the colors for each effect
     effect_colors = {
             'Stability': '#E34A6F',
+            'Disulfide bridges': '#E34A6F',
             'Local Int.': '#3E5965',
             'PTM': '#FF8B1F',
             'Long Range': '#F6CE3C',
-            'Functional': '#5B8255',
-            'Disulfide bridges': '#E34A6F'}
+            'Functional': '#5B8255'}
 
     # Define range of df to be plotted
     lower = 0
