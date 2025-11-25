@@ -157,14 +157,16 @@ def color_yticklabels(labels):
     # an effect on stability, function or other
     stability = ['Stability classification',
                  'PTM effect in stability',
-                 'EFoldMine - part of early folding region']
+                 'EFoldMine - part of early folding region',
+                 'Loss of disulfide bridge',
+                 'Predicted de-novo disulfide bridge']
+
 
     function = ['Local Int.',
                 'Functional sites (cofactor)',
                 'Functional sites (active site)',
                 'PTM',
                 'AlloSigMA 2']
-
     # Iterate over the labels and append to the color list
     # the color based on the effect
     for l in labels:
@@ -329,11 +331,18 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
                     'AlphaMissense classification' in x or \
                     ('Mutation' in x and not 'Mutation sources' in x and not 'Mutation predicted to' in x) or \
                     'EFoldMine - part of early folding region' in x or \
-                    'Experimental data classification' in x
+                    'Experimental data classification' in x or \
+                    'Loss of disulfide bridge' in x or \
+                    'Predicted de-novo disulfide bridge' in x
 
     df = full_df.copy()
     filter_columns = [col for col in full_df.columns if f(col)]
     df = df[filter_columns]
+
+    # if both these columns are not present or absent, exit immediately
+    if ('Loss of disulfide bridge' in filter_columns) ^ ('Predicted de-novo disulfide bridge' in filter_columns):
+        raise TypeError ('Columns produced by the disulfide bridges module should either be both '
+                         'available or both unavailable')
 
     # If pltRevel is True then convert REVEL score column to float
     # In case multiple REVEL scores are present it returns the average
@@ -810,6 +819,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
     allosigma_clmn = [col for col in data if 'AlloSigMA 2 predicted consequence' in col]
     long_range_psn_clmn = [col for col in data if 'AlloSigMA2-PSN classification' in col]
     cofactor_active = [col for col in data if 'Functional sites' in col]
+    disulfide_clmn = [col for col in data if 'disulfide bridge' in col]
     # # Check if columns with well-defined names are in the dataframe
     # for col in [ptm_stab_clmn, ptm_reg_clmn, ptm_funct_clmn, allosigma_clmn]:
     #     if col not in data.columns:
@@ -1304,6 +1314,20 @@ def generate_summary(data,d_cutoff,r_cutoff):
             multiple.append([])
     multiple = [item for sublist in multiple if sublist != [] for item in (sublist if isinstance(sublist, list) else [sublist])]
 
+    ### Damaging disulfide bridges ###
+    all_disulfide = []
+    for col in disulfide_clmn:
+        try:
+            disulfide_d = str(len(data[data[col] == 'damaging']))
+            disulfide_d_list = data.index[data[col] == 'damaging'].to_list()
+            all_disulfide.extend(disulfide_d_list)
+            out += f'- {disulfide_d} variants are damaging for {col} '
+            out += out_list(disulfide_d_list)
+        except KeyError:
+            out += f'- {col} not found in MAVISp csv.\n'
+            all_disulfide.append([])
+    all_disulfide = [item for sublist in all_disulfide if sublist != [] for item in (sublist if isinstance(sublist, list) else [sublist])]
+
     ### Damaging for functional sites ###
     multiple_1 = []
     for col in cofactor_active:
@@ -1360,6 +1384,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
     lists = [("stability", all_stability),
              ("local_interactions", all_local),
              ("long_range", all_long_range),
+             ("disulfide", all_disulfide),
              ("functional site",multiple_1),
              ("ptm", all_ptm)]
 
@@ -1426,11 +1451,11 @@ def generate_summary(data,d_cutoff,r_cutoff):
         out += "- No variants with multiple effects have been found.\n"
 
     ### DAMAGING ###
-    damaging_all = set(all_stability + all_local + ptm_s_d_list + ptm_r_d_list + all_long_range)
+    damaging_all = set(all_stability + all_local + ptm_s_d_list + ptm_r_d_list + all_long_range + all_disulfide)
     data_d = data.query('index in @damaging_all')
 
     # For alphamissense output include ptm_f as well in set and df
-    damaging_full = set(all_stability + all_local + all_ptm + multiple_1 + all_long_range)
+    damaging_full = set(all_stability + all_local + all_ptm + multiple_1 + all_long_range + all_disulfide)
     full_data_d = data.query('index in @damaging_full')
 
     # REVEL score > 0.5 (default)
@@ -1641,13 +1666,20 @@ def effect_summary(df):
     # Replace values with 0/1s
     temp_df = df.replace(mechanism_code, regex=True)
 
+    # Wrangle disulfide module columns to make just one
+    if 'Loss of disulfide bridge' and 'Predicted de-novo disulfide bridge' in temp_df.columns:
+        temp_df['Disulfide bridges'] = temp_df['Loss of disulfide bridge'] + temp_df['Predicted de-novo disulfide bridge']
+        temp_df['Disulfide bridges'] = temp_df['Disulfide bridges'].clip(upper=1)
+        temp_df = temp_df.drop(columns=['Loss of disulfide bridge', 'Predicted de-novo disulfide bridge'])
+
     # Define broad effect categories + corresponding regex patterns
     effect_categories = {
         'Stability': 'Stability classification',
         'Local Int.': 'Local Int.',
         'PTM': 'PTM effect',
         'Long Range': 'AlloSigMA',
-        'Functional': 'Functional sites'}
+        'Functional': 'Functional sites',
+        'Disulfide bridges': 'Disulfide bridges'}
 
     # Initialise series for storing results
     effects_summary = pd.Series(index=df.index, dtype='object')
@@ -1716,7 +1748,6 @@ def map_clinvar_categories(dataframe, clinvar_dict):
         axis=1)
     return dataframe
 
-
 def filter_vep_summary(summary, df, vep_filter, glof_filter):
     """Filter the AlphafoldMissense summary dataframe
 
@@ -1747,6 +1778,8 @@ def filter_vep_summary(summary, df, vep_filter, glof_filter):
               'AlloSigMA2-PSN classification' in x or \
               'PTM effect' in x or \
               'Functional sites' in x or \
+              'Loss of disulfide bridge' in x or \
+              'Predicted de-novo disulfide bridge' in x or \
               ('Mutation' in x and 'Mutation sources' not in x)
 
     # Filter the columns to keep only classification info
