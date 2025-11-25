@@ -164,7 +164,7 @@ def plot(df, xlim):
     # Define the colors for each effect
     effect_colors = {
             'Stability': '#E34A6F',
-            'Disulfide bridges': '#E34A6F',
+            'Disulfide bridges': '#781CAD',
             'Local Int.': '#3E5965',
             'PTM': '#FF8B1F',
             'Long Range': '#F6CE3C',
