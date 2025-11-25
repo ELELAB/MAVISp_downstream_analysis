@@ -72,12 +72,15 @@ def test_effect_summary_aggregates_categories():
             "Stability classification, test": [1, 0],
             "Local Int. classification, test": [0, 1],
             "PTM effect in regulation": [0, 1],
-            "AlloSigma2 predicted consequence - pockets and interfaces": [1, 0],
+            "AlloSigMA 2 predicted consequence - pockets and interfaces": [1, 0],
             "Functional sites (active site)": [0, 1],
+            "Loss of disulfide bridge": [1, 0],
+            "Predicted de-novo disulfide bridge": [0, 1],
         },
         index=["mut1", "mut2"],
     )
 
     enriched = dp.effect_summary(df.copy())
-    assert enriched.loc["mut1", "MAVISp Effects"] == "Stability, Long Range"
+    assert enriched.loc["mut1", "MAVISp Effects"] == "Stability, Long Range, Disulfide bridges"
     assert "Local Int." in enriched.loc["mut2", "MAVISp Effects"]
+    assert "Disulfide bridges" in enriched.loc["mut1", "MAVISp Effects"]
