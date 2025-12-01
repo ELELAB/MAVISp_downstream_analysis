@@ -646,6 +646,10 @@ def plot(df, full_df, width, height, xlim, clinvar_flag, clinvar_col):
     # List axes label colors
     yticklabel_color = color_yticklabels(labels = df.columns.values)
 
+    # Override display label for GEMME row
+    display_yticklabels = ['GEMME classification' if lbl == 'GEMME predicted consequence' else lbl
+                           for lbl in df.columns.values]
+
     # Lower and upper limits
     l = 0
     u = xlim
@@ -706,7 +710,7 @@ def plot(df, full_df, width, height, xlim, clinvar_flag, clinvar_col):
         _ = ax.set_xticks(x)
         _ = ax.set_yticks(y)
         _ = ax.set_xticklabels(filtered_df.index, rotation=90)
-        _ = ax.set_yticklabels(df.columns.values, fontweight = 'bold')
+        _ = ax.set_yticklabels(display_yticklabels, fontweight = 'bold')
         _ = ax.set_xlabel('Mutations')
 
         # Color ytick labels
