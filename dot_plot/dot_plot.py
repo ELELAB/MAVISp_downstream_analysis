@@ -427,8 +427,6 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
 
     df = df[ordered_cols]
 
-    print(ordered_cols)
-
     # Define a dictionary of effect: code_number
     # Damaging : 1, 5, 6
     # Neutral : 2
