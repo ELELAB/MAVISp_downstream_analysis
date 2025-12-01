@@ -382,9 +382,15 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
 
     # Sort columns based on broad effect categories
     functional_cols = [col for col in df.columns if 'functional' in col.lower() and 'experimental data classification' not in col.lower()]
+    disulfide_cols = [col for col in df.columns if 'disulfide bridge' in col.lower()]
     stability_cols = [col for col in df.columns if 'stability' in col.lower() and 'experimental data classification' not in col.lower()]
+    stability_cols += disulfide_cols
     efold_col = [col for col in df.columns if 'efoldmine' in col.lower()]
-    other_cols = [col for col in df.columns if 'functional' not in col.lower() and 'stability' not in col.lower() and 'experimental data classification' not in col.lower() and 'efoldmine' not in col.lower()]
+    other_cols = [col for col in df.columns if 'functional' not in col.lower()
+                  and 'stability' not in col.lower()
+                  and 'disulfide bridge' not in col.lower()
+                  and 'experimental data classification' not in col.lower()
+                  and 'efoldmine' not in col.lower()]
     experimental_cols = []
     for col in df.columns:
         if 'Experimental data classification' in col and col not in experimental_cols:
@@ -420,6 +426,8 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
             ordered_cols.append(col)
 
     df = df[ordered_cols]
+
+    print(ordered_cols)
 
     # Define a dictionary of effect: code_number
     # Damaging : 1, 5, 6
