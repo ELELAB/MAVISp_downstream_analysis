@@ -209,7 +209,7 @@ def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
     style = dynamic_errorbar_style(n_bars)
 
     # =============================
-    #  HORIZONTAL MODE
+    #  VERTICAL MODE
     # =============================
     if args.barh:
         ax.barh(labels, ddg, xerr=std, color=bar_color, **style)
@@ -230,7 +230,7 @@ def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
         return fig
 
     # =============================
-    #  VERTICAL MODE
+    #  HORIZONTAL MODE
     # =============================
     ax.bar(labels, ddg, yerr=std, color=bar_color, **style)
     ax.set_ylabel("ΔΔG (kcal/mol)", fontsize=args.y_title)
@@ -329,6 +329,17 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
     fig, ax = plt.subplots(figsize=(args.figure_width/2.54, args.figure_height/2.54))
     n_bars = len(mutations) * n_methods
     style = dynamic_errorbar_style(n_bars)
+    # =============================
+    #  AF label colors (unchanged)
+    # =============================
+    if args.color_AF and "AlphaFold2 model pLDDT score" in chunk.columns:
+        colors = chunk["AlphaFold2 model pLDDT score"].apply(
+            lambda x: 'orange' if x < 50 else
+                      ('yellow' if 50 <= x < 70 else
+                       ('cyan' if 70 <= x < 90 else 'blue'))
+        )
+    else:
+        colors = ['black'] * len(chunk)
 
     for i in range(n_methods):
         if args.barh:
@@ -352,6 +363,8 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
         ax.set_xlabel("ΔΔG (kcal/mol)", fontsize=args.y_title)
         ax.set_ylabel("Mutation", fontsize=args.x_title)
         ax.invert_yaxis()
+        for tick, c in zip(ax.get_yticklabels(), colors):
+            tick.set_color(c)
     else:
         ax.set_xticks(x)
         ax.set_xticklabels(
@@ -364,6 +377,8 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
 
         ax.set_ylabel("ΔΔG (kcal/mol)", fontsize=args.y_title)
         ax.set_xlabel("Mutation", fontsize=args.x_title)
+        for tick, c in zip(ax.get_xticklabels(), colors):
+            tick.set_color(c)
 
     ax.set_title(f"Grouped methods — ensemble {ensemble} — chunk {idx}")
     ax.legend(bbox_to_anchor=(1.02, 1), loc="upper left")
