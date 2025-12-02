@@ -14,7 +14,7 @@ import os
 import argparse
 import re
 import matplotlib.cm as cm
-
+from matplotlib.lines import Line2D
 
 # ============================================================
 # REGEX TO PARSE STABILITY COLUMNS
@@ -125,7 +125,7 @@ def extract_method_name(col_name):
     return col_name
 
 
-def dynamic_errorbar_style(n_bars, base_capsize=5, base_linewidth=2, base_capthick=2):
+def dynamic_errorbar_style(n_bars, base_capsize=5, base_linewidth=1, base_capthick=1):
     """
     Reduces the size/line width of the error bars based on the total number of bars.
     """
@@ -207,12 +207,38 @@ def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
     fig, ax = plt.subplots(figsize=(args.figure_width/2.54, args.figure_height/2.54))
     n_bars = len(labels)
     style = dynamic_errorbar_style(n_bars)
+    
+    ddg_array = ddg.to_numpy(dtype=float)
+    has_pos = np.any(ddg_array > 0) 
+    has_neg = np.any(ddg_array < 0)
 
     # =============================
     #  VERTICAL MODE
     # =============================
     if args.barh:
-        ax.barh(labels, ddg, xerr=std, color=bar_color, **style)
+        ax.barh(labels, ddg, xerr=std, color=bar_color, edgecolor="black",linewidth=1.0, **style)
+        ax.axvline(0, color="black", linewidth=1.2)
+        if has_pos:
+            ax.axvline(3, color="red", linestyle="--", linewidth=1.0)   # UPDATED: +3 threshold
+        if has_neg:
+            ax.axvline(-3, color="red", linestyle="--", linewidth=1.0)  # UPDATED: -3 threshold
+
+        # ensure the ±3 lines and ticks are visible when they exist  # UPDATED
+        xmin, xmax = ax.get_xlim()
+        if has_pos:
+            xmax = max(xmax, 3)
+        if has_neg:
+            xmin = min(xmin, -3)
+        ax.set_xlim(xmin, xmax)
+
+        xticks = list(ax.get_xticks())
+        if has_pos and 3 not in xticks:
+            xticks.append(3)
+        if has_neg and -3 not in xticks:
+            xticks.append(-3)
+        xticks = sorted(xticks)
+        ax.set_xticks(xticks)
+
         ax.invert_yaxis()
         ax.set_xlabel("ΔΔG (kcal/mol)", fontsize=args.y_title)
         ax.set_ylabel("Mutation", fontsize=args.x_title)
@@ -224,7 +250,7 @@ def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
         )
 
         for tick, c in zip(ax.get_yticklabels(), colors):
-            tick.set_color(c)
+            tick.set_color(c)       
 
         ax.set_title(f"{method} — {ensemble} — chunk {idx}")
         return fig
@@ -232,7 +258,30 @@ def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
     # =============================
     #  HORIZONTAL MODE
     # =============================
-    ax.bar(labels, ddg, yerr=std, color=bar_color, **style)
+    ax.bar(labels, ddg, yerr=std, color=bar_color,edgecolor="black", linewidth=1.0, **style)
+    ax.axhline(0, color="black", linewidth=1.2)
+
+    if has_pos:
+        ax.axhline(3, color="red", linestyle="--", linewidth=1.0)   # UPDATED: +3 threshold
+    if has_neg:
+        ax.axhline(-3, color="red", linestyle="--", linewidth=1.0)  # UPDATED: -3 threshold
+
+    # ensure the ±3 lines and ticks are visible when they exist  # UPDATED
+    ymin, ymax = ax.get_ylim()
+    if has_pos:
+        ymax = max(ymax, 3)
+    if has_neg:
+        ymin = min(ymin, -3)
+    ax.set_ylim(ymin, ymax)
+
+    yticks = list(ax.get_yticks())
+    if has_pos and 3 not in yticks:
+        yticks.append(3)
+    if has_neg and -3 not in yticks:
+        yticks.append(-3)
+    yticks = sorted(yticks)
+    ax.set_yticks(yticks)
+
     ax.set_ylabel("ΔΔG (kcal/mol)", fontsize=args.y_title)
     ax.set_xlabel("Mutation", fontsize=args.x_title)
     ax.set_xticks(range(len(labels)))
@@ -345,13 +394,17 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
         if args.barh:
             ax.barh(x + offsets[i], data[i], xerr=errors[i],
                     color=colors_bars[i], height=bar_width,
-                    label=legend_labels[i], **style)
+                    label=legend_labels[i], edgecolor="black",linewidth=1.0,  **style)
         else:
             ax.bar(x + offsets[i], data[i], yerr=errors[i],
                    color=colors_bars[i], width=bar_width,
-                   label=legend_labels[i], **style)
+                   label=legend_labels[i], edgecolor="black", linewidth=1.0,  **style)
 
     # Labels
+    all_vals = np.concatenate(data) if len(data) > 0 else np.array([0.0])
+    has_pos = np.any(all_vals > 0)
+    has_neg = np.any(all_vals < 0)
+    
     if args.barh:
         ax.set_yticks(x)
         ax.set_yticklabels(
@@ -365,6 +418,27 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
         ax.invert_yaxis()
         for tick, c in zip(ax.get_yticklabels(), colors):
             tick.set_color(c)
+        ax.axvline(0, color="black", linewidth=1.2)
+
+        if has_pos:
+            ax.axvline(3, color="red", linestyle="--", linewidth=1.0)
+        if has_neg:
+            ax.axvline(-3, color="red", linestyle="--", linewidth=1.0) 
+        
+        xmin, xmax = ax.get_xlim()
+        if has_pos:
+            xmax = max(xmax, 3)
+        if has_neg:
+            xmin = min(xmin, -3)
+        ax.set_xlim(xmin, xmax)
+
+        xticks = list(ax.get_xticks())
+        if has_pos and 3 not in xticks:
+            xticks.append(3)
+        if has_neg and -3 not in xticks:
+            xticks.append(-3)
+        xticks = sorted(xticks)
+        ax.set_xticks(xticks)
     else:
         ax.set_xticks(x)
         ax.set_xticklabels(
@@ -379,6 +453,26 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
         ax.set_xlabel("Mutation", fontsize=args.x_title)
         for tick, c in zip(ax.get_xticklabels(), colors):
             tick.set_color(c)
+        ax.axhline(0, color="black", linewidth=1.2)
+
+        if has_pos:
+            ax.axhline(3, color="red", linestyle="--", linewidth=1.0)
+        if has_neg:
+            ax.axhline(-3, color="red", linestyle="--", linewidth=1.0)
+        ymin, ymax = ax.get_ylim()
+        if has_pos:
+            ymax = max(ymax, 3)
+        if has_neg:
+            ymin = min(ymin, -3)
+        ax.set_ylim(ymin, ymax)
+
+        yticks = list(ax.get_yticks())
+        if has_pos and 3 not in yticks:
+            yticks.append(3)
+        if has_neg and -3 not in yticks:
+            yticks.append(-3)
+        yticks = sorted(yticks)
+        ax.set_yticks(yticks)
 
     ax.set_title(f"Grouped methods — ensemble {ensemble} — chunk {idx}")
     ax.legend(bbox_to_anchor=(1.02, 1), loc="upper left")
@@ -465,6 +559,22 @@ def load_and_combine(input_folder, grouped_columns=None):
 def ensure(path):
     if not os.path.exists(path):
         os.makedirs(path)
+
+def sanitize_name(name):
+    """
+    Replace unsafe characters in method/ensemble names
+    so they can be safely used as folder names.
+    """
+    return name.replace(" ", "_")
+
+def grouped_folder_root(args):
+    """
+    Return the folder where grouped plots should go.
+    If --grouped_columns is used → place them in a global folder.
+    Otherwise → place them inside each ensemble.
+    """
+    return "grouped_methods" if args.grouped_columns else None
+
 
 
 # ============================================================
@@ -680,7 +790,7 @@ def main():
                         continue
                     std_col = ensembles[ensemble].get("std", None)
                     # Standard plot
-                    out_dir = os.path.join(output_folder, ensemble, method)
+                    out_dir = os.path.join(output_folder, sanitize_name(ensemble), sanitize_name(method))
                     ensure(out_dir)
                     fig = plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx)
                     outfile = os.path.join(out_dir, f"{method}_{ensemble}_chunk_{idx}.png")
@@ -689,17 +799,21 @@ def main():
                     print("Saved:", outfile)
 
             # Grouped methods plot
-            for ensemble in set([e for m in parsed for e in parsed[m]]):
-                grouped_dir = os.path.join(output_folder, ensemble, "grouped_methods")
+            all_ensembles = sorted({e for m in parsed for e in parsed[m]})
+
+            if args.grouped_columns:
+                if not all_ensembles:
+                    continue
+                ensemble_for_plot = all_ensembles[0]
+                grouped_dir = os.path.join(output_folder, "grouped_methods")
                 ensure(grouped_dir)
                 fig2, legend_labels, data_vals, errors_vals = plot_grouped_methods(
                     chunk, parsed, ensemble, args, idx, specific_cols=args.grouped_columns
                 )
-                outfile2 = os.path.join(grouped_dir, f"grouped_{ensemble}_chunk_{idx}.png")
+                outfile2 = os.path.join(grouped_dir, f"grouped_chunk_{idx}.png")
                 fig2.savefig(outfile2, dpi=300, bbox_inches='tight')
                 plt.close(fig2)
                 print("Saved grouped:", outfile2)
-
                 # Save CSV
                 csv_cols = ["Mutation"]
                 if args.grouped_columns:
@@ -721,9 +835,32 @@ def main():
                             csv_cols.append(ensembles_dict[ensemble]["ddg"])
                             if "std" in ensembles_dict[ensemble]:
                                 csv_cols.append(ensembles_dict[ensemble]["std"])
-                csv_file = os.path.join(grouped_dir, f"grouped_{ensemble}_chunk_{idx}.csv")
-                chunk[csv_cols].to_csv(csv_file, index=False)
+                csv_file = os.path.join(grouped_dir, f"grouped_chunk_{idx}.csv")
+                chunk[csv_cols].to_csv(csv_file, index=False)       
 
+            else:
+                for ensemble in all_ensembles:
+                    grouped_dir = os.path.join(output_folder, sanitize_name(ensemble), "grouped_methods")
+                    ensure(grouped_dir)
+                    fig2, legend_labels, data_vals, errors_vals = plot_grouped_methods(
+                        chunk, parsed, ensemble, args, idx, specific_cols=None
+                    )
+                    outfile2 = os.path.join(grouped_dir, f"grouped_{ensemble}_chunk_{idx}.png")
+                    fig2.savefig(outfile2, dpi=300, bbox_inches='tight')
+                    plt.close(fig2)
+                    print("Saved grouped:", outfile2)
+
+                    # Save CSV per ensemble (as before)
+                    csv_cols = ["Mutation"]
+                    for method_name, ensembles_dict in parsed.items():
+                        if ensemble in ensembles_dict:
+                            csv_cols.append(ensembles_dict[ensemble]["ddg"])
+                            if "std" in ensembles_dict[ensemble]:
+                                csv_cols.append(ensembles_dict[ensemble]["std"])
+
+                    csv_file = os.path.join(grouped_dir, f"grouped_{ensemble}_chunk_{idx}.csv")
+                    chunk[csv_cols].to_csv(csv_file, index=False)
 
 if __name__ == "__main__":
     main()
+
