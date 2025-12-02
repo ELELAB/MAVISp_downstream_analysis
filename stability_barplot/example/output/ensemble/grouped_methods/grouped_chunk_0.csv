@@ -1,0 +1,3 @@
+Mutation,"Stability (FoldX5, kcal/mol) [md_25]","Stability (FoldX5, kcal/mol, st. dev.) [md_25]","Stability (RaSP, kcal/mol) [md_25]","Stability (RaSP, kcal/mol, st. dev.) [md_25]","Stability (Rosetta Cartddg2020, kcal/mol) [md]","Stability (Rosetta Cartddg2020, kcal/mol, st. dev.) [md]"
+S297F,4.36434,3.30107,-0.6614860855376243,0.7922418967243228,1.6731300000000002,1.4327453469708658
+L424V,2.00102,0.43469,1.3127567814486767,0.2722179315340944,2.02857,0.7948260869313906
