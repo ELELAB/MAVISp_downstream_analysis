@@ -165,9 +165,54 @@ def filter_destabilizing(df, ensemble, classification_cols, target_methods):
 # ============================================================
 # PLOTTING FUNCTIONS
 # ============================================================
-def get_palette_color(cmap_name, index):
+# UPDATED: make colors well-separated across the chosen palette
+CATEGORICAL_CMAPS = {
+    "tab10", "tab10_r",
+    "tab20", "tab20_r",
+    "tab20b", "tab20b_r",
+    "tab20c", "tab20c_r",
+    "Set1", "Set1_r",
+    "Set2", "Set2_r",
+    "Set3", "Set3_r",
+    "Pastel1", "Pastel1_r",
+    "Pastel2", "Pastel2_r",
+    "Dark2", "Dark2_r",
+    "Accent", "Accent_r",
+    "Paired", "Paired_r",
+}
+
+def get_palette_color(cmap_name, index, n_slots=4):
+    """
+    Return a visually distinct color from the given colormap.
+
+    - If cmap_name is categorical (tab10, Set1, Dark2, etc.), we use its
+      discrete color list so colors look natural and balanced.
+    - Otherwise, we treat it as a continuous/gradient map and sample
+      *evenly inside* [0.15, 0.85] to avoid extreme ends that are too
+      bright or too dark (less 'puñetazo en el ojo').
+    """
     cmap = cm.get_cmap(cmap_name)
-    return cmap(index)
+
+    # === CASE 1: CATEGORICAL COLORMAP ===  # UPDATED
+    if cmap_name in CATEGORICAL_CMAPS and hasattr(cmap, "colors"):
+        colors = cmap.colors
+        if len(colors) == 0:
+            # fall back to continuous behaviour if something is weird
+            pass
+        else:
+            return colors[index % len(colors)]
+
+    # === CASE 2: CONTINUOUS / GRADIENT COLORMAP ===  # UPDATED
+    # sample within [low, high] to avoid extreme ends of the gradient
+    low, high = 0.15, 0.85
+
+    if n_slots is None or n_slots <= 1:
+        pos = 0.5  # middle of the colormap
+    else:
+        pos = low + (high - low) * (index / float(max(1, n_slots - 1)))
+
+    return cmap(pos)
+
     
 
 def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
@@ -219,9 +264,9 @@ def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
         ax.barh(labels, ddg, xerr=std, color=bar_color, edgecolor="black",linewidth=1.0, **style)
         ax.axvline(0, color="black", linewidth=1.2)
         if has_pos:
-            ax.axvline(3, color="red", linestyle="--", linewidth=1.0)   # UPDATED: +3 threshold
+            ax.axvline(3, color="black", linestyle="--", linewidth=1.0)   # UPDATED: +3 threshold
         if has_neg:
-            ax.axvline(-3, color="red", linestyle="--", linewidth=1.0)  # UPDATED: -3 threshold
+            ax.axvline(-3, color="black", linestyle="--", linewidth=1.0)  # UPDATED: -3 threshold
 
         # ensure the ±3 lines and ticks are visible when they exist  # UPDATED
         xmin, xmax = ax.get_xlim()
@@ -237,6 +282,7 @@ def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
         if has_neg and -3 not in xticks:
             xticks.append(-3)
         xticks = sorted(xticks)
+        xticks = np.arange(np.floor(xmin), np.ceil(xmax) + 1, 1)
         ax.set_xticks(xticks)
 
         ax.invert_yaxis()
@@ -262,9 +308,9 @@ def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
     ax.axhline(0, color="black", linewidth=1.2)
 
     if has_pos:
-        ax.axhline(3, color="red", linestyle="--", linewidth=1.0)   # UPDATED: +3 threshold
+        ax.axhline(3, color="black", linestyle="--", linewidth=1.0)   # UPDATED: +3 threshold
     if has_neg:
-        ax.axhline(-3, color="red", linestyle="--", linewidth=1.0)  # UPDATED: -3 threshold
+        ax.axhline(-3, color="black", linestyle="--", linewidth=1.0)  # UPDATED: -3 threshold
 
     # ensure the ±3 lines and ticks are visible when they exist  # UPDATED
     ymin, ymax = ax.get_ylim()
@@ -280,6 +326,7 @@ def plot_chunk(chunk, method, ensemble, ddg_col, std_col, args, idx):
     if has_neg and -3 not in yticks:
         yticks.append(-3)
     yticks = sorted(yticks)
+    yticks = np.arange(np.floor(ymin), np.ceil(ymax) + 1, 1)
     ax.set_yticks(yticks)
 
     ax.set_ylabel("ΔΔG (kcal/mol)", fontsize=args.y_title)
@@ -322,10 +369,11 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
             if ensemble in ensembles:
                 method_list.append(method)
 
-    # Assign dynamically colors
+    n_methods = len(method_list)
+
     color_map = {
-        method_list[i]: get_palette_color(args.palette, i)
-        for i in range(len(method_list))
+        method_list[i]: get_palette_color(args.palette, i, n_slots=n_methods)  # UPDATED
+        for i in range(n_methods)
     }
 
     # -------------------------------------------
@@ -421,9 +469,9 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
         ax.axvline(0, color="black", linewidth=1.2)
 
         if has_pos:
-            ax.axvline(3, color="red", linestyle="--", linewidth=1.0)
+            ax.axvline(3, color="black", linestyle="--", linewidth=1.0)
         if has_neg:
-            ax.axvline(-3, color="red", linestyle="--", linewidth=1.0) 
+            ax.axvline(-3, color="black", linestyle="--", linewidth=1.0) 
         
         xmin, xmax = ax.get_xlim()
         if has_pos:
@@ -438,6 +486,7 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
         if has_neg and -3 not in xticks:
             xticks.append(-3)
         xticks = sorted(xticks)
+        xticks = np.arange(np.floor(xmin), np.ceil(xmax) + 1, 1)
         ax.set_xticks(xticks)
     else:
         ax.set_xticks(x)
@@ -456,9 +505,9 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
         ax.axhline(0, color="black", linewidth=1.2)
 
         if has_pos:
-            ax.axhline(3, color="red", linestyle="--", linewidth=1.0)
+            ax.axhline(3, color="black", linestyle="--", linewidth=1.0)
         if has_neg:
-            ax.axhline(-3, color="red", linestyle="--", linewidth=1.0)
+            ax.axhline(-3, color="black", linestyle="--", linewidth=1.0)
         ymin, ymax = ax.get_ylim()
         if has_pos:
             ymax = max(ymax, 3)
@@ -472,6 +521,7 @@ def plot_grouped_methods(chunk, parsed, ensemble, args, idx, specific_cols=None)
         if has_neg and -3 not in yticks:
             yticks.append(-3)
         yticks = sorted(yticks)
+        yticks = np.arange(np.floor(ymin), np.ceil(ymax) + 1, 1)
         ax.set_yticks(yticks)
 
     ax.set_title(f"Grouped methods — ensemble {ensemble} — chunk {idx}")
