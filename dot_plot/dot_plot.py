@@ -313,7 +313,9 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
         log.error("ClinVar Interpretation column is missing from the input data.")
         raise TypeError("ClinVar Interpretation column is missing from the input data.")
 
-    f = lambda x: '(Rosetta, FoldX)' in x or \
+    f = lambda x: '(Foldetta from FoldX and Rosetta)' in x or \
+                    '(Foldetta from FoldX and RaSP)' in x or \
+                    '(Rosetta, FoldX)' in x or \
                     '(RaSP, FoldX)' in x or \
                     'Local Int. classification' in x or \
                     'Local Int. With DNA classification' in x or \
@@ -395,6 +397,12 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
     for col in df.columns:
         if 'Experimental data classification' in col and col not in experimental_cols:
             experimental_cols.append(col)
+
+    # Move Foldetta columns to the end of stability_cols
+    foldetta_cols = [col for col in stability_cols if 'foldetta' in col.lower()]
+    other_stability_cols = [col for col in stability_cols if 'foldetta' not in col.lower()]
+
+    stability_cols = foldetta_cols + other_stability_cols
 
     # Combine lists in order
     df = df[stability_cols + efold_col + functional_cols + other_cols + experimental_cols]
@@ -821,7 +829,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
 
     # Colnames ptm and allosigma
 
-    filter_col_stability = [col for col in data if '(Rosetta, FoldX)' in col or '(RaSP, FoldX)' in col]
+    filter_col_stability = [col for col in data if '(Foldetta from FoldX and Rosetta)' in col or '(Foldetta from FoldX and RaSP)' in col or '(Rosetta, FoldX)' in col or '(RaSP, FoldX)' in col]
     filter_col_local = [col for col in data if 'Local Int. classification' in col or 'Local Int. With DNA classification' in col]
     ptm_stab_clmn = [col for col in data if 'PTM effect in stability' in col]
     ptm_reg_clmn = [col for col in data if 'PTM effect in regulation' in col]
