@@ -398,11 +398,47 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
         if 'Experimental data classification' in col and col not in experimental_cols:
             experimental_cols.append(col)
 
-    # Move Foldetta columns to the end of stability_cols
-    foldetta_cols = [col for col in stability_cols if 'foldetta' in col.lower()]
-    other_stability_cols = [col for col in stability_cols if 'foldetta' not in col.lower()]
+    # Get ensemble labels only from stability columns
+    ensembles = []
+    for col in stability_cols:
+        m = re.search(r"\[(.*?)\]", col)
+        ensemble = m.group(1).lower() if m else "simple"
+        if ensemble not in ensembles:
+            ensembles.append(ensemble)
 
-    stability_cols = foldetta_cols + other_stability_cols
+    # Reorder stability columns by ensembly label
+    ordered_stability_cols = []
+
+    for ensemble in ensembles:
+        if ensemble == "simple":
+            ensemble_cols = [
+                col for col in stability_cols
+                if "[" not in col
+            ]
+        else:
+            ensemble_cols = [
+                col for col in stability_cols
+                if f"[{ensemble}]" in col.lower()
+            ]
+
+        foldetta_cols = [
+            col for col in ensemble_cols
+            if 'foldetta' in col.lower()
+        ]
+        other_stability_cols = [
+            col for col in ensemble_cols
+            if 'foldetta' not in col.lower()
+        ]
+
+        ordered_stability_cols += foldetta_cols + other_stability_cols
+
+    stability_cols = ordered_stability_cols
+
+    # Move Foldetta columns to the end of stability_cols
+#    foldetta_cols = [col for col in stability_cols if 'foldetta' in col.lower()]
+#    other_stability_cols = [col for col in stability_cols if 'foldetta' not in col.lower()]
+
+#    stability_cols = foldetta_cols + other_stability_cols
 
     # Combine lists in order
     df = df[stability_cols + efold_col + functional_cols + other_cols + experimental_cols]

@@ -1,0 +1,1 @@
+python dot_plot.py -i testing_foldetta/TP53-simple_mode.csv
