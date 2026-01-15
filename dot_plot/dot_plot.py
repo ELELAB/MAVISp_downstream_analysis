@@ -406,7 +406,7 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
         if ensemble not in ensembles:
             ensembles.append(ensemble)
 
-    # Reorder stability columns by ensembly label
+    # Reorder stability columns by ensemble label, Foldetta last
     ordered_stability_cols = []
 
     for ensemble in ensembles:
@@ -433,12 +433,6 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
         ordered_stability_cols += foldetta_cols + other_stability_cols
 
     stability_cols = ordered_stability_cols
-
-    # Move Foldetta columns to the end of stability_cols
-#    foldetta_cols = [col for col in stability_cols if 'foldetta' in col.lower()]
-#    other_stability_cols = [col for col in stability_cols if 'foldetta' not in col.lower()]
-
-#    stability_cols = foldetta_cols + other_stability_cols
 
     # Combine lists in order
     df = df[stability_cols + efold_col + functional_cols + other_cols + experimental_cols]
