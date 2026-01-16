@@ -313,7 +313,9 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
         log.error("ClinVar Interpretation column is missing from the input data.")
         raise TypeError("ClinVar Interpretation column is missing from the input data.")
 
-    f = lambda x: '(Rosetta, FoldX)' in x or \
+    f = lambda x: '(Foldetta from FoldX and Rosetta)' in x or \
+                    '(Foldetta from FoldX and RaSP)' in x or \
+                    '(Rosetta, FoldX)' in x or \
                     '(RaSP, FoldX)' in x or \
                     'Local Int. classification' in x or \
                     'Local Int. With DNA classification' in x or \
@@ -395,6 +397,42 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
     for col in df.columns:
         if 'Experimental data classification' in col and col not in experimental_cols:
             experimental_cols.append(col)
+
+    # Get ensemble labels only from stability columns
+    ensembles = []
+    for col in stability_cols:
+        m = re.search(r"\[(.*?)\]", col)
+        ensemble = m.group(1).lower() if m else "simple"
+        if ensemble not in ensembles:
+            ensembles.append(ensemble)
+
+    # Reorder stability columns by ensemble label, Foldetta last
+    ordered_stability_cols = []
+
+    for ensemble in ensembles:
+        if ensemble == "simple":
+            ensemble_cols = [
+                col for col in stability_cols
+                if "[" not in col
+            ]
+        else:
+            ensemble_cols = [
+                col for col in stability_cols
+                if f"[{ensemble}]" in col.lower()
+            ]
+
+        foldetta_cols = [
+            col for col in ensemble_cols
+            if 'foldetta' in col.lower()
+        ]
+        other_stability_cols = [
+            col for col in ensemble_cols
+            if 'foldetta' not in col.lower()
+        ]
+
+        ordered_stability_cols += foldetta_cols + other_stability_cols
+
+    stability_cols = ordered_stability_cols
 
     # Combine lists in order
     df = df[stability_cols + efold_col + functional_cols + other_cols + experimental_cols]
@@ -821,7 +859,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
 
     # Colnames ptm and allosigma
 
-    filter_col_stability = [col for col in data if '(Rosetta, FoldX)' in col or '(RaSP, FoldX)' in col]
+    filter_col_stability = [col for col in data if '(Foldetta from FoldX and Rosetta)' in col or '(Foldetta from FoldX and RaSP)' in col or '(Rosetta, FoldX)' in col or '(RaSP, FoldX)' in col]
     filter_col_local = [col for col in data if 'Local Int. classification' in col or 'Local Int. With DNA classification' in col]
     ptm_stab_clmn = [col for col in data if 'PTM effect in stability' in col]
     ptm_reg_clmn = [col for col in data if 'PTM effect in regulation' in col]
