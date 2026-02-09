@@ -1,0 +1,157 @@
+#Oncogenicity	Internal_dictionary
+Benign	Benign
+Likely benign	Likely benign
+Uncertain significance	Uncertain
+Likely oncogenic	Likely oncogenic
+Oncogenic	Oncogenic
+nan	Uncertain
+Benign,Benign	Benign
+Benign,Likely benign	Likely benign
+Benign,Uncertain significance	Conflicting interpretation
+Benign,Likely oncogenic	Conflicting interpretation
+Benign,Oncogenic	Conflicting interpretation
+Likely benign,Benign	Likely benign
+Likely benign,Likely benign	Likely benign
+Likely benign,Uncertain significance	Conflicting interpretation
+Likely benign,Likely oncogenic	Conflicting interpretation
+Likely benign,Oncogenic	Conflicting interpretation
+Uncertain significance,Benign	Conflicting interpretation
+Uncertain significance,Likely benign	Conflicting interpretation
+Uncertain significance,Uncertain significance	Uncertain
+Uncertain significance,Likely oncogenic	Conflicting interpretation
+Uncertain significance,Oncogenic	Conflicting interpretation
+Likely oncogenic,Benign	Conflicting interpretation
+Likely oncogenic,Likely benign	Conflicting interpretation
+Likely oncogenic,Uncertain significance	Conflicting interpretation
+Likely oncogenic,Likely oncogenic	Likely oncogenic
+Likely oncogenic,Oncogenic	Likely oncogenic
+Oncogenic,Benign	Conflicting interpretation
+Oncogenic,Likely benign	Conflicting interpretation
+Oncogenic,Uncertain significance	Conflicting interpretation
+Oncogenic,Likely oncogenic	Likely oncogenic
+Oncogenic,Oncogenic	Oncogenic
+Benign,Benign,Benign	Benign
+Benign,Benign,Likely benign	Likely benign
+Benign,Benign,Uncertain significance	Conflicting interpretation
+Benign,Benign,Likely oncogenic	Conflicting interpretation
+Benign,Benign,Oncogenic	Conflicting interpretation
+Benign,Likely benign,Benign	Likely benign
+Benign,Likely benign,Likely benign	Likely benign
+Benign,Likely benign,Uncertain significance	Conflicting interpretation
+Benign,Likely benign,Likely oncogenic	Conflicting interpretation
+Benign,Likely benign,Oncogenic	Conflicting interpretation
+Benign,Uncertain significance,Benign	Conflicting interpretation
+Benign,Uncertain significance,Likely benign	Conflicting interpretation
+Benign,Uncertain significance,Uncertain significance	Conflicting interpretation
+Benign,Uncertain significance,Likely oncogenic	Conflicting interpretation
+Benign,Uncertain significance,Oncogenic	Conflicting interpretation
+Benign,Likely oncogenic,Benign	Conflicting interpretation
+Benign,Likely oncogenic,Likely benign	Conflicting interpretation
+Benign,Likely oncogenic,Uncertain significance	Conflicting interpretation
+Benign,Likely oncogenic,Likely oncogenic	Conflicting interpretation
+Benign,Likely oncogenic,Oncogenic	Conflicting interpretation
+Benign,Oncogenic,Benign	Conflicting interpretation
+Benign,Oncogenic,Likely benign	Conflicting interpretation
+Benign,Oncogenic,Uncertain significance	Conflicting interpretation
+Benign,Oncogenic,Likely oncogenic	Conflicting interpretation
+Benign,Oncogenic,Oncogenic	Conflicting interpretation
+Likely benign,Benign,Benign	Likely benign
+Likely benign,Benign,Likely benign	Likely benign
+Likely benign,Benign,Uncertain significance	Conflicting interpretation
+Likely benign,Benign,Likely oncogenic	Conflicting interpretation
+Likely benign,Benign,Oncogenic	Conflicting interpretation
+Likely benign,Likely benign,Benign	Likely benign
+Likely benign,Likely benign,Likely benign	Likely benign
+Likely benign,Likely benign,Uncertain significance	Conflicting interpretation
+Likely benign,Likely benign,Likely oncogenic	Conflicting interpretation
+Likely benign,Likely benign,Oncogenic	Conflicting interpretation
+Likely benign,Uncertain significance,Benign	Conflicting interpretation
+Likely benign,Uncertain significance,Likely benign	Conflicting interpretation
+Likely benign,Uncertain significance,Uncertain significance	Conflicting interpretation
+Likely benign,Uncertain significance,Likely oncogenic	Conflicting interpretation
+Likely benign,Uncertain significance,Oncogenic	Conflicting interpretation
+Likely benign,Likely oncogenic,Benign	Conflicting interpretation
+Likely benign,Likely oncogenic,Likely benign	Conflicting interpretation
+Likely benign,Likely oncogenic,Uncertain significance	Conflicting interpretation
+Likely benign,Likely oncogenic,Likely oncogenic	Conflicting interpretation
+Likely benign,Likely oncogenic,Oncogenic	Conflicting interpretation
+Likely benign,Oncogenic,Benign	Conflicting interpretation
+Likely benign,Oncogenic,Likely benign	Conflicting interpretation
+Likely benign,Oncogenic,Uncertain significance	Conflicting interpretation
+Likely benign,Oncogenic,Likely oncogenic	Conflicting interpretation
+Likely benign,Oncogenic,Oncogenic	Conflicting interpretation
+Uncertain significance,Benign,Benign	Conflicting interpretation
+Uncertain significance,Benign,Likely benign	Conflicting interpretation
+Uncertain significance,Benign,Uncertain significance	Conflicting interpretation
+Uncertain significance,Benign,Likely oncogenic	Conflicting interpretation
+Uncertain significance,Benign,Oncogenic	Conflicting interpretation
+Uncertain significance,Likely benign,Benign	Conflicting interpretation
+Uncertain significance,Likely benign,Likely benign	Conflicting interpretation
+Uncertain significance,Likely benign,Uncertain significance	Conflicting interpretation
+Uncertain significance,Likely benign,Likely oncogenic	Conflicting interpretation
+Uncertain significance,Likely benign,Oncogenic	Conflicting interpretation
+Uncertain significance,Uncertain significance,Benign	Conflicting interpretation
+Uncertain significance,Uncertain significance,Likely benign	Conflicting interpretation
+Uncertain significance,Uncertain significance,Uncertain significance	Uncertain
+Uncertain significance,Uncertain significance,Likely oncogenic	Conflicting interpretation
+Uncertain significance,Uncertain significance,Oncogenic	Conflicting interpretation
+Uncertain significance,Likely oncogenic,Benign	Conflicting interpretation
+Uncertain significance,Likely oncogenic,Likely benign	Conflicting interpretation
+Uncertain significance,Likely oncogenic,Uncertain significance	Conflicting interpretation
+Uncertain significance,Likely oncogenic,Likely oncogenic	Conflicting interpretation
+Uncertain significance,Likely oncogenic,Oncogenic	Conflicting interpretation
+Uncertain significance,Oncogenic,Benign	Conflicting interpretation
+Uncertain significance,Oncogenic,Likely benign	Conflicting interpretation
+Uncertain significance,Oncogenic,Uncertain significance	Conflicting interpretation
+Uncertain significance,Oncogenic,Likely oncogenic	Conflicting interpretation
+Uncertain significance,Oncogenic,Oncogenic	Conflicting interpretation
+Likely oncogenic,Benign,Benign	Conflicting interpretation
+Likely oncogenic,Benign,Likely benign	Conflicting interpretation
+Likely oncogenic,Benign,Uncertain significance	Conflicting interpretation
+Likely oncogenic,Benign,Likely oncogenic	Conflicting interpretation
+Likely oncogenic,Benign,Oncogenic	Conflicting interpretation
+Likely oncogenic,Likely benign,Benign	Conflicting interpretation
+Likely oncogenic,Likely benign,Likely benign	Conflicting interpretation
+Likely oncogenic,Likely benign,Uncertain significance	Conflicting interpretation
+Likely oncogenic,Likely benign,Likely oncogenic	Conflicting interpretation
+Likely oncogenic,Likely benign,Oncogenic	Conflicting interpretation
+Likely oncogenic,Uncertain significance,Benign	Conflicting interpretation
+Likely oncogenic,Uncertain significance,Likely benign	Conflicting interpretation
+Likely oncogenic,Uncertain significance,Uncertain significance	Conflicting interpretation
+Likely oncogenic,Uncertain significance,Likely oncogenic	Conflicting interpretation
+Likely oncogenic,Uncertain significance,Oncogenic	Conflicting interpretation
+Likely oncogenic,Likely oncogenic,Benign	Conflicting interpretation
+Likely oncogenic,Likely oncogenic,Likely benign	Conflicting interpretation
+Likely oncogenic,Likely oncogenic,Uncertain significance	Conflicting interpretation
+Likely oncogenic,Likely oncogenic,Likely oncogenic	Likely oncogenic
+Likely oncogenic,Likely oncogenic,Oncogenic	Likely oncogenic
+Likely oncogenic,Oncogenic,Benign	Conflicting interpretation
+Likely oncogenic,Oncogenic,Likely benign	Conflicting interpretation
+Likely oncogenic,Oncogenic,Uncertain significance	Conflicting interpretation
+Likely oncogenic,Oncogenic,Likely oncogenic	Likely oncogenic
+Likely oncogenic,Oncogenic,Oncogenic	Likely oncogenic
+Oncogenic,Benign,Benign	Conflicting interpretation
+Oncogenic,Benign,Likely benign	Conflicting interpretation
+Oncogenic,Benign,Uncertain significance	Conflicting interpretation
+Oncogenic,Benign,Likely oncogenic	Conflicting interpretation
+Oncogenic,Benign,Oncogenic	Conflicting interpretation
+Oncogenic,Likely benign,Benign	Conflicting interpretation
+Oncogenic,Likely benign,Likely benign	Conflicting interpretation
+Oncogenic,Likely benign,Uncertain significance	Conflicting interpretation
+Oncogenic,Likely benign,Likely oncogenic	Conflicting interpretation
+Oncogenic,Likely benign,Oncogenic	Conflicting interpretation
+Oncogenic,Uncertain significance,Benign	Conflicting interpretation
+Oncogenic,Uncertain significance,Likely benign	Conflicting interpretation
+Oncogenic,Uncertain significance,Uncertain significance	Conflicting interpretation
+Oncogenic,Uncertain significance,Likely oncogenic	Conflicting interpretation
+Oncogenic,Uncertain significance,Oncogenic	Conflicting interpretation
+Oncogenic,Likely oncogenic,Benign	Conflicting interpretation
+Oncogenic,Likely oncogenic,Likely benign	Conflicting interpretation
+Oncogenic,Likely oncogenic,Uncertain significance	Conflicting interpretation
+Oncogenic,Likely oncogenic,Likely oncogenic	Likely oncogenic
+Oncogenic,Likely oncogenic,Oncogenic	Likely oncogenic
+Oncogenic,Oncogenic,Benign	Conflicting interpretation
+Oncogenic,Oncogenic,Likely benign	Conflicting interpretation
+Oncogenic,Oncogenic,Uncertain significance	Conflicting interpretation
+Oncogenic,Oncogenic,Likely oncogenic	Likely oncogenic
+Oncogenic,Oncogenic,Oncogenic	Oncogenic

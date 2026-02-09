@@ -1,0 +1,92 @@
+Mutation,"Stability classification, alphafold, (Rosetta, FoldX)","Stability classification, alphafold, (RaSP, FoldX)","Stability classification, alphafold, (Foldetta from FoldX and Rosetta)","Stability classification, alphafold, (Foldetta from FoldX and RaSP)",Local Int. classification (TP53BP1_AFmulti),Local Int. With DNA classification (3KZ8b),Local Int. classification (TP53_2OCJbd),PTM effect in regulation,PTM effect in stability,PTM effect in function,AlloSigMA 2 predicted consequence - pockets and interfaces,Functional sites (cofactor),Loss of disulfide bridge,Predicted de-novo disulfide bridge,MAVISp Effects
+R110L,neutral,neutral,neutral,neutral,uncertain,uncertain,uncertain,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+R110P,destabilizing,destabilizing,destabilizing,destabilizing,uncertain,uncertain,uncertain,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,"Stability, Long Range"
+T125M,uncertain,uncertain,destabilizing,uncertain,,,,uncertain,,,neutral,neutral,neutral,neutral,Stability
+T125R,destabilizing,uncertain,destabilizing,destabilizing,,,,uncertain,,,neutral,neutral,neutral,neutral,Stability
+Y126C,destabilizing,destabilizing,destabilizing,destabilizing,,,,uncertain,damaging,uncertain,mixed_effects,neutral,neutral,neutral,"Stability, PTM, Long Range"
+S127F,uncertain,uncertain,uncertain,uncertain,,,,uncertain,,,stabilizing,neutral,neutral,neutral,Long Range
+S127P,destabilizing,destabilizing,destabilizing,destabilizing,,,,uncertain,,,stabilizing,neutral,neutral,neutral,"Stability, Long Range"
+N131Y,neutral,neutral,neutral,neutral,uncertain,uncertain,uncertain,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+M133K,uncertain,uncertain,uncertain,neutral,,,,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+F134L,uncertain,uncertain,neutral,uncertain,neutral,neutral,,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,Long Range
+A138V,uncertain,neutral,uncertain,neutral,neutral,uncertain,neutral,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+C141Y,uncertain,uncertain,destabilizing,destabilizing,,,,neutral,neutral,neutral,neutral,neutral,damaging,neutral,"Stability, Disulfide bridges"
+L145P,destabilizing,destabilizing,destabilizing,destabilizing,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+P151H,destabilizing,uncertain,destabilizing,destabilizing,,,,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,"Stability, Long Range"
+T155P,uncertain,uncertain,destabilizing,destabilizing,,,,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,Stability
+V157F,destabilizing,uncertain,destabilizing,destabilizing,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R158H,uncertain,uncertain,destabilizing,destabilizing,,,,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,"Stability, Long Range"
+R158P,uncertain,destabilizing,destabilizing,destabilizing,,,,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,"Stability, Long Range"
+A159P,uncertain,uncertain,destabilizing,destabilizing,,,,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,"Stability, Long Range"
+A159V,neutral,neutral,neutral,neutral,,,,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+Y163C,destabilizing,destabilizing,destabilizing,destabilizing,neutral,,,uncertain,,,mixed_effects,neutral,neutral,neutral,"Stability, Long Range"
+V172F,destabilizing,uncertain,destabilizing,uncertain,neutral,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+V173A,uncertain,uncertain,uncertain,uncertain,neutral,,,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+V173E,destabilizing,destabilizing,destabilizing,destabilizing,neutral,,,neutral,neutral,neutral,uncertain,neutral,neutral,neutral,Stability
+V173M,uncertain,uncertain,destabilizing,uncertain,neutral,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R175G,uncertain,uncertain,destabilizing,uncertain,neutral,,neutral,neutral,neutral,neutral,mixed_effects,damaging,neutral,neutral,"Stability, Long Range, Functional"
+R175H,uncertain,uncertain,destabilizing,destabilizing,neutral,,neutral,neutral,neutral,neutral,mixed_effects,damaging,neutral,neutral,"Stability, Long Range, Functional"
+C176F,uncertain,uncertain,destabilizing,destabilizing,uncertain,,neutral,neutral,neutral,neutral,stabilizing,damaging,neutral,neutral,"Stability, Long Range, Functional"
+C176S,uncertain,uncertain,uncertain,destabilizing,neutral,,neutral,neutral,neutral,neutral,destabilizing,damaging,neutral,neutral,"Stability, Long Range, Functional"
+C176W,destabilizing,uncertain,destabilizing,destabilizing,uncertain,,uncertain,neutral,neutral,neutral,stabilizing,damaging,neutral,neutral,"Stability, Long Range, Functional"
+H179L,uncertain,uncertain,destabilizing,destabilizing,neutral,,neutral,neutral,neutral,neutral,stabilizing,damaging,neutral,neutral,"Stability, Long Range, Functional"
+H179R,uncertain,uncertain,destabilizing,destabilizing,neutral,,neutral,neutral,neutral,neutral,stabilizing,damaging,neutral,neutral,"Stability, Long Range, Functional"
+H179Y,uncertain,uncertain,destabilizing,destabilizing,neutral,,neutral,neutral,neutral,neutral,stabilizing,damaging,neutral,neutral,"Stability, Long Range, Functional"
+R181C,neutral,neutral,neutral,neutral,uncertain,uncertain,uncertain,neutral,neutral,neutral,stabilizing,damaging,neutral,neutral,"Long Range, Functional"
+H193L,neutral,neutral,neutral,neutral,,,,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+L194F,uncertain,uncertain,neutral,neutral,,,,neutral,neutral,neutral,neutral,damaging,neutral,neutral,Functional
+I195N,destabilizing,destabilizing,destabilizing,destabilizing,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R196P,destabilizing,destabilizing,destabilizing,destabilizing,,,,neutral,neutral,neutral,mixed_effects,neutral,neutral,neutral,"Stability, Long Range"
+V197M,uncertain,uncertain,neutral,neutral,,,,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+Y205H,uncertain,uncertain,uncertain,uncertain,,,,uncertain,,,mixed_effects,neutral,neutral,neutral,Long Range
+Y205S,destabilizing,destabilizing,destabilizing,destabilizing,,,,uncertain,,,mixed_effects,neutral,neutral,neutral,"Stability, Long Range"
+R213P,destabilizing,destabilizing,destabilizing,destabilizing,,,,neutral,neutral,neutral,mixed_effects,neutral,neutral,neutral,"Stability, Long Range"
+R213Q,neutral,uncertain,neutral,neutral,,,,neutral,neutral,neutral,mixed_effects,neutral,neutral,neutral,Long Range
+H214R,uncertain,uncertain,uncertain,neutral,,,,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+V216G,destabilizing,destabilizing,destabilizing,destabilizing,,,,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,"Stability, Long Range"
+V218E,uncertain,uncertain,destabilizing,uncertain,,,,neutral,neutral,neutral,uncertain,neutral,neutral,neutral,Stability
+Y220C,destabilizing,destabilizing,destabilizing,destabilizing,,,,uncertain,neutral,uncertain,stabilizing,neutral,neutral,neutral,"Stability, Long Range"
+Y220N,destabilizing,destabilizing,destabilizing,destabilizing,,,,uncertain,neutral,uncertain,stabilizing,neutral,neutral,neutral,"Stability, Long Range"
+I232F,neutral,neutral,neutral,neutral,,,,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+Y234C,destabilizing,destabilizing,destabilizing,destabilizing,,,,uncertain,,,mixed_effects,neutral,neutral,neutral,"Stability, Long Range"
+Y234H,uncertain,uncertain,uncertain,uncertain,,,,uncertain,,,mixed_effects,neutral,neutral,neutral,Long Range
+Y236C,destabilizing,destabilizing,destabilizing,destabilizing,neutral,,neutral,uncertain,,,destabilizing,neutral,neutral,neutral,"Stability, Long Range"
+M237K,neutral,neutral,neutral,neutral,neutral,,neutral,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+M237V,uncertain,uncertain,neutral,uncertain,neutral,,neutral,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,Long Range
+C238Y,destabilizing,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,stabilizing,damaging,damaging,neutral,"Stability, Long Range, Functional, Disulfide bridges"
+S241P,uncertain,neutral,neutral,neutral,uncertain,destabilizing,neutral,uncertain,,,neutral,neutral,neutral,neutral,Local Int.
+C242F,uncertain,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,damaging,neutral,"Stability, Functional, Disulfide bridges"
+G244C,uncertain,uncertain,uncertain,uncertain,destabilizing,neutral,neutral,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,"Local Int., Long Range"
+G244D,uncertain,uncertain,neutral,neutral,destabilizing,neutral,neutral,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,"Local Int., Long Range"
+G244S,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+G245A,destabilizing,uncertain,destabilizing,uncertain,neutral,,neutral,neutral,neutral,neutral,stabilizing,damaging,neutral,neutral,"Stability, Long Range, Functional"
+G245C,destabilizing,uncertain,destabilizing,destabilizing,neutral,,neutral,neutral,neutral,neutral,stabilizing,damaging,neutral,damaging,"Stability, Long Range, Functional, Disulfide bridges"
+G245S,uncertain,uncertain,destabilizing,destabilizing,neutral,,neutral,neutral,neutral,neutral,stabilizing,damaging,neutral,neutral,"Stability, Long Range, Functional"
+G245V,destabilizing,uncertain,destabilizing,destabilizing,neutral,,neutral,neutral,neutral,neutral,stabilizing,damaging,neutral,neutral,"Stability, Long Range, Functional"
+M246I,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,damaging,neutral,neutral,Functional
+M246V,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,mixed_effects,damaging,neutral,neutral,"Long Range, Functional"
+R248G,neutral,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,"Local Int., Long Range"
+R248L,neutral,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,"Local Int., Long Range"
+R248Q,neutral,neutral,neutral,neutral,uncertain,neutral,neutral,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,Long Range
+R249M,neutral,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,neutral,neutral,mixed_effects,neutral,neutral,neutral,Long Range
+R249S,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,neutral,uncertain,neutral,neutral,mixed_effects,neutral,neutral,neutral,Long Range
+I255F,uncertain,uncertain,destabilizing,uncertain,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I255S,destabilizing,destabilizing,destabilizing,destabilizing,,,,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,"Stability, Long Range"
+G266E,destabilizing,uncertain,destabilizing,destabilizing,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G266R,destabilizing,uncertain,destabilizing,destabilizing,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R267W,uncertain,uncertain,destabilizing,destabilizing,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F270S,destabilizing,destabilizing,destabilizing,destabilizing,,,,neutral,neutral,neutral,mixed_effects,neutral,neutral,neutral,"Stability, Long Range"
+R273C,neutral,neutral,neutral,neutral,uncertain,neutral,uncertain,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,Long Range
+R273G,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,uncertain,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,Long Range
+R273H,neutral,neutral,neutral,neutral,uncertain,destabilizing,uncertain,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,"Local Int., Long Range"
+R273L,neutral,neutral,neutral,neutral,uncertain,neutral,uncertain,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,Long Range
+V274F,destabilizing,uncertain,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,neutral,neutral,"Stability, Functional"
+C275F,uncertain,neutral,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,Long Range
+C275Y,neutral,neutral,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,neutral,stabilizing,neutral,neutral,neutral,"Local Int., Long Range"
+C277F,neutral,neutral,neutral,neutral,neutral,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+C277Y,neutral,neutral,neutral,neutral,neutral,destabilizing,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+P278H,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+P278V,destabilizing,uncertain,destabilizing,uncertain,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+D281Y,neutral,neutral,neutral,neutral,neutral,destabilizing,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+R282W,uncertain,uncertain,destabilizing,destabilizing,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+T284P,uncertain,uncertain,destabilizing,destabilizing,neutral,neutral,uncertain,damaging,neutral,potentially_damaging,uncertain,neutral,neutral,neutral,"Stability, PTM"
