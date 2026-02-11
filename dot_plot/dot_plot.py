@@ -166,7 +166,7 @@ def color_yticklabels(labels):
                 'Functional sites (cofactor)',
                 'Functional sites (active site)',
                 'PTM',
-                'AlloSigMA 2']
+                'AlloSigMA']
     # Iterate over the labels and append to the color list
     # the color based on the effect
     for l in labels:
