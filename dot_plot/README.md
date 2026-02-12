@@ -1,5 +1,5 @@
 # MAVISp dot plot
-*Last updated*: 09/02/26
+*Last updated*: 12/02/26
 
 ## Description
 
@@ -20,7 +20,7 @@ It produces:
 ## Inputs 
 
 - MAVISp CSV (the full aggregated table; required)
-- `dictionary.csv|oncodict.csv|clinicaldict.csv` (ClinVar annotation dictionary; only required when `-pltC/--plot_Clinvar` or `-colC/--color_Clinvar` is used. The selection of dictionary depends on the desired type of ClinVar interpretation: germline, clinical impact or oncogenicity)
+- `dictionary.csv` (ClinVar annotation dictionary; only required when `-pltC/--plot_Clinvar` or `-colC/--color_Clinvar` is used)
 
 ## Usage
 
@@ -30,17 +30,16 @@ python dot_plot.py [-h] -i INPUT [-v CLINVAR_DICTIONARY] [-o OUTPUT]
                    [-R REVEL_THRESHOLD] [-D DEMASK_THRESHOLD]
                    [-G GEMME_THRESHOLD] [-x X_LIM] [-f FIGSIZE FIGSIZE]
                    [-pltR] [-pltD]
-                   [-pltC {all,uncertain,benign,likely_benign,pathogenic,likely_pathogenic,conflicting,oncogenic,likely_oncogenic,potential,strong,unknown}
-                          [{all,uncertain,benign,likely_benign,pathogenic,likely_pathogenic,conflicting,oncogenic,likely_oncogenic,potential,strong,unknown} ...]]
+                   [-pltC {all,uncertain,benign,likely_benign,pathogenic,likely_pathogenic,conflicting}
+                          [{all,uncertain,benign,likely_benign,pathogenic,likely_pathogenic,conflicting} ...]]
                    [-colC]
-		    -cct {aggregated,germline,oncogenicity,clinical_impact}
                    [-pltS {saturation,cosmic,cbioportal} [{saturation,cosmic,cbioportal} ...]]
                    [-vep {none,alphamissense,revel,gemme,eve}]
                    [-lgof]
 ```
 
 - `-i/--input`: MAVISp CSV to process (required).
-- `-v/--clinvar-dictionary`: path to `dictionary.csv|oncodict.csv|clinicaldict.csv`. Only needed when plotting or colouring ClinVar categories (default: `dictionary.csv`).
+- `-v/--clinvar-dictionary`: path to `dictionary.csv`. Only needed when plotting or colouring ClinVar categories (default: `dictionary.csv`).
 - `-o/--output`: base name for dot-plot files (default: `dot_plot`).
 - `-m/--mutations`: comma-separated mutations to display (e.g. `A4G,F55K`). Mutually exclusive with `-r`.
 - `-r/--residues`: comma-separated residue positions to display (e.g. `4,55`). Mutually exclusive with `-m`.
@@ -51,12 +50,33 @@ python dot_plot.py [-h] -i INPUT [-v CLINVAR_DICTIONARY] [-o OUTPUT]
 - `-f/--figsize`: figure width and height (default: `14 5`). The default works well for ~50 mutations and 7–8 labels.
 - `-pltR/--plot_Revel`: add REVEL classifications to the dot plot.
 - `-pltD/--plot_Demask`: add DeMaSk predicted consequence (LoF/GoF) for mutations meeting the `-D` threshold.
-- `-pltC/--plot_Clinvar`: filter to specific ClinVar categories (e.g. `pathogenic uncertain`). Requires the corresponding clinvar dictionary.
-- `-colC/--color_Clinvar`: colour the x-axis labels according to ClinVar categories. Requires the corresponding clinvar dictionary.
-- `-cct/--clinvar_class_type`: ClinVar classification type to use for plotting/coloring. Choices: aggregated, germline, oncogenicity, clinical_impact. (default: aggregated)
+- `-pltC/--plot_Clinvar`: filter to specific ClinVar categories (e.g. `pathogenic uncertain`). Requires `dictionary.csv`.
+- `-colC/--color_Clinvar`: colour the x-axis labels according to ClinVar categories. Requires `dictionary.csv`.
 - `-pltS/--plot_Source`: filter mutations by source (`saturation`, `cosmic`, `cbioportal`). Multiple sources can be provided; filters are additive with `-pltC`.
 - `-vep/--vep-filter`: restrict `mechanistic_indicators_out.csv` to mutations predicted as pathogenic by the selected VEP. Choices are `alphamissense`, `revel`, `gemme`, `eve`, or `none` (default). Supplying `-vep` without an argument defaults to `alphamissense`.
 - `-lgof/--vep-filter-lgof`: when set, only keep entries classified as DeMaSk LoF or GoF in `mechanistic_indicators_out.csv`. By default, this filtering is not performed.
+
+## MAVISp dot plot v2:  
+
+`dot_plot_v2.py` extends `dot_plot.py` to support visualization of alternative ClinVar classifications.
+
+In addition to all existing `dot_plot.py` options, the following differences apply:
+
+- New required option:
+
+`-cct / --clinvar_class_type` {aggregated,germline,oncogenicity,clinical_impact}: Selects which ClinVar interpretation column is used. Default: aggregated (old-entry compatible).
+
+- When using `-pltC` or `-colC`, the correct dictionary must be supplied via `-v`:
+   - aggregated or germline → dictionary.csv
+   - oncogenicity → somatic oncogenicity dictionary
+   - clinical_impact → somatic clinical impact dictionary
+
+- Compared to `dot_plot.py`, the following additional categories are supported using the `-pltC` option:
+   - oncogenic
+   - likely_oncogenic
+   - strong
+   - potential
+   - unknown
 
 ## Example
 
