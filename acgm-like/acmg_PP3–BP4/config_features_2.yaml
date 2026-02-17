@@ -1,0 +1,91 @@
+###############################################################################
+# MAVISp → ACMG/ClinGen PP3-BP4 Feature Category Mapping
+#
+# This file ONLY defines:
+#   • Categories (conservation, ML predictors, stability, interactions)
+#   • Which MAVISp columns belong to which category
+#
+# NO THRESHOLDS.
+# Thresholds will later be derived in a separate calibration step and stored
+# in calibrated_thresholds.yaml
+###############################################################################
+
+categories:
+
+  ###########################################################################
+  # Category 1 — Conservation / Evolutionary Constraint
+  ###########################################################################
+  conservation:
+    columns:
+      - GEMME Score
+      - DeMaSk delta fitness
+
+  ###########################################################################
+  # Category 2 — Machine-Learning Pathogenicity Predictors
+  ###########################################################################
+  ml_predictors:
+    columns:
+      - REVEL score
+      - AlphaMissense pathogenicity score
+      - EVE score
+
+  ###########################################################################
+  # Category 3 — Structural / Stability / Structural Context
+  ###########################################################################
+  structural:
+    columns:
+      - EFoldMine score
+      - Stability (RaSP, kcal/mol) [md_25]
+      - Stability (FoldX5, kcal/mol) [md_25]  
+      - Relative Side Chain Solvent Accessibility in wild-type (average) [md]
+      - Change in stability with PTM (FoldX5, kcal/mol) [md] 
+
+  ###########################################################################
+  # Category 4 — Interaction / Functional Impact (includes long-range)
+  ###########################################################################
+  interaction_functional:
+    columns:
+      # Direct local interaction ΔΔG (optionally raw columns)
+      # (These may differ in column names between POLE and POLD1; customize as needed)
+      - Local Int. (Binding with PCNA_9B8T_AD, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with CDC45_7PLO, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with MCM5_7PLO, heterodimer, FoldX5, kcal/mol)  [md]
+      - Local Int. (Binding with PCNA_9B8T_AB, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with MCM2_7PLO, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with POLE2_7PLO, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with PCNA_9B8T_AC, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with PCNA_9B8T_AD, heterodimer, Rosetta Talaris 2014, kcal/mol) [md]
+      - Local Int. (Binding with CDC45_7PLO, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] 
+      - Local Int. (Binding with MCM5_7PLO, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] 
+      - Local Int. (Binding with PCNA_9B8T_AB, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] 
+      - Local Int. (Binding with MCM2_7PLO, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] 
+      - Local Int. (Binding with POLE2_7PLO, heterodimer, Rosetta Talaris 2014, kcal/mol) [md]
+      - Local Int. (Binding with PCNA_9B8T_AC, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] 
+      - Local Int. With DNA (9F6I_27-1175_retromut_arrest, heterodimer, FoldX5, kcal/mol) [md] 
+      - Local Int. With DNA (9B8T_24-1198_retromut_closed, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. With DNA (9F6K_27-1175_frayed, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. With DNA (9F6L_27-1175_mismatch_excision, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. With DNA (9B8S_27-1198_retromut_open, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with LASP1_AFmulti_Huri, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with PCNA_AFmulti, heterodimer, FoldX5, kcal/mol) [md] 
+      - Local Int. (Binding with POLD4_AFmulti, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with POLD2_6TNY, heterodimer, FoldX5, kcal/mol) [md]
+      - Local Int. (Binding with LASP1_AFmulti_Huri, heterodimer, Rosetta Talaris 2014, kcal/mol) [md]
+      - Local Int. (Binding with PCNA_AFmulti, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] 
+      - Local Int. (Binding with POLD4_AFmulti, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] 
+      - Local Int. (Binding with POLD2_6TNY, heterodimer, Rosetta Talaris 2014, kcal/mol) [md]
+      - Local Int. With DNA (6TNY_APT, heterodimer, FoldX5, kcal/mol) [md] 
+      - Local Int. With DNA (6TNZ_APT, heterodimer, FoldX5, kcal/mol) [md] 
+      - Local Int. With DNA (6S1N_APT, heterodimer, FoldX5, kcal/mol) [md] 
+      - Local Int. With DNA (6S1M_APT, heterodimer, FoldX5, kcal/mol) [md] 
+      - Local Int. With DNA (6S1O_APT, heterodimer, FoldX5, kcal/mol) [md]
+
+###############################################################################
+# Additional options
+###############################################################################
+options:
+  # If some columns are missing due to differences between POLE and POLD1
+  ignore_missing_columns: true
+
+  # Verbose output when evaluating category membership
+  verbose: false

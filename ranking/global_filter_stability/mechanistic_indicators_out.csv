@@ -1,0 +1,98 @@
+Mutation,"Stability classification, (Rosetta, FoldX) [md]","Stability classification, (RaSP, FoldX) [md]","Stability classification, (RaSP, FoldX) [md_25]",Local Int. classification (MCM5_7PLO) [md],Local Int. classification (PCNA_9B8T_AD) [md],Local Int. classification (PCNA_9B8T_AB) [md],Local Int. classification (CDC45_7PLO) [md],Local Int. classification (POLE2_7PLO) [md],Local Int. classification (MCM2_7PLO) [md],Local Int. classification (PCNA_9B8T_AC) [md],Local Int. With DNA classification (9F6I_27-1175_retromut_arrest) [md],Local Int. With DNA classification (9B8T_24-1198_retromut_closed) [md],Local Int. With DNA classification (9B8S_27-1198_retromut_open) [md],Local Int. With DNA classification (9F6K_27-1175_frayed) [md],Local Int. With DNA classification (9F6L_27-1175_mismatch_excision) [md],PTM effect in regulation [md],PTM effect in stability [md],PTM effect in function [md],AlloSigma2-PSN classification - pockets and interfaces [md],Functional sites (cofactor),Functional sites (active site),MAVISp Effects
+L272W,,destabilizing,uncertain,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F274C,,destabilizing,destabilizing,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F274S,,destabilizing,destabilizing,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I276N,,destabilizing,destabilizing,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I293T,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I296T,,uncertain,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+Y298C,,destabilizing,destabilizing,,,,,,,,,,,,,uncertain,,,neutral,neutral,neutral,Stability
+N309D,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,uncertain,neutral,neutral,Stability
+I317S,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F320C,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F320S,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+E340G,,destabilizing,uncertain,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L343P,,destabilizing,destabilizing,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+W347C,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F348S,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+T361I,,neutral,neutral,,,,,,,,,,,neutral,stabilizing,uncertain,,,neutral,neutral,neutral,Local Int.
+N363D,,neutral,neutral,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,destabilizing,neutral,neutral,neutral,neutral,uncertain,neutral,neutral,Local Int.
+N363I,,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,destabilizing,stabilizing,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+D368G,,uncertain,neutral,,,,,,,,,,,neutral,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+D368V,,neutral,neutral,,,,,,,,,,,neutral,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+R375G,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R375P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+A376E,,uncertain,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+A376P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+A399P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+C407F,,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,stabilizing,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+C407W,,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,stabilizing,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+A428P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+A430P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L432P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L439P,,destabilizing,destabilizing,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+P441L,,neutral,neutral,,,,,,,,,,,neutral,stabilizing,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+L455P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+A456P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+T457P,,destabilizing,destabilizing,,,,,,,,,,,,,uncertain,,,uncertain,neutral,neutral,Stability
+Y467S,,destabilizing,destabilizing,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,,,neutral,neutral,neutral,Stability
+Y468S,,destabilizing,destabilizing,,,,,,,,,,,,,uncertain,,,neutral,neutral,neutral,Stability
+L469P,,destabilizing,destabilizing,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+Y470C,,destabilizing,destabilizing,,,,,,,,,,,,,uncertain,,,neutral,neutral,neutral,Stability
+L493P,,destabilizing,destabilizing,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G496C,,neutral,neutral,,,,,,,,neutral,destabilizing,neutral,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+G496V,,neutral,neutral,,,,,,,,destabilizing,destabilizing,neutral,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+S497P,,neutral,neutral,,,,,,,,stabilizing,neutral,neutral,,,uncertain,,,neutral,neutral,neutral,Local Int.
+G498C,,neutral,neutral,,,,,,,,neutral,destabilizing,neutral,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+G498R,,neutral,neutral,,,,,,,,destabilizing,destabilizing,neutral,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+G498S,,neutral,neutral,,,,,,,,neutral,destabilizing,neutral,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+T499A,,neutral,neutral,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,destabilizing,neutral,uncertain,uncertain,uncertain,,,neutral,neutral,neutral,Local Int.
+T499I,,neutral,neutral,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,destabilizing,neutral,uncertain,uncertain,uncertain,,,neutral,neutral,neutral,Local Int.
+T538I,,neutral,neutral,,,,,,,,destabilizing,neutral,neutral,neutral,,uncertain,,,neutral,neutral,neutral,Local Int.
+Y623C,,destabilizing,destabilizing,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,,,neutral,neutral,neutral,Stability
+H624P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L636P,,destabilizing,destabilizing,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R672K,,neutral,neutral,,,,,,,,neutral,stabilizing,neutral,,,neutral,neutral,neutral,uncertain,neutral,neutral,Local Int.
+E674K,,neutral,neutral,,,,,,,,,stabilizing,neutral,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+R762P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R765P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F815S,,destabilizing,destabilizing,,,,,,,,neutral,neutral,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+Y816N,,destabilizing,uncertain,,,,,,,,,,neutral,,,uncertain,,,neutral,neutral,neutral,Stability
+G817V,,neutral,neutral,,,,,,,,destabilizing,,neutral,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+M820T,,uncertain,uncertain,,,,,,,,destabilizing,neutral,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+R821C,,neutral,neutral,,,,,,,,destabilizing,neutral,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+R821H,,neutral,neutral,,,,,,,,destabilizing,destabilizing,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+R821L,,neutral,neutral,,,,,,,,neutral,stabilizing,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+R821S,,neutral,neutral,,,,,,,,destabilizing,neutral,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+G823A,,uncertain,uncertain,,,,,,,,neutral,destabilizing,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+V835D,,destabilizing,destabilizing,,,,,,,,,neutral,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+T844P,,destabilizing,destabilizing,,,,,,,,,,,,,uncertain,,,uncertain,neutral,neutral,Stability
+L859P,,destabilizing,destabilizing,,,,,,,,neutral,neutral,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G863R,,destabilizing,destabilizing,,,,,,,,neutral,neutral,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+W865R,,destabilizing,destabilizing,,,,,,,,neutral,neutral,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+I929N,,uncertain,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F931S,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G935E,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+G935R,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+Y937C,,destabilizing,destabilizing,,,,,,,,,,,,,uncertain,,,neutral,neutral,neutral,Stability
+Y937S,,destabilizing,destabilizing,,,,,,,,,,,,,uncertain,,,neutral,neutral,neutral,Stability
+Y956C,,destabilizing,destabilizing,,,,,,,,,,neutral,,,uncertain,,,neutral,neutral,neutral,Stability
+R975C,,neutral,neutral,,,,,,,,neutral,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+R975H,,neutral,neutral,,,,,,,,neutral,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+R975S,,neutral,neutral,,,,,,,,neutral,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+Y1046H,,neutral,neutral,,,,,,,,destabilizing,neutral,neutral,neutral,neutral,uncertain,,,neutral,neutral,neutral,Local Int.
+T1052R,,neutral,neutral,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,destabilizing,neutral,uncertain,neutral,uncertain,,,neutral,neutral,neutral,Local Int.
+T1090M,,neutral,neutral,,,,,,,,destabilizing,destabilizing,destabilizing,,neutral,uncertain,,,neutral,neutral,neutral,Local Int.
+T1090R,,neutral,neutral,,,,,,,,destabilizing,destabilizing,destabilizing,,neutral,uncertain,,,neutral,neutral,neutral,Local Int.
+Y1132C,,destabilizing,destabilizing,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,destabilizing,neutral,uncertain,neutral,uncertain,,,neutral,neutral,neutral,"Stability, Local Int."
+R1136W,,neutral,neutral,,,,,,,,stabilizing,neutral,neutral,,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+K1143R,,neutral,neutral,,,,,,,,neutral,neutral,stabilizing,,,neutral,neutral,neutral,uncertain,neutral,neutral,Local Int.
+I1183N,,neutral,neutral,,destabilizing,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+L1186P,,destabilizing,destabilizing,uncertain,destabilizing,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,"Stability, Local Int."
+H1820P,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+R1826P,,destabilizing,destabilizing,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+F2138L,,neutral,neutral,neutral,,,,,destabilizing,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.
+W2185C,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+W2185R,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+W2185S,,destabilizing,destabilizing,,,,,,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Stability
+L2216P,,destabilizing,destabilizing,,,,,destabilizing,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,"Stability, Local Int."
+W2276C,,uncertain,uncertain,,,,,destabilizing,,,,,,,,neutral,neutral,neutral,neutral,neutral,neutral,Local Int.

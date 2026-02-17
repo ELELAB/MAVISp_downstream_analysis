@@ -1,0 +1,85 @@
+# ==============================
+# RANK CONFIG — COMPLETE PROFILE
+# ==============================
+
+# ---------- CORE ML / EVOLUTION ----------
+
+# EVE as an independent model (categorical)
+#CAT: EVE classification (25% Uncertain) ; weight=0.5 ; order=pathogenic>ambiguous>benign ; rest=last
+NUM: EVE score; weight=0.5; direction=high ; normalize=minmax
+
+#AlphaMissense to account for score
+NUM: AlphaMissense pathogenicity score ; weight=0.3 ; direction=high ; normalize=minmax
+
+#DeMask to account for score 
+NUM: DeMaSk delta fitness ; weight=0.3 ; transform=abs ; direction=high ; normalize=minmax
+
+
+#GEMME as independent model
+NUM: GEMME score; weight=0.5; direction=low ; normalize=minmax
+
+#REVEL as independent model
+NUM: REVEL score; weight=0.5; direction=high ; normalize=minmax
+
+# ---------- RARITY ----------
+NUM: gnomAD genome allele frequency ; weight=0.5 ; direction=low ; normalize=minmax
+NUM: gnomAD exome allele frequency  ; weight=0.5 ; direction=low ; normalize=minmax
+
+# ---------- STRUCTURE / CONTEXT ----------
+# Higher confidence structures (pLDDT) get slightly more trust
+NUM: AlphaFold2 model pLDDT score ; weight=0.5 ; direction=high ; normalize=minmax
+
+# Burial: lower SASA = more sensitive
+#NUM: Relative Side Chain Solvent Accessibility in wild-type (standard deviation) [md] ; weight=0.5 ; direction=low ; normalize=minmax
+
+# Early folding propensity (boolean)
+#CAT: EFoldMine - part of early folding region ; weight=1.0 ; order=True>False ; rest=zero
+NUM: EFoldMine score ; weight=0.5 ; direction=high ; normalize=minmax
+# ---------- STABILITY (CATEGORICAL) ----------
+# Tool-agnostic labels
+#CAT: Stability classification, (RaSP, FoldX) [md]    ; weight=2.0 ; order=Destabilizing,Stabilizing>Uncertain ; rest=last
+
+# ---------- STABILITY (ΔΔG NUMERIC) ----------
+# Assumption: more positive ΔΔG = more destabilizing (flip direction if needed)
+NUM: Stability (FoldX5, kcal/mol) [md]   ; weight=1.0 ; direction=high ; normalize=minmax
+NUM: Stability (RaSP, kcal/mol) [md_25]  ; weight=1.0 ; direction=high ; normalize=minmax
+
+# ---------- LOCAL INT (ΔΔG NUMERIC) ----------
+# Assumption: more positive ΔΔG = more destabilizing (flip direction if needed)
+NUM: Local Int. (Binding with PCNA_9B8T_AD, heterodimer, FoldX5, kcal/mol) [md]  ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with CDC45_7PLO, heterodimer, FoldX5, kcal/mol) [md] ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with MCM5_7PLO, heterodimer, FoldX5, kcal/mol)  [md] ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with PCNA_9B8T_AB, heterodimer, FoldX5, kcal/mol) [md]  ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with MCM2_7PLO, heterodimer, FoldX5, kcal/mol) [md] ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with POLE2_7PLO, heterodimer, FoldX5, kcal/mol) [md] ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with PCNA_9B8T_AC, heterodimer, FoldX5, kcal/mol) [md] ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with PCNA_9B8T_AD, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with CDC45_7PLO, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with MCM5_7PLO, heterodimer, Rosetta Talaris 2014, kcal/mol) [md]  ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with PCNA_9B8T_AB, heterodimer, Rosetta Talaris 2014, kcal/mol) [md] ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with MCM2_7PLO, heterodimer, Rosetta Talaris 2014, kcal/mol) [md]  ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with POLE2_7PLO, heterodimer, Rosetta Talaris 2014, kcal/mol) [md]  ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. (Binding with PCNA_9B8T_AC, heterodimer, Rosetta Talaris 2014, kcal/mol) [md]  ; weight=2.0 ; direction=high ; normalize=minmax
+NUM: Local Int. With DNA (9F6I_27-1175_retromut_arrest, heterodimer, FoldX5, kcal/mol) [md]  ; weight=3 ; direction=high ; normalize=minmax
+NUM: Local Int. With DNA (9B8T_24-1198_retromut_closed, heterodimer, FoldX5, kcal/mol) [md]  ; weight=3 ; direction=high ; normalize=minmax
+NUM: Local Int. With DNA (9F6K_27-1175_frayed, heterodimer, FoldX5, kcal/mol) [md]  ; weight=3 ; direction=high ; normalize=minmax
+NUM: Local Int. With DNA (9F6L_27-1175_mismatch_excision, heterodimer, FoldX5, kcal/mol) [md]  ; weight=3 ; direction=high ; normalize=minmax
+NUM: Local Int. With DNA (9B8S_27-1198_retromut_open, heterodimer, FoldX5, kcal/mol) [md] ; weight=3 ; direction=high ; normalize=minmax
+
+# ---------- PTM ----------
+# Functional/regulatory effects
+#CAT: PTM effect in regulation [md]  ; weight=0.5 ; order=damaging>uncertain ; rest=last
+#CAT: PTM effect in function [md] ; weight=1.5 ; order=potentially_damaging>uncertain ; rest=last
+CAT: is site part of phospho-SLiM [md] ; weight=0.5 ; order=True>False ; rest=zero
+#CAT: PTM effect in stability [md]    ; weight=2.0 ; order=damaging>neutral>uncertain>- ; rest=last
+# Optional: stability shift upon PTM (ΔΔG) — larger change = more interesting
+#NUM: Change in stability with PTM (FoldX5, kcal/mol) [md] ; weight=0.5 ; direction=high ; normalize=minmax
+
+
+# ---------- LONG-RANGE / ALLOSTERY ----------
+# AlloSigma2 consequences (interfaces & cofactors)
+#CAT: AlloSigma2-PSN classification - pockets and interfaces [md] ; weight=2.0 ; order=damaging>uncertain ; rest=last
+#CAT: AlloSigma2-PSN classification - cofactor sites [md]  ; weight=2.0 ; order=damaging>uncertain ; rest=last
+
+# Optional: explicit functional-site label (if populated)
+#CAT: Functional sites (cofactor) ; weight=1.0 ; order=damaging>neutral ; rest=last

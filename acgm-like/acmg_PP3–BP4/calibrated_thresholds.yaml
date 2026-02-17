@@ -1,0 +1,81 @@
+thresholds:
+  EVE score:
+    auc: 1.0
+    youden_threshold: 0.7926652080874252
+    percentile_pathogenic_25th: 0.8405560681258265
+    percentile_benign_75th: 8.466840117312162e-07
+    mannwhitney_u_pvalue: 0.00010283833813245579
+    n_positive: 10
+    n_negative: 7
+  GEMME Score:
+    auc: 1.0
+    youden_threshold: -4.59337450435688
+    percentile_pathogenic_25th: -7.520729780279575
+    percentile_benign_75th: -0.0544072836049352
+    mannwhitney_u_pvalue: 0.0007489887560150321
+    n_positive: 10
+    n_negative: 7
+  AlphaMissense pathogenicity score:
+    auc: 1.0
+    youden_threshold: 0.87
+    percentile_pathogenic_25th: 0.994075
+    percentile_benign_75th: 0.27244999999999997
+    mannwhitney_u_pvalue: 0.00010283833813245579
+    n_positive: 10
+    n_negative: 7
+  REVEL score:
+    auc: 1.0
+    youden_threshold: 0.377
+    percentile_pathogenic_25th: 0.5
+    percentile_benign_75th: 0.10350000000000001
+    mannwhitney_u_pvalue: 0.00010283833813245579
+    n_positive: 10
+    n_negative: 7
+  Stability (RaSP, kcal/mol) [md_25]:
+    auc: 0.5285714285714285
+    youden_threshold: 1.3127567814486767
+    percentile_pathogenic_25th: 0.05332183217944868
+    percentile_benign_75th: 0.7488869727527576
+    mannwhitney_u_pvalue: 0.8867749897161661
+    n_positive: 10
+    n_negative: 7
+  EFoldMine score:
+    auc: 0.44285714285714284
+    youden_threshold: 0.025
+    percentile_pathogenic_25th: 0.02525
+    percentile_benign_75th: 0.254
+    mannwhitney_u_pvalue: 0.7320459116328961
+    n_positive: 10
+    n_negative: 7
+  DeMaSk delta fitness:
+    auc: 0.9857142857142858
+    youden_threshold: -0.2893
+    percentile_pathogenic_25th: -0.35919999999999996
+    percentile_benign_75th: -0.037750000000000006
+    mannwhitney_u_pvalue: 0.00020567667626491157
+    n_positive: 10
+    n_negative: 7
+  Relative Side Chain Solvent Accessibility in wild-type (average) [md]:
+    auc: 0.21428571428571427
+    youden_threshold: .inf
+    percentile_pathogenic_25th: 0.6707500000000001
+    percentile_benign_75th: 42.144
+    mannwhitney_u_pvalue: 0.056583682119435125
+    n_positive: 10
+    n_negative: 7
+  Stability (FoldX5, kcal/mol) [md_25]:
+    auc: 0.6428571428571429
+    youden_threshold: 1.95225
+    percentile_pathogenic_25th: 0.22951500000000002
+    percentile_benign_75th: 0.81726
+    mannwhitney_u_pvalue: 0.36384204031262857
+    n_positive: 10
+    n_negative: 7
+  stability_combined_ddg:
+    auc: 0.6285714285714286
+    youden_threshold: 1.6272551036643268
+    percentile_pathogenic_25th: 0.22382415184382232
+    percentile_benign_75th: 1.087483271206445
+    mannwhitney_u_pvalue: 0.41731797614150556
+    n_positive: 10
+    n_negative: 7
