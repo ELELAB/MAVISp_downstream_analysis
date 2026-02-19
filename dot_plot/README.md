@@ -1,5 +1,5 @@
 # MAVISp dot plot
-*Last updated*: 25/11/25
+*Last updated*: 12/02/26
 
 ## Description
 
@@ -56,9 +56,31 @@ python dot_plot.py [-h] -i INPUT [-v CLINVAR_DICTIONARY] [-o OUTPUT]
 - `-vep/--vep-filter`: restrict `mechanistic_indicators_out.csv` to mutations predicted as pathogenic by the selected VEP. Choices are `alphamissense`, `revel`, `gemme`, `eve`, or `none` (default). Supplying `-vep` without an argument defaults to `alphamissense`.
 - `-lgof/--vep-filter-lgof`: when set, only keep entries classified as DeMaSk LoF or GoF in `mechanistic_indicators_out.csv`. By default, this filtering is not performed.
 
+## MAVISp dot plot v2:  
+
+`dot_plot_v2.py` extends `dot_plot.py` to support visualization of alternative ClinVar classifications.
+
+In addition to all existing `dot_plot.py` options, the following differences apply:
+
+- New required option:
+
+`-cct / --clinvar_class_type` {aggregated,germline,oncogenicity,clinical_impact}: Selects which ClinVar interpretation column is used. Default: aggregated (old-entry compatible).
+
+- When using `-pltC` or `-colC`, the correct dictionary must be supplied via `-v`:
+   - aggregated or germline → dictionary.csv
+   - oncogenicity → somatic oncogenicity dictionary
+   - clinical_impact → somatic clinical impact dictionary
+
+- Compared to `dot_plot.py`, the following additional categories are supported using the `-pltC` option:
+   - oncogenic
+   - likely_oncogenic
+   - strong
+   - potential
+   - unknown
+
 ## Example
 
-See the `example` directory and the accompanying `do.sh` script for a minimal end-to-end run.
+See the `examples` directory and the accompanying `do.sh` scripts for a minimal end-to-end run.
 
 ## Output
 
