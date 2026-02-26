@@ -1,0 +1,86 @@
+#Clinical Impact	Internal_dictionary
+Tier I - Strong	Strong
+Tier II - Potential	Potential
+Tier III - Unknown	Unknown
+Tier IV - Benign/Likely benign	Benign/Likely benign
+nan	Unknown
+Tier I - Strong,Tier I - Strong	Strong
+Tier I - Strong,Tier II - Potential	Conflicting interpretation
+Tier I - Strong,Tier III - Unknown	Conflicting interpretation
+Tier I - Strong,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier II - Potential,Tier I - Strong	Conflicting interpretation
+Tier II - Potential,Tier II - Potential	Potential
+Tier II - Potential,Tier III - Unknown	Conflicting interpretation
+Tier II - Potential,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier III - Unknown,Tier I - Strong	Conflicting interpretation
+Tier III - Unknown,Tier II - Potential	Conflicting interpretation
+Tier III - Unknown,Tier III - Unknown	Unknown
+Tier III - Unknown,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier I - Strong	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier II - Potential	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier III - Unknown	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier IV - Benign/Likely benign	Benign/Likely benign
+Tier I - Strong,Tier I - Strong,Tier I - Strong	Strong
+Tier I - Strong,Tier I - Strong,Tier II - Potential	Conflicting interpretation
+Tier I - Strong,Tier I - Strong,Tier III - Unknown	Conflicting interpretation
+Tier I - Strong,Tier I - Strong,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier I - Strong,Tier II - Potential,Tier I - Strong	Conflicting interpretation
+Tier I - Strong,Tier II - Potential,Tier II - Potential	Conflicting interpretation
+Tier I - Strong,Tier II - Potential,Tier III - Unknown	Conflicting interpretation
+Tier I - Strong,Tier II - Potential,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier I - Strong,Tier III - Unknown,Tier I - Strong	Conflicting interpretation
+Tier I - Strong,Tier III - Unknown,Tier II - Potential	Conflicting interpretation
+Tier I - Strong,Tier III - Unknown,Tier III - Unknown	Conflicting interpretation
+Tier I - Strong,Tier III - Unknown,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier I - Strong,Tier IV - Benign/Likely benign,Tier I - Strong	Conflicting interpretation
+Tier I - Strong,Tier IV - Benign/Likely benign,Tier II - Potential	Conflicting interpretation
+Tier I - Strong,Tier IV - Benign/Likely benign,Tier III - Unknown	Conflicting interpretation
+Tier I - Strong,Tier IV - Benign/Likely benign,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier II - Potential,Tier I - Strong,Tier I - Strong	Conflicting interpretation
+Tier II - Potential,Tier I - Strong,Tier II - Potential	Conflicting interpretation
+Tier II - Potential,Tier I - Strong,Tier III - Unknown	Conflicting interpretation
+Tier II - Potential,Tier I - Strong,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier II - Potential,Tier II - Potential,Tier I - Strong	Conflicting interpretation
+Tier II - Potential,Tier II - Potential,Tier II - Potential	Potential
+Tier II - Potential,Tier II - Potential,Tier III - Unknown	Conflicting interpretation
+Tier II - Potential,Tier II - Potential,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier II - Potential,Tier III - Unknown,Tier I - Strong	Conflicting interpretation
+Tier II - Potential,Tier III - Unknown,Tier II - Potential	Conflicting interpretation
+Tier II - Potential,Tier III - Unknown,Tier III - Unknown	Conflicting interpretation
+Tier II - Potential,Tier III - Unknown,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier II - Potential,Tier IV - Benign/Likely benign,Tier I - Strong	Conflicting interpretation
+Tier II - Potential,Tier IV - Benign/Likely benign,Tier II - Potential	Conflicting interpretation
+Tier II - Potential,Tier IV - Benign/Likely benign,Tier III - Unknown	Conflicting interpretation
+Tier II - Potential,Tier IV - Benign/Likely benign,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier III - Unknown,Tier I - Strong,Tier I - Strong	Conflicting interpretation
+Tier III - Unknown,Tier I - Strong,Tier II - Potential	Conflicting interpretation
+Tier III - Unknown,Tier I - Strong,Tier III - Unknown	Conflicting interpretation
+Tier III - Unknown,Tier I - Strong,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier III - Unknown,Tier II - Potential,Tier I - Strong	Conflicting interpretation
+Tier III - Unknown,Tier II - Potential,Tier II - Potential	Conflicting interpretation
+Tier III - Unknown,Tier II - Potential,Tier III - Unknown	Conflicting interpretation
+Tier III - Unknown,Tier II - Potential,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier III - Unknown,Tier III - Unknown,Tier I - Strong	Conflicting interpretation
+Tier III - Unknown,Tier III - Unknown,Tier II - Potential	Conflicting interpretation
+Tier III - Unknown,Tier III - Unknown,Tier III - Unknown	Unknown
+Tier III - Unknown,Tier III - Unknown,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier III - Unknown,Tier IV - Benign/Likely benign,Tier I - Strong	Conflicting interpretation
+Tier III - Unknown,Tier IV - Benign/Likely benign,Tier II - Potential	Conflicting interpretation
+Tier III - Unknown,Tier IV - Benign/Likely benign,Tier III - Unknown	Conflicting interpretation
+Tier III - Unknown,Tier IV - Benign/Likely benign,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier I - Strong,Tier I - Strong	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier I - Strong,Tier II - Potential	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier I - Strong,Tier III - Unknown	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier I - Strong,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier II - Potential,Tier I - Strong	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier II - Potential,Tier II - Potential	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier II - Potential,Tier III - Unknown	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier II - Potential,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier III - Unknown,Tier I - Strong	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier III - Unknown,Tier II - Potential	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier III - Unknown,Tier III - Unknown	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier III - Unknown,Tier IV - Benign/Likely benign	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier IV - Benign/Likely benign,Tier I - Strong	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier IV - Benign/Likely benign,Tier II - Potential	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier IV - Benign/Likely benign,Tier III - Unknown	Conflicting interpretation
+Tier IV - Benign/Likely benign,Tier IV - Benign/Likely benign,Tier IV - Benign/Likely benign	Benign/Likely benign
