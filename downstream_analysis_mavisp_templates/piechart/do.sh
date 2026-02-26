@@ -3,5 +3,7 @@ csv=$1
 # change the csv path and the number of mutations you want to plot on the x-axis
 # suggested not to use more than 50, otherwise you need to chage the figuresize;
 # for more information about available options: python dot_plot.py -h
+# suggested not to use more than 50, otherwise you need to chage the figuresize;
+# The following commands could be also run with piechart_v2.py instead of piechart.py
 python piechart.py -i $csv -d  clinvar_interpretation_internal_dictionary.txt -o pie.pdf
 python piechart.py -i $csv -d clinvar_interpretation_internal_dictionary.txt  -o pie.png
