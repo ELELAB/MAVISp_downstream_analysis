@@ -3,7 +3,8 @@
 # Copyright (C) 2023 Ludovica Beltrame <beltrameludo@gmail.com>,
 # Simone Scrima <simonescrima@gmail.com>, Karolina Krzesińska <kzokr@dtu.dk>,
 # Matteo Tiberti
-# Danish Cancer Society & Technical University of Denmark
+# Danish Cancer Society & Technical University of Denmark,
+# 2026 Eszter Toldi, Technical University of Denmark
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -336,7 +337,8 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
         log.error(f"{clinvar_cols[0]} column is missing from the input data.")
         raise TypeError(f"{clinvar_cols[0]} column is missing from the input data.")
 
-    f = lambda x: '(Foldetta from FoldX and Rosetta)' in x or \
+    f = lambda x: '(ThermoMPNN)' in x or \
+                    '(Foldetta from FoldX and Rosetta)' in x or \
                     '(Foldetta from FoldX and RaSP)' in x or \
                     '(Rosetta, FoldX)' in x or \
                     '(RaSP, FoldX)' in x or \
@@ -909,7 +911,7 @@ def generate_summary(data,d_cutoff,r_cutoff, clinvar_cols):
 
     # Colnames ptm and allosigma
 
-    filter_col_stability = [col for col in data if '(Foldetta from FoldX and Rosetta)' in col or '(Foldetta from FoldX and RaSP)' in col or '(Rosetta, FoldX)' in col or '(RaSP, FoldX)' in col]
+    filter_col_stability = [col for col in data if 'ThermoMPNN' in col or '(Foldetta from FoldX and Rosetta)' in col or '(Foldetta from FoldX and RaSP)' in col or '(Rosetta, FoldX)' in col or '(RaSP, FoldX)' in col]
     filter_col_local = [col for col in data if 'Local Int. classification' in col or 'Local Int. With DNA classification' in col]
     ptm_stab_clmn = [col for col in data if 'PTM effect in stability' in col]
     ptm_reg_clmn = [col for col in data if 'PTM effect in regulation' in col]
