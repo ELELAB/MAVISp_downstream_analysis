@@ -614,7 +614,7 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
     if plot_Clinvar:
         # Define a mapping of user-input to categories
         filter_terms = {
-            'benign': ['benign'],
+            'benign': ['benign', 'benign/likely benign'],
             'likely_benign' : ['likely benign'],
             'pathogenic': ['pathogenic'],
             'likely_pathogenic': ['likely pathogenic'],
@@ -624,8 +624,7 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
             'likely_oncogenic': ['likely oncogenic'],
             'strong': ['strong'],
             'potential': ['potential'],
-            'unknown': ['unknown'],
-            'benign': ['benign/likely benign']}
+            'unknown': ['unknown']}
 
         # Filter dataframe according to flag option
         if 'all' in plot_Clinvar:
