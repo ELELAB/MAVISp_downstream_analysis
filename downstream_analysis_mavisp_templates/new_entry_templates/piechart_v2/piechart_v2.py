@@ -86,7 +86,7 @@ if __name__ == "__main__":
     except ValueError as e:
         print(f"ERROR: {e}")
         exit(1)
-    df[clinvar_cols[0]] = df[clinvar_cols[0]].str.replace(r",\s+", ",", regex=True)
+    df[clinvar_cols[0]] = df[clinvar_cols[0]].astype("string").replace(r",\s+", ",", regex=True)
    
     # Check if correct dict was provided:
     first_cell = pd.read_csv(args.dictionary, sep="\t", header=None).iat[0, 0]
