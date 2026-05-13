@@ -1,5 +1,5 @@
 # MAVISp dot plot
-*Last updated*: 12/02/26
+*Last updated*: 13/05/26
 
 ## Description
 
@@ -27,14 +27,15 @@ It produces:
 ```
 python dot_plot.py [-h] -i INPUT [-v CLINVAR_DICTIONARY] [-o OUTPUT]
                    [-m MUTATIONS [MUTATIONS ...]] [-r RESIDUES [RESIDUES ...]]
-                   [-R REVEL_THRESHOLD] [-D DEMASK_THRESHOLD]
-                   [-G GEMME_THRESHOLD] [-x X_LIM] [-f FIGSIZE FIGSIZE]
-                   [-pltR] [-pltD]
+                   [-R REVEL_THRESHOLD] [-P POPEVE_THRESHOLD]
+                   [-D DEMASK_THRESHOLD] [-G GEMME_THRESHOLD]
+                   [-x X_LIM] [-f FIGSIZE FIGSIZE]
+                   [-pltR] [-pltP] [-pltD]
                    [-pltC {all,uncertain,benign,likely_benign,pathogenic,likely_pathogenic,conflicting}
                           [{all,uncertain,benign,likely_benign,pathogenic,likely_pathogenic,conflicting} ...]]
                    [-colC]
                    [-pltS {saturation,cosmic,cbioportal} [{saturation,cosmic,cbioportal} ...]]
-                   [-vep {none,alphamissense,revel,gemme,eve}]
+                   [-vep {none,alphamissense,revel,gemme,eve,popeve}]
                    [-lgof]
 ```
 
@@ -44,16 +45,18 @@ python dot_plot.py [-h] -i INPUT [-v CLINVAR_DICTIONARY] [-o OUTPUT]
 - `-m/--mutations`: comma-separated mutations to display (e.g. `A4G,F55K`). Mutually exclusive with `-r`.
 - `-r/--residues`: comma-separated residue positions to display (e.g. `4,55`). Mutually exclusive with `-m`.
 - `-R/--revel_threshold`: REVEL pathogenic threshold (default: `0.5`).
+- `-P/--popeve_threshold`: popEVE deleterious threshold (default: `-4.617`).
 - `-D/--demask_threshold`: DeMaSk delta-fitness threshold for LoF/GoF calls (default: `0.25`).
 - `-G/--gemme_threshold`: GEMME threshold (default: `-3.0`).
 - `-x/--x_lim`: number of mutations per panel before splitting across multiple figures (default: `50`).
 - `-f/--figsize`: figure width and height (default: `14 5`). The default works well for ~50 mutations and 7–8 labels.
 - `-pltR/--plot_Revel`: add REVEL classifications to the dot plot.
+- `-pltP/--plot_popEVE`: add popEVE classifications to the dot plot.
 - `-pltD/--plot_Demask`: add DeMaSk predicted consequence (LoF/GoF) for mutations meeting the `-D` threshold.
 - `-pltC/--plot_Clinvar`: filter to specific ClinVar categories (e.g. `pathogenic uncertain`). Requires `dictionary.csv`.
 - `-colC/--color_Clinvar`: colour the x-axis labels according to ClinVar categories. Requires `dictionary.csv`.
 - `-pltS/--plot_Source`: filter mutations by source (`saturation`, `cosmic`, `cbioportal`). Multiple sources can be provided; filters are additive with `-pltC`.
-- `-vep/--vep-filter`: restrict `mechanistic_indicators_out.csv` to mutations predicted as pathogenic by the selected VEP. Choices are `alphamissense`, `revel`, `gemme`, `eve`, or `none` (default). Supplying `-vep` without an argument defaults to `alphamissense`.
+- `-vep/--vep-filter`: restrict `mechanistic_indicators_out.csv` to mutations predicted as pathogenic by the selected VEP. Choices are `alphamissense`, `revel`, `gemme`, `eve`, `popeve`, or `none` (default). Supplying `-vep` without an argument defaults to `alphamissense`.
 - `-lgof/--vep-filter-lgof`: when set, only keep entries classified as DeMaSk LoF or GoF in `mechanistic_indicators_out.csv`. By default, this filtering is not performed.
 
 ## MAVISp dot plot v2:  
@@ -86,7 +89,7 @@ See the `examples` directory and the accompanying `do.sh` scripts for a minimal 
 
 Running the script produces:
 - `dot_plot.pdf` (and additional numbered PDFs if more mutations exceed `-x`). PNGs are also written when any of `-m`, `-r`, `-pltS`, or `-pltC` is used.
-- `log.txt`, summarising how many variants satisfy each classifier (REVEL, GEMME, DeMaSk, EVE, AlphaMissense) and providing module-level counts.
+- `log.txt`, summarising how many variants satisfy each classifier (REVEL, GEMME, DeMaSk, EVE, AlphaMissense, popEVE) and providing module-level counts.
 - `mechanistic_indicators_out.csv`, containing the filtered subset of mutations with at least one module effect and the consolidated `MAVISp Effects` column. This file honours all filters applied through `-m`, `-r`, `-pltS`, `-pltC`, `-vep`, and `-lgof`.
 
 Notes:
