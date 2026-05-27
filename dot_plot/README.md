@@ -1,5 +1,5 @@
 # MAVISp dot plot
-*Last updated*: 13/05/26
+*Last updated*: 27/05/26
 
 ## Description
 
@@ -80,6 +80,8 @@ In addition to all existing `dot_plot.py` options, the following differences app
    - strong
    - potential
    - unknown
+
+- popEVE support is only available in `dot_plot_v2.py`.
 
 ## Example
 
