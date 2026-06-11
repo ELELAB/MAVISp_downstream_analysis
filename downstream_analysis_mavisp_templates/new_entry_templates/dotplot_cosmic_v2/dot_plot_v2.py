@@ -285,8 +285,8 @@ def get_clinvar_columns(df, clinvar_class_type: str):
     raise ValueError(f"ClinVar mode '{clinvar_class_type}' requested, but the corresponding columns are missing.")
 
 
-def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
-    clinvar_dict, plot_Revel, plot_Demask, plot_Source, plot_Clinvar, color_Clinvar, clinvar_cols):
+def process_input(full_df, r_cutoff, p_cutoff, d_cutoff, g_cutoff, residues, mutations,
+    clinvar_dict, plot_Revel, plot_popEVE, plot_Demask, plot_Source, plot_Clinvar, color_Clinvar, clinvar_cols):
     ''' Read MAVISp aggregated table.
 
     The function takes as input a MAVISp csv file and returns
@@ -351,6 +351,7 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
                     'AlloSigMA 2 predicted consequence - pockets and interfaces' in x or \
                     ('AlloSigMA2-PSN classification' in x and not 'AlloSigMA 2 mutation type' in x) or\
                     'PTM effect in ' in x or 'REVEL score' in x or \
+                    'popEVE score' in x or \
                     'EVE classification (25% Uncertain)' in x or \
                     'DeMaSk delta fitness' in x or \
                     'DeMaSk predicted consequence' in x or \
@@ -378,11 +379,24 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
     for d in [df, full_df]:
         d['REVEL score'] = d['REVEL score'].apply(convert_to_float)
 
+        # Convert popEVE score column to numeric values.
+        # Invalid/non-numeric values are converted to NaN.
+        if 'popEVE score' in d.columns:
+            d['popEVE score'] = pd.to_numeric(d['popEVE score'], errors='coerce')
+
 
     # Add REVEL score interpretation column
     df['REVEL'] = np.where(df['REVEL score'].isna(), None,
                                 np.where(df['REVEL score'] >= r_cutoff,
                                     'Damaging', 'Neutral'))
+
+    try:
+        # Add popEVE score interpretation column
+        df['popEVE'] = np.where(df['popEVE score'].isna(), None,
+                                np.where(df['popEVE score'] < p_cutoff,
+                                         'Damaging', 'Neutral'))
+    except:
+        log.warning(f'- no popEVE found in MAVISp csv.')
 
     try:
         # Convert GEMME score into absolute value
@@ -400,12 +414,17 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
                 'Neutral')))
 
     # Drop score columns
+    score_cols_to_drop = ['REVEL score',
+                        'DeMaSk delta fitness']
+
     if 'GEMME Score' in df.columns:
-        df.drop(columns = ['REVEL score','DeMaSk delta fitness', 'GEMME Score'],
-            inplace = True)
-    else:
-        df.drop(columns = ['REVEL score','DeMaSk delta fitness'],
-            inplace = True)
+        score_cols_to_drop.append('GEMME Score')
+
+    if 'popEVE score' in df.columns:
+        score_cols_to_drop.append('popEVE score')
+
+    df.drop(columns=score_cols_to_drop, inplace=True)
+
 
     # Sort columns based on broad effect categories
     functional_cols = [col for col in df.columns if 'functional' in col.lower() and 'experimental data classification' not in col.lower()]
@@ -468,7 +487,8 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
         'AlphaMissense classification',
         'EVE classification (25% Uncertain)',
         'GEMME predicted consequence',
-        'REVEL'
+        'REVEL',
+        'popEVE'
     ]
     demask_pred_col = 'DeMaSk predicted consequence'
     experimental_present = [col for col in experimental_cols if col in df.columns]
@@ -668,6 +688,9 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
 
     if not plot_Revel and 'REVEL' in plot_df.columns:
         plot_df = plot_df.drop(columns=['REVEL'])
+
+    if not plot_popEVE and 'popEVE' in plot_df.columns:
+        plot_df = plot_df.drop(columns=['popEVE'])
 
     if not plot_Demask and 'DeMaSk predicted consequence' in plot_df.columns:
         plot_df = plot_df.drop(columns=['DeMaSk predicted consequence'])
@@ -882,7 +905,7 @@ def plot(df, full_df, width, height, xlim, clinvar_flag, clinvar_class_type, cli
 
     return figures
 
-def generate_summary(data,d_cutoff,r_cutoff, clinvar_cols):
+def generate_summary(data,d_cutoff,r_cutoff, p_cutoff, clinvar_cols):
     ''' Summary log.txt file.
 
     The function is aimed at summarizing the number of mutations
@@ -1566,6 +1589,18 @@ def generate_summary(data,d_cutoff,r_cutoff, clinvar_cols):
         f'which could be of interest for further investigation:\n'
     out += f'-- {revel_d}\n'
 
+    # popEVE score < -4.617 (default)
+    try:
+        popeve_d = data_d.index[data_d['popEVE score'] < p_cutoff].to_list()
+
+        out += f'- We aggregated all the variants that have at least one of the MAVISp modules ' \
+               f'with a predicted damaging effect (except for PTM.function) and retained only ' \
+               f'the ones with a popEVE score < {p_cutoff} for a total of {len(popeve_d)} variants ' \
+               f'which could be of interest for further investigation:\n'
+        out += f'-- {popeve_d}\n'
+    except KeyError:
+        out += '\n- popEVE score not available.\n'
+
     # Demask
     demask_d = data_d.index[(data_d['DeMaSk delta fitness'] >= d_cutoff) | (data_d['DeMaSk delta fitness'] <= -d_cutoff)].to_list()
     out += f'- We aggregated all the variants that have at least one of the MAVISp modules ' \
@@ -1900,6 +1935,8 @@ def filter_vep_summary(summary, df, vep_filter, glof_filter):
         filtered_index_vep = df[df['REVEL'] == 1].index
     elif vep_filter == 'eve':
         filtered_index_vep = df[df['EVE classification (25% Uncertain)'] == 1].index
+    elif vep_filter == 'popeve':
+        filtered_index_vep = df[df['popEVE'] == 1].index
     elif vep_filter == 'none':
         filtered_index_vep = df.index
 
@@ -1981,6 +2018,14 @@ def main():
 	                    type = float,
                         help = R_helpstr)
 
+    P_default = -4.617
+    P_helpstr = f"Threshold to classify a mutation according to the " \
+                f"popEVE score. (Default = {P_default})"
+    parser.add_argument("-P", "--popeve_threshold",
+                        default=P_default,
+                        type=float,
+                        help=P_helpstr)
+
     D_default = 0.25
     D_helpstr = f"Threshold to classify a mutation according to the " \
                 f"DeMask score. (Default = {D_default})"
@@ -2021,12 +2066,18 @@ def main():
                         action = 'store_true',
                         help = pltR_helpstr)
 
+    pltP_helpstr = f"Plotting of popEVE classification. (Default = None)"
+    parser.add_argument("-pltP", "--plot_popEVE",
+                        action='store_true',
+                        help=pltP_helpstr)
+
     pltD_helpstr = f"Plotting of Demask LoF/GoF if" \
                     f" mutation is above demask threshold. " \
                     f"(Default = None)"
     parser.add_argument("-pltD", "--plot_Demask",
                         action = 'store_true',
                         help = pltD_helpstr)
+
     clinvarclasstype_helpstr = f"ClinVar classification type to use for plotting/coloring. " \
                                f"Choices:aggregated, germline, oncogenicity, clinical_impact."
     parser.add_argument("-cct", "--clinvar_class_type",
@@ -2077,10 +2128,10 @@ def main():
                         help = pltS_helpstr)
 
     AMx_helpstr = "Restrict mechanisitc indicators output to pathogenic variants. Choose the VEP to use" \
-                  "to detect pathogenic variants between none, alphamissense, revel, gemme, eve. If this option" \
+                  "to detect pathogenic variants between none, alphamissense, revel, gemme, eve, popeve. If this option" \
                   "is used without argument it will default to alphamissense"
     parser.add_argument("-vep", "--vep-filter",
-                        choices=["none", "alphamissense", "revel", "gemme", "eve"],
+                        choices=["none", "alphamissense", "revel", "gemme", "eve", "popeve"],
                         nargs="?",
                         const="alphamissense",
                         default="none",
@@ -2167,12 +2218,14 @@ def main():
     try:
         plot_df, classification_df, dataframe, clinvar_mapped_df =  process_input(full_df = full_df,
                                                           r_cutoff = args.revel_threshold,
+                                                          p_cutoff=args.popeve_threshold,
                                                           d_cutoff = args.demask_threshold,
                                                           g_cutoff= args.gemme_threshold,
                                                           residues = args.residues,
                                                           mutations = args.mutations,
                                                           clinvar_dict = clinvar_dict,
                                                           plot_Revel = args.plot_Revel,
+                                                          plot_popEVE=args.plot_popEVE,
                                                           plot_Demask = args.plot_Demask,
                                                           plot_Source = args.plot_Source,
                                                           plot_Clinvar = args.plot_Clinvar,
@@ -2192,6 +2245,7 @@ def main():
         summary, summary_df = generate_summary(data = dataframe,
                                                d_cutoff = args.demask_threshold,
                                                r_cutoff = args.revel_threshold,
+                                               p_cutoff=args.popeve_threshold,
                                                clinvar_cols = clinvar_cols)
         out.write(summary)
 
