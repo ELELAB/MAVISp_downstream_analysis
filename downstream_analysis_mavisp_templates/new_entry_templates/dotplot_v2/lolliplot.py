@@ -279,6 +279,11 @@ def main():
                         dest = "save_png",
                         action = 'store_true',
                         help = "Save individual plots as PNGs")
+    parser.add_argument('-o',
+                        dest="output_prefix",
+                        default="lolliplot",
+                        type=str,
+                        help="Output filename prefix. Default: lolliplot")
     args = parser.parse_args()
 
     # Logging configuration
@@ -310,10 +315,10 @@ def main():
         save_png = False
 
     # Save plots
-    with PdfPages("lolliplot.pdf") as pdf:
+    with PdfPages(f"{args.output_prefix}.pdf") as pdf:
         for i, figure in enumerate(figures):
             if save_png:
-                figure.savefig(f'lolliplot_{i}.png',
+                figure.savefig(f'{args.output_prefix}_{i}.png',
                             dpi=300,
                             bbox_inches='tight')
             figure.savefig(pdf,

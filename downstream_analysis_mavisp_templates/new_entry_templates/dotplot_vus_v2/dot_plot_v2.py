@@ -2241,7 +2241,7 @@ def main():
     ############################### SUMMARY ###############################
 
     # Write summary output file
-    with open('log.txt', 'w') as out:
+    with open(f'log_{args.clinvar_class_type}.txt', 'w') as out:
         summary, summary_df = generate_summary(data = dataframe,
                                                d_cutoff = args.demask_threshold,
                                                r_cutoff = args.revel_threshold,
@@ -2286,7 +2286,7 @@ def main():
 ################################# AM CSV #################################
     filtered_am = filter_vep_summary(summary_df, classification_df, args.AMx, args.adf)
 
-    filtered_am.to_csv('mechanistic_indicators_out.csv', index=True)
+    filtered_am.to_csv(f'mechanistic_indicators_out_{args.clinvar_class_type}.csv', index=True)
 
 if __name__ == '__main__':
     main()
