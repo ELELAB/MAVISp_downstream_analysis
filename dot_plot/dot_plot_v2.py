@@ -345,10 +345,10 @@ def process_input(full_df, r_cutoff, p_cutoff, d_cutoff, g_cutoff, residues, mut
                     '(Foldetta from FoldX and RaSP)' in x or \
                     '(Rosetta, FoldX)' in x or \
                     '(RaSP, FoldX)' in x or \
-                    x == "Classification of change in folding free energy with phosphorylation" or \
+                    "Classification of change in folding free energy with phosphorylation" in x or \
                     'Local Int. classification' in x or \
                     'Local Int. With DNA classification' in x or \
-                    x == "Classification of change in binding free energy with phosphorylation" or \
+                    "Classification of change in binding free energy with phosphorylation" in x or \
                     'Functional sites (cofactor)' in x or \
                     'Functional sites (active site)' in x or \
                     'AlloSigMA 2 predicted consequence - active sites' in x or \
@@ -434,17 +434,17 @@ def process_input(full_df, r_cutoff, p_cutoff, d_cutoff, g_cutoff, residues, mut
     # Sort columns based on broad effect categories
     functional_cols = [col for col in df.columns if ('functional' in col.lower()
                                                    and 'experimental data classification' not in col.lower())
-                       or col == "Classification of change in binding free energy with phosphorylation"]
+                       or "Classification of change in binding free energy with phosphorylation" in col]
     disulfide_cols = [col for col in df.columns if 'disulfide bridge' in col.lower()]
     stability_cols = [col for col in df.columns if ('stability' in col.lower()
                                                   and 'experimental data classification' not in col.lower())
-                      or col == "Classification of change in folding free energy with phosphorylation"]
+                      or "Classification of change in folding free energy with phosphorylation" in col]
     stability_cols += disulfide_cols
     efold_col = [col for col in df.columns if 'efoldmine' in col.lower()]
     other_cols = [col for col in df.columns if 'functional' not in col.lower()
                   and 'stability' not in col.lower()
-                  and col != "Classification of change in folding free energy with phosphorylation"
-                  and col != "Classification of change in binding free energy with phosphorylation"
+                  and "Classification of change in folding free energy with phosphorylation" not in col
+                  and "Classification of change in binding free energy with phosphorylation" not in col
                   and 'disulfide bridge' not in col.lower()
                   and 'experimental data classification' not in col.lower()
                   and 'efoldmine' not in col.lower()]
@@ -759,7 +759,6 @@ def plot(df, full_df, width, height, xlim, clinvar_flag, clinvar_class_type, cli
                                 else lbl
                                 for lbl in df.columns.values
                           ]
-
     # Lower and upper limits
     l = 0
     u = xlim
@@ -957,10 +956,10 @@ def generate_summary(data,d_cutoff,r_cutoff, p_cutoff, clinvar_cols):
                             or '(Foldetta from FoldX and RaSP)' in col
                             or '(Rosetta, FoldX)' in col
                             or '(RaSP, FoldX)' in col
-                            or col == "Classification of change in folding free energy with phosphorylation"]
+                            or "Classification of change in folding free energy with phosphorylation" in col]
     filter_col_local = [col for col in data if 'Local Int. classification' in col
                         or 'Local Int. With DNA classification' in col
-                        or col == "Classification of change in binding free energy with phosphorylation"]
+                        or "Classification of change in binding free energy with phosphorylation" in col]
     ptm_stab_clmn = [col for col in data if 'PTM effect in stability' in col]
     ptm_reg_clmn = [col for col in data if 'PTM effect in regulation' in col]
     ptm_funct_clmn = [col for col in data if 'PTM effect in function' in col]
@@ -1023,7 +1022,7 @@ def generate_summary(data,d_cutoff,r_cutoff, p_cutoff, clinvar_cols):
                 # Print list of mutations only if the are less than 10
                 mutlist = out_list(loc_un_list)
 
-                if col == "Classification of change in binding free energy with phosphorylation":
+                if "Classification of change in binding free energy with phosphorylation" in col:
                     out += f'- {loc_un} variants remain uncertain for phosphorylation-dependent binding free energy. {mutlist}'
                     continue
                 if ensemble:
@@ -1296,7 +1295,7 @@ def generate_summary(data,d_cutoff,r_cutoff, p_cutoff, clinvar_cols):
 
             # Print list of mutations only if the are less than 10
             mutlist = out_list(loc_d_list)
-            if col == "Classification of change in binding free energy with phosphorylation":
+            if "Classification of change in binding free energy with phosphorylation" in col:
                 out += f'- {loc_d} variants are destabilizing for phosphorylation-dependent binding free energy. {mutlist}'
                 continue
             if ensemble:
@@ -1942,8 +1941,8 @@ def filter_vep_summary(summary, df, vep_filter, glof_filter):
     f = lambda x: 'Stability classification' in x or \
               'Local Int. classification' in x or \
               'Local Int. With DNA classification' in x or \
-              x == "Classification of change in folding free energy with phosphorylation" or \
-              x == "Classification of change in binding free energy with phosphorylation" or \
+              "Classification of change in folding free energy with phosphorylation" in x or \
+              "Classification of change in binding free energy with phosphorylation" in x or \
               'AlloSigMA 2 predicted consequence' in x or \
               'AlloSigMA2-PSN classification' in x or \
               'PTM effect' in x or \
