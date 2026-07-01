@@ -753,9 +753,9 @@ def plot(df, full_df, width, height, xlim, clinvar_flag, clinvar_class_type, cli
                                 'GEMME classification'
                                 if lbl == 'GEMME predicted consequence'
                                 else 'De novo phosphosite stability'
-                                if lbl == 'Classification of change in folding free energy with phosphorylation'
+                                if lbl.startswith('Classification of change in folding free energy with phosphorylation')
                                 else 'De novo phosphosite binding'
-                                if lbl == 'Classification of change in binding free energy with phosphorylation'
+                                if lbl.startswith('Classification of change in binding free energy with phosphorylation')
                                 else lbl
                                 for lbl in df.columns.values
                           ]
