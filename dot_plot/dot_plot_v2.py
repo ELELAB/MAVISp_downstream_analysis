@@ -1828,6 +1828,10 @@ def effect_summary(df):
         '(?i)uncertain': 0,
         'ambiguous': 0}
 
+    # Rename Denovo phospho columns
+    df.columns = df.columns.str.replace("Classification of change in folding free energy with phosphorylation", "De novo phosphorylation stability", regex=False)
+    df.columns = df.columns.str.replace("Classification of change in binding free energy with phosphorylation", "De novo phosphorylation binding", regex=False)
+
     # Replace values with 0/1s
     temp_df = df.replace(mechanism_code, regex=True)
 
@@ -1839,8 +1843,8 @@ def effect_summary(df):
 
     # Define broad effect categories + corresponding regex patterns
     effect_categories = {
-        'Stability': 'Stability classification|Classification of change in folding free energy with phosphorylation',
-        'Local Int.': 'Local Int.|Classification of change in binding free energy with phosphorylation',
+        'Stability': 'Stability classification|De novo phosphorylation stability',
+        'Local Int.': 'Local Int.|De novo phosphorylation binding',
         'PTM': 'PTM effect',
         'Long Range': 'AlloSigMA',
         'Functional': 'Functional sites',
@@ -1861,6 +1865,7 @@ def effect_summary(df):
 
     # Add the new column to the original DataFrame
     df['MAVISp Effects'] = effects_summary
+
     return df
 
 def load_clinvar_dict(tsv_file):
@@ -1988,6 +1993,7 @@ def filter_vep_summary(summary, df, vep_filter, glof_filter):
     if filtered_am.empty:
         log.warning(f'No mutations found with AM pathogenic annotation'\
                     f' output file will be empty...')
+
 
     return filtered_am
 
