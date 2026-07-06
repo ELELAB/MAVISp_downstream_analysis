@@ -1,0 +1,49 @@
+Summary of the effects.
+
+>>> UNCERTAIN effects:
+
+- 0 variants remain uncertain for Classification of change in folding free energy with phosphorylation [md]. []
+- No classification for LOCAL_INTERACTION available yet.
+- 33539 variants remain uncertain for Long Range-PSN. [md] See csv file for details.
+ - 0 variants could not be classified with any of the MAVISp modules.[]
+
+>>> DAMAGING/DESTABILIZING effects:
+
+- 0 variants are predicted with damaging effects for Classification of change in folding free energy with phosphorylation [md]. []
+-- 0 of these are vus according to ClinVar Germline Interpretation: []
+-- 0 of these have conflicting interpretations according to ClinVar Germline Interpretation: []
+- No classification for LOCAL_INTERACTION available yet.
+- 62 variants are predicted with damaging long range effects on pocket site(s). [md] See csv file for details.
+ - No variants with multiple effects have been found.
+- We aggregated all the variants that have at least one of the MAVISp modules with a predicted damaging effect (except for PTM.function) and retained only the ones with a REVEL score higher than 0.5 for a total of 4 variants which could be of interest for further investigation:
+-- ['E1528K', 'D1529V', 'Q1619H', 'E1626Q']
+
+- popEVE score not available.
+- We aggregated all the variants that have at least one of the MAVISp modules with a predicted damaging effect (except for PTM.function) and retained only the ones with a Demask delta fitness >= 0.25 or <= -0.25 for a total of 60 variants which could be of interest for further investigation:
+-- ['E1528F', 'E1528H', 'E1528I', 'E1528K', 'E1528L', 'E1528M', 'E1528Q', 'E1528R', 'E1528W', 'E1528Y', 'D1529F', 'D1529H', 'D1529I', 'D1529K', 'D1529L', 'D1529M', 'D1529Q', 'D1529R', 'D1529V', 'D1529W', 'D1529Y', 'R1530F', 'R1530W', 'R1530Y', 'Q1619F', 'Q1619H', 'Q1619I', 'Q1619K', 'Q1619L', 'Q1619M', 'Q1619R', 'Q1619W', 'Q1619Y', 'Y1622W', 'T1624E', 'T1624F', 'T1624H', 'T1624I', 'T1624K', 'T1624L', 'T1624M', 'T1624Q', 'T1624R', 'T1624V', 'T1624W', 'T1624Y', 'E1626F', 'E1626H', 'E1626I', 'E1626K', 'E1626L', 'E1626M', 'E1626Q', 'E1626R', 'E1626W', 'E1626Y', 'L1655R', 'L1655W', 'L1655Y', 'F1703W']
+- We aggregated all the variants that have at least one of the MAVISp modules with a predicted damaging effect (except for PTM.function) and retained only the ones with an EVE classification of Pathogenic for a total of 36 variants which could be of interest for further investigation:
+ -- ['E1528F', 'E1528H', 'E1528I', 'E1528K', 'E1528L', 'E1528M', 'E1528Q', 'E1528R', 'E1528W', 'E1528Y', 'D1529F', 'D1529I', 'D1529K', 'D1529L', 'D1529M', 'D1529Q', 'D1529R', 'D1529V', 'D1529W', 'D1529Y', 'Q1619F', 'Q1619H', 'Q1619I', 'Q1619M', 'Q1619W', 'Q1619Y', 'Y1622W', 'E1626F', 'E1626H', 'E1626I', 'E1626L', 'E1626M', 'E1626Q', 'E1626R', 'E1626Y', 'F1703W']
+- We aggregated all the variants that have at least one of the MAVISp modules with a predicted damaging effect (except for PTM.function) and retained only the ones with an AlphaMissense classification of Pathogenic for a total of 57 variants which could be of interest for further investigation:
+ -- ['E1528F', 'E1528H', 'E1528I', 'E1528K', 'E1528L', 'E1528M', 'E1528Q', 'E1528R', 'E1528W', 'E1528Y', 'D1529E', 'D1529F', 'D1529H', 'D1529I', 'D1529K', 'D1529L', 'D1529M', 'D1529Q', 'D1529R', 'D1529V', 'D1529W', 'D1529Y', 'R1530F', 'R1530W', 'R1530Y', 'Q1619F', 'Q1619H', 'Q1619I', 'Q1619K', 'Q1619M', 'Q1619R', 'Q1619W', 'Q1619Y', 'Y1622W', 'T1624E', 'T1624F', 'T1624H', 'T1624I', 'T1624K', 'T1624Q', 'T1624R', 'T1624W', 'T1624Y', 'E1626F', 'E1626H', 'E1626I', 'E1626K', 'E1626L', 'E1626M', 'E1626Q', 'E1626R', 'E1626W', 'E1626Y', 'L1655R', 'L1655W', 'L1655Y', 'F1703W']
+
+- Experimental classification not available.
+
+- We identified continuous stretches of residues that are above a pre-determined threshold of a minimum length of 3 residues to assign whether each residue is part of a early folding region totalling to 1140 variants. See csv file for details.
+
+
+Not reported ClinVar Germline Interpretation in clinvar: 44864
+ClinVar Germline Interpretation
+benign                                                                    38
+benign/likely benign                                                      48
+conflicting classifications of pathogenicity                             160
+likely benign                                                             99
+likely benign, uncertain significance                                      1
+likely pathogenic                                                         80
+not provided                                                               4
+pathogenic                                                                22
+pathogenic, pathogenic                                                     1
+pathogenic/likely pathogenic                                              18
+uncertain significance                                                  1036
+uncertain significance, conflicting classifications of pathogenicity       2
+uncertain significance, uncertain significance                             6
+Name: ClinVar Germline Interpretation, dtype: int64
