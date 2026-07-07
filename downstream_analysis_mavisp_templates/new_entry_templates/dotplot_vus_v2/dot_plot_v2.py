@@ -33,6 +33,7 @@ from itertools import combinations
 from matplotlib.backends.backend_pdf import PdfPages
 import re
 
+
 def adjust_figsize_w(x_mut, original_w, original_m):
     ''' Adjust width of figuresize if the last plot has less mutations
     on the x axis.
@@ -158,12 +159,14 @@ def color_yticklabels(labels):
     # an effect on stability, function or other
     stability = ['Stability classification',
                  'PTM effect in stability',
+                 "Classification of change in folding free energy with phosphorylation",
                  'EFoldMine - part of early folding region',
                  'Loss of disulfide bridge',
                  'Predicted de-novo disulfide bridge']
 
 
     function = ['Local Int.',
+                "Classification of change in binding free energy with phosphorylation",
                 'Functional sites (cofactor)',
                 'Functional sites (active site)',
                 'PTM',
@@ -342,8 +345,10 @@ def process_input(full_df, r_cutoff, p_cutoff, d_cutoff, g_cutoff, residues, mut
                     '(Foldetta from FoldX and RaSP)' in x or \
                     '(Rosetta, FoldX)' in x or \
                     '(RaSP, FoldX)' in x or \
+                    "Classification of change in folding free energy with phosphorylation" in x or \
                     'Local Int. classification' in x or \
                     'Local Int. With DNA classification' in x or \
+                    "Classification of change in binding free energy with phosphorylation" in x or \
                     'Functional sites (cofactor)' in x or \
                     'Functional sites (active site)' in x or \
                     'AlloSigMA 2 predicted consequence - active sites' in x or \
@@ -427,13 +432,19 @@ def process_input(full_df, r_cutoff, p_cutoff, d_cutoff, g_cutoff, residues, mut
 
 
     # Sort columns based on broad effect categories
-    functional_cols = [col for col in df.columns if 'functional' in col.lower() and 'experimental data classification' not in col.lower()]
+    functional_cols = [col for col in df.columns if ('functional' in col.lower()
+                                                   and 'experimental data classification' not in col.lower())
+                       or "Classification of change in binding free energy with phosphorylation" in col]
     disulfide_cols = [col for col in df.columns if 'disulfide bridge' in col.lower()]
-    stability_cols = [col for col in df.columns if 'stability' in col.lower() and 'experimental data classification' not in col.lower()]
+    stability_cols = [col for col in df.columns if ('stability' in col.lower()
+                                                  and 'experimental data classification' not in col.lower())
+                      or "Classification of change in folding free energy with phosphorylation" in col]
     stability_cols += disulfide_cols
     efold_col = [col for col in df.columns if 'efoldmine' in col.lower()]
     other_cols = [col for col in df.columns if 'functional' not in col.lower()
                   and 'stability' not in col.lower()
+                  and "Classification of change in folding free energy with phosphorylation" not in col
+                  and "Classification of change in binding free energy with phosphorylation" not in col
                   and 'disulfide bridge' not in col.lower()
                   and 'experimental data classification' not in col.lower()
                   and 'efoldmine' not in col.lower()]
@@ -738,9 +749,16 @@ def plot(df, full_df, width, height, xlim, clinvar_flag, clinvar_class_type, cli
     yticklabel_color = color_yticklabels(labels = df.columns.values)
 
     # Override display label for GEMME row
-    display_yticklabels = ['GEMME classification' if lbl == 'GEMME predicted consequence' else lbl
-                           for lbl in df.columns.values]
-
+    display_yticklabels = [
+                                'GEMME classification'
+                                if lbl == 'GEMME predicted consequence'
+                                else 'De novo phosphosite stability'
+                                if lbl.startswith('Classification of change in folding free energy with phosphorylation')
+                                else 'De novo phosphosite binding'
+                                if lbl.startswith('Classification of change in binding free energy with phosphorylation')
+                                else lbl
+                                for lbl in df.columns.values
+                          ]
     # Lower and upper limits
     l = 0
     u = xlim
@@ -933,8 +951,15 @@ def generate_summary(data,d_cutoff,r_cutoff, p_cutoff, clinvar_cols):
 
     # Colnames ptm and allosigma
 
-    filter_col_stability = [col for col in data if 'ThermoMPNN' in col or '(Foldetta from FoldX and Rosetta)' in col or '(Foldetta from FoldX and RaSP)' in col or '(Rosetta, FoldX)' in col or '(RaSP, FoldX)' in col]
-    filter_col_local = [col for col in data if 'Local Int. classification' in col or 'Local Int. With DNA classification' in col]
+    filter_col_stability = [col for col in data if 'ThermoMPNN' in col
+                            or '(Foldetta from FoldX and Rosetta)' in col
+                            or '(Foldetta from FoldX and RaSP)' in col
+                            or '(Rosetta, FoldX)' in col
+                            or '(RaSP, FoldX)' in col
+                            or "Classification of change in folding free energy with phosphorylation" in col]
+    filter_col_local = [col for col in data if 'Local Int. classification' in col
+                        or 'Local Int. With DNA classification' in col
+                        or "Classification of change in binding free energy with phosphorylation" in col]
     ptm_stab_clmn = [col for col in data if 'PTM effect in stability' in col]
     ptm_reg_clmn = [col for col in data if 'PTM effect in regulation' in col]
     ptm_funct_clmn = [col for col in data if 'PTM effect in function' in col]
@@ -997,6 +1022,9 @@ def generate_summary(data,d_cutoff,r_cutoff, p_cutoff, clinvar_cols):
                 # Print list of mutations only if the are less than 10
                 mutlist = out_list(loc_un_list)
 
+                if "Classification of change in binding free energy with phosphorylation" in col:
+                    out += f'- {loc_un} variants remain uncertain for phosphorylation-dependent binding free energy. {mutlist}'
+                    continue
                 if ensemble:
                     if 'DNA' in col:
                         out += f'- {loc_un} variants remain uncertain for LOCAL_INTERACTION with DNA {inter}. {ensemble[0]}. {mutlist}'
@@ -1267,6 +1295,9 @@ def generate_summary(data,d_cutoff,r_cutoff, p_cutoff, clinvar_cols):
 
             # Print list of mutations only if the are less than 10
             mutlist = out_list(loc_d_list)
+            if "Classification of change in binding free energy with phosphorylation" in col:
+                out += f'- {loc_d} variants are destabilizing for phosphorylation-dependent binding free energy. {mutlist}'
+                continue
             if ensemble:
                 if 'DNA' in col:
                     out += f'- {loc_d} variants are destabilizing for the LOCAL_INTERACTION with DNA {inter}. {ensemble[0]}. {mutlist}'
@@ -1797,6 +1828,10 @@ def effect_summary(df):
         '(?i)uncertain': 0,
         'ambiguous': 0}
 
+    # Rename Denovo phospho columns
+    df.columns = df.columns.str.replace("Classification of change in folding free energy with phosphorylation", "De novo phosphorylation stability", regex=False)
+    df.columns = df.columns.str.replace("Classification of change in binding free energy with phosphorylation", "De novo phosphorylation binding", regex=False)
+
     # Replace values with 0/1s
     temp_df = df.replace(mechanism_code, regex=True)
 
@@ -1808,8 +1843,8 @@ def effect_summary(df):
 
     # Define broad effect categories + corresponding regex patterns
     effect_categories = {
-        'Stability': 'Stability classification',
-        'Local Int.': 'Local Int.',
+        'Stability': 'Stability classification|De novo phosphorylation stability',
+        'Local Int.': 'Local Int.|De novo phosphorylation binding',
         'PTM': 'PTM effect',
         'Long Range': 'AlloSigMA',
         'Functional': 'Functional sites',
@@ -1830,6 +1865,7 @@ def effect_summary(df):
 
     # Add the new column to the original DataFrame
     df['MAVISp Effects'] = effects_summary
+
     return df
 
 def load_clinvar_dict(tsv_file):
@@ -1910,6 +1946,8 @@ def filter_vep_summary(summary, df, vep_filter, glof_filter):
     f = lambda x: 'Stability classification' in x or \
               'Local Int. classification' in x or \
               'Local Int. With DNA classification' in x or \
+              "Classification of change in folding free energy with phosphorylation" in x or \
+              "Classification of change in binding free energy with phosphorylation" in x or \
               'AlloSigMA 2 predicted consequence' in x or \
               'AlloSigMA2-PSN classification' in x or \
               'PTM effect' in x or \
@@ -1955,6 +1993,7 @@ def filter_vep_summary(summary, df, vep_filter, glof_filter):
     if filtered_am.empty:
         log.warning(f'No mutations found with AM pathogenic annotation'\
                     f' output file will be empty...')
+
 
     return filtered_am
 

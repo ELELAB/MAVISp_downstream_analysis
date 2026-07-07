@@ -86,6 +86,7 @@ def process_input(df):
                         'PTM effect' in x or \
                         'disulfide bridge' in x or \
                         'Functional sites' in x or \
+                        'De novo phosphorylation' in x or \
                         'Mutation' in x and not 'Mutation sources' in x
 
     df = df[[col for col in df.columns if f(col)]]
@@ -127,7 +128,7 @@ def process_input(df):
     df['Disulfide bridges'] = df.filter(regex='disulfide bridge').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Long Range'] = df.filter(regex='AlloSigMA').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Local Int.'] = df.filter(regex='Local Int.').apply(pd.to_numeric, errors="coerce").max(axis=1)
-    df['PTM']        = df.filter(regex='PTM effect').apply(pd.to_numeric, errors="coerce").max(axis=1)
+    df['PTM']        = df.filter(regex='PTM effect|De novo phosphorylation').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Functional'] = df.filter(regex='Functional sites').apply(pd.to_numeric, errors="coerce").max(axis=1)
 
     # Filter df for relevant columns
