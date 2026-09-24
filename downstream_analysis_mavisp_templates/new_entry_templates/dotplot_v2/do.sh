@@ -5,14 +5,14 @@ csv=$1
 # for more information about available options: python dot_plot.py -h
 
 # Germline classification dotplot
-python dot_plot_v2.py -i $csv -x  50 -pltD -pltP -pltR -colC -vep -lgof -cct germline -v dictionary.csv -o dot_plot_germline
+python dot_plot_v2.py -i $csv -x  50 -pltD -pltR -colC -vep -lgof -cct germline -v dictionary.csv -o dot_plot_germline
 
 python lolliplot.py -i mechanistic_indicators_out_germline.csv -x 50 -s
 python filter_pLDDT.py -i $csv -m mechanistic_indicators_out_germline.csv -t 70
 
 # Oncogenicity dotplot
-python dot_plot_v2.py -i $csv -x  50 -pltD -pltP -pltR -colC -vep -lgof -cct oncogenicity -v oncodict.csv -o dot_plot_oncogenicity
+python dot_plot_v2.py -i $csv -x  50 -pltD -pltR -colC -vep -lgof -cct oncogenicity -v oncodict.csv -o dot_plot_oncogenicity
 
 # Clinical impact dotplot
-python dot_plot_v2.py -i $csv -x  50 -pltD -pltP -pltR -colC -vep -lgof -cct clinical_impact -v clinicaldict.csv -o dot_plot_clinical_impact
+python dot_plot_v2.py -i $csv -x  50 -pltD -pltR -colC -vep -lgof -cct clinical_impact -v clinicaldict.csv -o dot_plot_clinical_impact
 
