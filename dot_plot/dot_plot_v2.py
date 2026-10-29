@@ -923,6 +923,96 @@ def plot(df, full_df, width, height, xlim, clinvar_flag, clinvar_class_type, cli
 
     return figures
 
+
+def get_damaging_mutations(data):
+    ''' Select the mutations with a damaging effect in at least one MAVISp module. '''
+    data = data.apply(lambda col: col.map(lambda x: str(x) if isinstance(x, bool) else x))
+    data = data.apply(lambda x: x.str.lower() if x.dtype == object else x)
+
+    # Identify the columns of each module
+
+    filter_col_stability = [col for col in data if 'ThermoMPNN' in col
+                            or '(Foldetta from FoldX and Rosetta)' in col
+                            or '(Foldetta from FoldX and RaSP)' in col
+                            or '(Rosetta, FoldX)' in col
+                            or '(RaSP, FoldX)' in col
+                            or "Classification of change in folding free energy with phosphorylation" in col]
+    filter_col_local = [col for col in data if 'Local Int. classification' in col
+                        or 'Local Int. With DNA classification' in col
+                        or "Classification of change in binding free energy with phosphorylation" in col]
+    ptm_stab_clmn = [col for col in data if 'PTM effect in stability' in col]
+    ptm_reg_clmn = [col for col in data if 'PTM effect in regulation' in col]
+    ptm_funct_clmn = [col for col in data if 'PTM effect in function' in col]
+    allosigma_clmn = [col for col in data if 'AlloSigMA 2 predicted consequence' in col]
+    long_range_psn_clmn = [col for col in data if 'AlloSigMA2-PSN classification' in col]
+    cofactor_active = [col for col in data if 'Functional sites' in col]
+    disulfide_clmn = [col for col in data if 'disulfide bridge' in col]
+
+    # Damaging stability
+    d_s = ['destabilizing', 'stabilizing']
+    all_stability = []
+    for col in filter_col_stability:
+        all_stability_list = data.index[data[col].isin(d_s)].to_list()
+        all_stability.extend(all_stability_list)
+
+    # Damaging local interactions
+    all_local = []
+    for col in filter_col_local:
+        loc_d_list = data.index[data[col].isin(d_s)].to_list()
+        all_local.extend(loc_d_list)
+    
+    # Damaging PTM_stability
+    ptm_s_d_list = []
+    for col in ptm_stab_clmn:
+        ptm_s_d_list = data.index[data[col] == 'damaging'].to_list()
+
+    # Damaging PTM_regulation
+    ptm_r_d_list = []
+    for col in ptm_reg_clmn:
+        ptm_r_d_list = data.index[data[col] == 'damaging'].to_list()
+
+    # Damaging PTM_function
+    dmg_str = ['damaging', 'potentially_damaging']
+    ptm_f_d_list = []
+    for col in ptm_funct_clmn:
+        ptm_f_d_list = data.index[data[col].isin(dmg_str)].to_list()
+
+    all_ptm = ptm_s_d_list + ptm_r_d_list + ptm_f_d_list
+
+    # Damaging Long-Range AlloSigma2
+    multiple = []
+    for col in allosigma_clmn:
+        long_d_list = data.index[data[col] == 'destabilizing'].to_list()
+        long_me_list = data.index[data[col] == 'mixed_effects'].to_list()
+        long_s_list = data.index[data[col] == 'stabilizing'].to_list()
+        multiple.extend(long_d_list + long_me_list + long_s_list)
+
+    # Damaging disulfide bridges
+    all_disulfide = []
+    for col in disulfide_clmn:
+        disulfide_d_list = data.index[data[col] == 'damaging'].to_list()
+        all_disulfide.extend(disulfide_d_list)
+
+    # Damaging functional sites
+    multiple_1 = []
+    for col in cofactor_active:
+        funct_sites_d_list = data.index[data[col] == 'damaging'].to_list()
+        multiple_1.extend(funct_sites_d_list)
+
+    # Damaging Long-Range AlloSigma2-PSN
+    psn_d_list = []
+    for col in long_range_psn_clmn:
+        psn_d_list = data.index[data[col] == 'damaging'].to_list()
+
+    all_long_range = multiple + psn_d_list
+
+    # Combine the damaging mutations of all modules
+    damaging_full = set(all_stability + all_local + all_ptm + multiple_1 + all_long_range + all_disulfide)
+    full_data_d = data.query('index in @damaging_full')
+
+    return full_data_d
+
+
 def generate_summary(data,d_cutoff,r_cutoff, p_cutoff, clinvar_cols):
     ''' Summary log.txt file.
 
@@ -2279,15 +2369,9 @@ def main():
 
     ############################### SUMMARY ###############################
 
-    # Write summary output file
-    with open(f'log_{args.clinvar_class_type}.txt', 'w') as out:
-        summary, summary_df = generate_summary(data = dataframe,
-                                               d_cutoff = args.demask_threshold,
-                                               r_cutoff = args.revel_threshold,
-                                               p_cutoff=args.popeve_threshold,
-                                               clinvar_cols = clinvar_cols)
-        out.write(summary)
-
+    # Select the mutations with a damaging effect in at least one module
+    summary_df = get_damaging_mutations(data = dataframe)
+    
     ################################# PLOT #################################
     '''
     filter_col = [col for col in plot_df if col.startswith("Local Int.")]
