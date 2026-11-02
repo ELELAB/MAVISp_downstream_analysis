@@ -1,4 +1,4 @@
-Mutation,"Stability classification, (RaSP, FoldX) [md]",Stability classification (Foldetta from FoldX and RaSP) [md],PTM effect in regulation [md],PTM effect in stability [md],PTM effect in function [md],De novo phosphorylation stability [md],AlloSigMA2-PSN classification - pockets and interfaces [md],MAVISp Effects
+Mutation,"Stability classification, (RaSP, FoldX) [md]",Stability classification (Foldetta from FoldX and RaSP) [md],Phosphorylation effect in regulation [md],Phosphorylation effect in stability [md],Phosphorylation effect in function [md],De novo phosphorylation stability [md],AlloSigMA2-PSN classification - pockets and interfaces [md],MAVISp Effects
 L272A,destabilizing,destabilizing,neutral,neutral,neutral,,uncertain,Stability
 L272C,uncertain,destabilizing,neutral,neutral,neutral,,uncertain,Stability
 L272D,destabilizing,destabilizing,neutral,neutral,neutral,,uncertain,Stability

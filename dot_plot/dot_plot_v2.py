@@ -158,7 +158,7 @@ def color_yticklabels(labels):
     # Define the prefix to classify the labels as having
     # an effect on stability, function or other
     stability = ['Stability classification',
-                 'PTM effect in stability',
+                 'Phosphorylation effect in stability',
                  "Classification of change in folding free energy with phosphorylation",
                  'EFoldMine - part of early folding region',
                  'Loss of disulfide bridge',
@@ -169,7 +169,7 @@ def color_yticklabels(labels):
                 "Classification of change in binding free energy with phosphorylation",
                 'Functional sites (cofactor)',
                 'Functional sites (active site)',
-                'PTM',
+                'Phosphorylation',
                 'AlloSigMA']
     # Iterate over the labels and append to the color list
     # the color based on the effect
@@ -355,7 +355,7 @@ def process_input(full_df, r_cutoff, p_cutoff, d_cutoff, g_cutoff, residues, mut
                     'AlloSigMA 2 predicted consequence - cofactor sites' in x or \
                     'AlloSigMA 2 predicted consequence - pockets and interfaces' in x or \
                     ('AlloSigMA2-PSN classification' in x and not 'AlloSigMA 2 mutation type' in x) or\
-                    'PTM effect in ' in x or 'REVEL score' in x or \
+                    'Phosphorylation effect in ' in x or 'REVEL score' in x or \
                     'popEVE score' in x or \
                     'EVE classification (25% Uncertain)' in x or \
                     'DeMaSk delta fitness' in x or \
@@ -960,9 +960,9 @@ def generate_summary(data,d_cutoff,r_cutoff, p_cutoff, clinvar_cols):
     filter_col_local = [col for col in data if 'Local Int. classification' in col
                         or 'Local Int. With DNA classification' in col
                         or "Classification of change in binding free energy with phosphorylation" in col]
-    ptm_stab_clmn = [col for col in data if 'PTM effect in stability' in col]
-    ptm_reg_clmn = [col for col in data if 'PTM effect in regulation' in col]
-    ptm_funct_clmn = [col for col in data if 'PTM effect in function' in col]
+    ptm_stab_clmn = [col for col in data if 'Phosphorylation effect in stability' in col]
+    ptm_reg_clmn = [col for col in data if 'Phosphorylation effect in regulation' in col]
+    ptm_funct_clmn = [col for col in data if 'Phosphorylation effect in function' in col]
     allosigma_clmn = [col for col in data if 'AlloSigMA 2 predicted consequence' in col]
     long_range_psn_clmn = [col for col in data if 'AlloSigMA2-PSN classification' in col]
     cofactor_active = [col for col in data if 'Functional sites' in col]
@@ -1845,7 +1845,7 @@ def effect_summary(df):
     effect_categories = {
         'Stability': 'Stability classification|De novo phosphorylation stability',
         'Local Int.': 'Local Int.|De novo phosphorylation binding',
-        'PTM': 'PTM effect',
+        'PTM': 'Phosphorylation effect',
         'Long Range': 'AlloSigMA',
         'Functional': 'Functional sites',
         'Disulfide bridges': 'Disulfide bridges'}
@@ -1950,7 +1950,7 @@ def filter_vep_summary(summary, df, vep_filter, glof_filter):
               "Classification of change in binding free energy with phosphorylation" in x or \
               'AlloSigMA 2 predicted consequence' in x or \
               'AlloSigMA2-PSN classification' in x or \
-              'PTM effect' in x or \
+              'Phosphorylation effect' in x or \
               'Functional sites' in x or \
               'Loss of disulfide bridge' in x or \
               'Predicted de-novo disulfide bridge' in x or \
