@@ -83,6 +83,8 @@ In addition to all existing `dot_plot.py` options, the following differences app
 
 - popEVE support is only available in `dot_plot_v2.py`.
 
+- `dot_plot_v2.py` does not write the `log.txt` summary file; it only produces the dot plots and `mechanistic_indicators_out.csv`.
+
 ## Example
 
 See the `examples` directory and the accompanying `do.sh` scripts for a minimal end-to-end run.
@@ -91,8 +93,8 @@ See the `examples` directory and the accompanying `do.sh` scripts for a minimal 
 
 Running the script produces:
 - `dot_plot.pdf` (and additional numbered PDFs if more mutations exceed `-x`). PNGs are also written when any of `-m`, `-r`, `-pltS`, or `-pltC` is used.
-- `log.txt`, summarising how many variants satisfy each classifier (REVEL, GEMME, DeMaSk, EVE, AlphaMissense, popEVE) and providing module-level counts.
 - `mechanistic_indicators_out.csv`, containing the filtered subset of mutations with at least one module effect and the consolidated `MAVISp Effects` column. This file honours all filters applied through `-m`, `-r`, `-pltS`, `-pltC`, `-vep`, and `-lgof`.
+- `log.txt` (only `dot_plot.py`), summarising how many variants satisfy each classifier (REVEL, GEMME, DeMaSk, EVE, AlphaMissense, popEVE) and providing module-level counts.
 
 Notes:
 - `-pltS` and `-pltC` filters are additive; the resulting dataset must satisfy both when both options are provided.
