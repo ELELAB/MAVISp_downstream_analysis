@@ -1213,6 +1213,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
     all_local = [item for sublist in all_local if sublist != [] for item in (sublist if isinstance(sublist, list) else [sublist])]
 
     ### Damaging PTM_stability ###
+    ptm_s_d_list = []
     if ptm_stab_clmn:
         for col in ptm_stab_clmn:
             try:
@@ -1238,6 +1239,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
 
 
     ### Damaging PTM_regulation ###
+    ptm_r_d_list = []
     if ptm_reg_clmn:
         for col in ptm_reg_clmn:
             try:
@@ -1264,6 +1266,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
 
     ### Damaging PTM_function ###
     dmg_str = ['damaging', 'potentially_damaging']
+    ptm_f_d_list = []
     if ptm_funct_clmn:
         for col in ptm_funct_clmn:
             try:
