@@ -129,6 +129,7 @@ Y126G,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,u
 Y126N,destabilizing,destabilizing,uncertain,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
 Y126P,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
 Y126Q,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
+Y126R,,uncertain,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,PTM
 Y126S,destabilizing,destabilizing,uncertain,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
 Y126T,,destabilizing,,uncertain,uncertain,damaging,uncertain,uncertain,neutral,uncertain,uncertain,"Stability, PTM"
 S127E,,destabilizing,,neutral,uncertain,,,uncertain,,,uncertain,Stability
@@ -548,6 +549,7 @@ T211Y,,neutral,,neutral,uncertain,damaging,potentially_damaging,uncertain,neutra
 F212P,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
 R213P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
 S215A,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,uncertain,PTM
+S215D,,neutral,,uncertain,uncertain,damaging,uncertain,uncertain,uncertain,uncertain,neutral,PTM
 S215E,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
 S215G,neutral,neutral,neutral,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,uncertain,PTM
 S215I,neutral,neutral,neutral,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
@@ -555,6 +557,7 @@ S215K,neutral,neutral,neutral,neutral,uncertain,damaging,uncertain,uncertain,dam
 S215L,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
 S215N,neutral,neutral,neutral,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
 S215Q,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
+S215R,neutral,neutral,uncertain,uncertain,uncertain,damaging,uncertain,uncertain,uncertain,uncertain,neutral,PTM
 S215T,neutral,neutral,neutral,neutral,neutral,damaging,uncertain,neutral,damaging,uncertain,neutral,PTM
 S215V,,neutral,,neutral,uncertain,damaging,uncertain,uncertain,damaging,uncertain,neutral,PTM
 V216A,uncertain,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,neutral,damaging,Long Range
@@ -788,6 +791,15 @@ G266V,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,ne
 G266W,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
 G266Y,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,neutral,Stability
 R267P,destabilizing,destabilizing,destabilizing,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,uncertain,Stability
+S269D,,neutral,,neutral,damaging,neutral,potentially_damaging,uncertain,uncertain,uncertain,neutral,PTM
+S269E,,neutral,,neutral,damaging,neutral,potentially_damaging,uncertain,uncertain,uncertain,neutral,PTM
+S269F,,neutral,,neutral,damaging,neutral,potentially_damaging,uncertain,uncertain,uncertain,neutral,PTM
+S269H,,neutral,,neutral,damaging,neutral,potentially_damaging,uncertain,uncertain,uncertain,neutral,PTM
+S269K,,neutral,,neutral,damaging,neutral,potentially_damaging,uncertain,uncertain,uncertain,neutral,PTM
+S269P,,uncertain,,neutral,damaging,neutral,potentially_damaging,uncertain,uncertain,uncertain,neutral,PTM
+S269R,neutral,neutral,neutral,neutral,damaging,neutral,potentially_damaging,uncertain,uncertain,uncertain,neutral,PTM
+S269W,,neutral,,neutral,damaging,neutral,potentially_damaging,uncertain,uncertain,uncertain,neutral,PTM
+S269Y,,neutral,,neutral,uncertain,neutral,potentially_damaging,uncertain,uncertain,uncertain,neutral,PTM
 F270A,,destabilizing,,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
 F270C,destabilizing,destabilizing,uncertain,uncertain,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
 F270D,,destabilizing,,destabilizing,neutral,neutral,neutral,neutral,neutral,neutral,damaging,"Stability, Long Range"
