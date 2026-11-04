@@ -83,7 +83,7 @@ def process_input(df):
                         'Local Int. ' in x or \
                         'AlloSigMA 2 predicted consequence' in x or \
                         'AlloSigMA2-PSN classification' in x or \
-                        'PTM effect' in x or \
+                        'Phosphorylation effect' in x or \
                         'disulfide bridge' in x or \
                         'Functional sites' in x or \
                         'De novo phosphorylation' in x or \
@@ -98,7 +98,7 @@ def process_input(df):
         'disulfide bridge' : 'Disulfide bridges',
         'AlloSigMA': 'Long Range',
         'Local Int. ': 'Local Int.',
-        'PTM effect': 'PTM',
+        'Phosphorylation effect': 'PTM',
         'Functional sites' : 'Functional'
     }
     # Print warning if not one column identified
@@ -128,7 +128,7 @@ def process_input(df):
     df['Disulfide bridges'] = df.filter(regex='disulfide bridge').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Long Range'] = df.filter(regex='AlloSigMA').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Local Int.'] = df.filter(regex='Local Int.').apply(pd.to_numeric, errors="coerce").max(axis=1)
-    df['PTM']        = df.filter(regex='PTM effect|De novo phosphorylation').apply(pd.to_numeric, errors="coerce").max(axis=1)
+    df['PTM']        = df.filter(regex='Phosphorylation effect|De novo phosphorylation').apply(pd.to_numeric, errors="coerce").max(axis=1)
     df['Functional'] = df.filter(regex='Functional sites').apply(pd.to_numeric, errors="coerce").max(axis=1)
 
     # Filter df for relevant columns
