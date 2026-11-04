@@ -1220,11 +1220,9 @@ def generate_summary(data,d_cutoff,r_cutoff):
                 # Calculate number of damaging mutations
                 ptm_s_d = str(len(data[data[col] == 'damaging']))
 
-                # List damaging mutations
-                ptm_s_d_list = data.index[data[col] == 'damaging'].to_list()
-
-                # Print list of mutations only if the are less than 10
-                ptm_mutlist_stab = out_list(ptm_s_d_list)
+                current_list = data.index[data[col] == 'damaging'].to_list()
+                ptm_s_d_list.extend(current_list)
+                ptm_mutlist_stab = out_list(current_list)
 
                 if ensemble:
                     out += f'- {ptm_s_d} variants are predicted with damaging effects on stability '\
@@ -1247,11 +1245,9 @@ def generate_summary(data,d_cutoff,r_cutoff):
                 # Calculate number of damaging mutations
                 ptm_r_d = str(len(data[data[col] == 'damaging']))
 
-                # List damaging mutations
-                ptm_r_d_list = data.index[data[col] == 'damaging'].to_list()
-
-                # Print list of mutations only if the are less than 10
-                ptm_mutlist_reg = out_list(ptm_r_d_list)
+                current_list = data.index[data[col] == 'damaging'].to_list()
+                ptm_r_d_list.extend(current_list)
+                ptm_mutlist_reg = out_list(current_list)
                 if ensemble:
                     out += f'- {ptm_r_d} variants are likely to alter the regulation provided by ' \
                            f'a phosphorylation. {ensemble[0]} {ptm_mutlist_reg} '
@@ -1276,11 +1272,9 @@ def generate_summary(data,d_cutoff,r_cutoff):
                 # Calculate number of damaging mutations
                 ptm_f_d = str(len(data[data[col].isin(dmg_str)]))
 
-                # List damaging mutations
-                ptm_f_d_list = data.index[data[col].isin(dmg_str)].to_list()
-
-                # Print list of mutations only if the are less than 10
-                ptm_mutlist_funct = out_list(ptm_f_d_list)
+                current_list = data.index[data[col].isin(dmg_str)].to_list()
+                ptm_f_d_list.extend(current_list)
+                ptm_mutlist_funct = out_list(current_list)
                 if ensemble:
                     out += f'- {ptm_f_d} variants are potentially damaging in terms of removing ' \
                         f'the function related to a phosphorylation. {ensemble[0]} {ptm_mutlist_funct} '
@@ -1411,11 +1405,9 @@ def generate_summary(data,d_cutoff,r_cutoff):
                     # Calculate number of damaging mutations
                 psn_d = str(len(data[data[col] == 'damaging']))
 
-                # List damaging mutations
-                psn_d_list = data.index[data[col] == 'damaging'].to_list()
-                # Print list of mutations only if the are less than 10
-                psn_d_mutlist = out_list(psn_d_list)
-
+                current_list = data.index[data[col] == 'damaging'].to_list()
+                psn_d_list.extend(current_list)
+                psn_d_mutlist = out_list(current_list)
                 if ensemble:
                     out += f'- {psn_d} variants are predicted with damaging long range effects on pocket site(s). {ensemble[0]} {psn_d_mutlist} '
                 else:
