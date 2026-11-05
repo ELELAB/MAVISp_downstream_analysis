@@ -963,18 +963,18 @@ def get_damaging_mutations(data):
     # Damaging PTM_stability
     ptm_s_d_list = []
     for col in ptm_stab_clmn:
-        ptm_s_d_list = data.index[data[col] == 'damaging'].to_list()
+        ptm_s_d_list.extend(data.index[data[col] == 'damaging'].to_list())
 
     # Damaging PTM_regulation
     ptm_r_d_list = []
     for col in ptm_reg_clmn:
-        ptm_r_d_list = data.index[data[col] == 'damaging'].to_list()
+        ptm_r_d_list.extend(data.index[data[col] == 'damaging'].to_list())
 
     # Damaging PTM_function
     dmg_str = ['damaging', 'potentially_damaging']
     ptm_f_d_list = []
     for col in ptm_funct_clmn:
-        ptm_f_d_list = data.index[data[col].isin(dmg_str)].to_list()
+        ptm_f_d_list.extend(data.index[data[col].isin(dmg_str)].to_list())
 
     all_ptm = ptm_s_d_list + ptm_r_d_list + ptm_f_d_list
 
@@ -1001,7 +1001,7 @@ def get_damaging_mutations(data):
     # Damaging Long-Range AlloSigma2-PSN
     psn_d_list = []
     for col in long_range_psn_clmn:
-        psn_d_list = data.index[data[col] == 'damaging'].to_list()
+        psn_d_list.extend(data.index[data[col] == 'damaging'].to_list())
 
     all_long_range = multiple + psn_d_list
 
