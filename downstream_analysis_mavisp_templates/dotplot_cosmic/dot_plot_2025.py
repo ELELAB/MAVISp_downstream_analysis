@@ -4,6 +4,7 @@
 # Simone Scrima <simonescrima@gmail.com>, Karolina Krzesińska <kzokr@dtu.dk>,
 # Matteo Tiberti
 # Danish Cancer Society & Technical University of Denmark
+# 2026 Eszter Toldi, Technical University of Denmark (DTU)
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -313,7 +314,8 @@ def process_input(full_df, r_cutoff, d_cutoff, g_cutoff, residues, mutations,
         log.error("ClinVar Interpretation column is missing from the input data.")
         raise TypeError("ClinVar Interpretation column is missing from the input data.")
 
-    f = lambda x: '(Foldetta from FoldX and Rosetta)' in x or \
+    f = lambda x: '(ThermoMPNN)' in x or \
+                    '(Foldetta from FoldX and Rosetta)' in x or \
                     '(Foldetta from FoldX and RaSP)' in x or \
                     '(Rosetta, FoldX)' in x or \
                     '(RaSP, FoldX)' in x or \
@@ -859,7 +861,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
 
     # Colnames ptm and allosigma
 
-    filter_col_stability = [col for col in data if '(Foldetta from FoldX and Rosetta)' in col or '(Foldetta from FoldX and RaSP)' in col or '(Rosetta, FoldX)' in col or '(RaSP, FoldX)' in col]
+    filter_col_stability = [col for col in data if 'ThermoMPNN' in col or '(Foldetta from FoldX and Rosetta)' in col or '(Foldetta from FoldX and RaSP)' in col or '(Rosetta, FoldX)' in col or '(RaSP, FoldX)' in col]
     filter_col_local = [col for col in data if 'Local Int. classification' in col or 'Local Int. With DNA classification' in col]
     ptm_stab_clmn = [col for col in data if 'PTM effect in stability' in col]
     ptm_reg_clmn = [col for col in data if 'PTM effect in regulation' in col]
@@ -1211,6 +1213,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
     all_local = [item for sublist in all_local if sublist != [] for item in (sublist if isinstance(sublist, list) else [sublist])]
 
     ### Damaging PTM_stability ###
+    ptm_s_d_list = []
     if ptm_stab_clmn:
         for col in ptm_stab_clmn:
             try:
@@ -1218,11 +1221,9 @@ def generate_summary(data,d_cutoff,r_cutoff):
                 # Calculate number of damaging mutations
                 ptm_s_d = str(len(data[data[col] == 'damaging']))
 
-                # List damaging mutations
-                ptm_s_d_list = data.index[data[col] == 'damaging'].to_list()
-
-                # Print list of mutations only if the are less than 10
-                ptm_mutlist_stab = out_list(ptm_s_d_list)
+                current_list = data.index[data[col] == 'damaging'].to_list()
+                ptm_s_d_list.extend(current_list)
+                ptm_mutlist_stab = out_list(current_list)
 
                 if ensemble:
                     out += f'- {ptm_s_d} variants are predicted with damaging effects on stability '\
@@ -1238,6 +1239,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
 
 
     ### Damaging PTM_regulation ###
+    ptm_r_d_list = []
     if ptm_reg_clmn:
         for col in ptm_reg_clmn:
             try:
@@ -1245,11 +1247,9 @@ def generate_summary(data,d_cutoff,r_cutoff):
                 # Calculate number of damaging mutations
                 ptm_r_d = str(len(data[data[col] == 'damaging']))
 
-                # List damaging mutations
-                ptm_r_d_list = data.index[data[col] == 'damaging'].to_list()
-
-                # Print list of mutations only if the are less than 10
-                ptm_mutlist_reg = out_list(ptm_r_d_list)
+                current_list = data.index[data[col] == 'damaging'].to_list()
+                ptm_r_d_list.extend(current_list)
+                ptm_mutlist_reg = out_list(current_list)
                 if ensemble:
                     out += f'- {ptm_r_d} variants are likely to alter the regulation provided by ' \
                            f'a phosphorylation. {ensemble[0]} {ptm_mutlist_reg} '
@@ -1266,6 +1266,7 @@ def generate_summary(data,d_cutoff,r_cutoff):
 
     ### Damaging PTM_function ###
     dmg_str = ['damaging', 'potentially_damaging']
+    ptm_f_d_list = []
     if ptm_funct_clmn:
         for col in ptm_funct_clmn:
             try:
@@ -1274,11 +1275,9 @@ def generate_summary(data,d_cutoff,r_cutoff):
                 # Calculate number of damaging mutations
                 ptm_f_d = str(len(data[data[col].isin(dmg_str)]))
 
-                # List damaging mutations
-                ptm_f_d_list = data.index[data[col].isin(dmg_str)].to_list()
-
-                # Print list of mutations only if the are less than 10
-                ptm_mutlist_funct = out_list(ptm_f_d_list)
+                current_list = data.index[data[col].isin(dmg_str)].to_list()
+                ptm_f_d_list.extend(current_list)
+                ptm_mutlist_funct = out_list(current_list)
                 if ensemble:
                     out += f'- {ptm_f_d} variants are potentially damaging in terms of removing ' \
                         f'the function related to a phosphorylation. {ensemble[0]} {ptm_mutlist_funct} '
@@ -1409,11 +1408,9 @@ def generate_summary(data,d_cutoff,r_cutoff):
                     # Calculate number of damaging mutations
                 psn_d = str(len(data[data[col] == 'damaging']))
 
-                # List damaging mutations
-                psn_d_list = data.index[data[col] == 'damaging'].to_list()
-                # Print list of mutations only if the are less than 10
-                psn_d_mutlist = out_list(psn_d_list)
-
+                current_list = data.index[data[col] == 'damaging'].to_list()
+                psn_d_list.extend(current_list)
+                psn_d_mutlist = out_list(current_list)
                 if ensemble:
                     out += f'- {psn_d} variants are predicted with damaging long range effects on pocket site(s). {ensemble[0]} {psn_d_mutlist} '
                 else:
